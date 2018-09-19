@@ -1,0 +1,27 @@
+<view wx:if="{{goodsList.length > 1}}" bindtap="onClick">
+    <scroll-view class="order-card-goods" scroll-x="true" scroll-with-animation="true" >
+        <view>
+            <block wx:for="{{goodsList}}" wx:key="item">
+                <view class="item">
+                    <image src="{{item.goods_img}}" mode="aspectFill" />
+                </view>
+            </block>
+        </view>
+    </scroll-view>
+</view>
+<view wx:elif="{{goodsList.length === 1}}" bindtap="onClick">
+    <view class="order-card-goods-one">
+        <block wx:for="{{goodsList}}" wx:key="item">
+            <view class="one-item" wx:for="{{goodsList}}" wx:key="item">
+                <view class="image">
+                    <image src="{{item.goods_img}}" mode="aspectFill" />
+                </view>
+                <view class="body">
+                    <text>{{item.goods_title}}</text>
+                    <view class="desc"><label>{{item.goods_spec_string}}</label><i>x{{item.goods_num}}</i></view>
+                    <label>¥{{item.goods_price}}</label>
+                </view>
+            </view>
+        </block>
+    </view>
+</view>

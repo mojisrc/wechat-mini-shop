@@ -1,0 +1,3 @@
+<view class="order-card">
+    <slot></slot>
+</view>

@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "time-format": "../../../common/timeFormat/index",
+    "common-rater": "../../../common/rater/index"
+  }
+}

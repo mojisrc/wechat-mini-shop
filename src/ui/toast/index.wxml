@@ -1,0 +1,30 @@
+<view
+  class="fa-toast {{ !message ? 'fa-toast--notitle' : '' }}"
+  wx:if="{{ show }}"
+  bindtap="clearZanToast"
+>
+  <!-- icon 展示 -->
+  <block
+    wx:if="{{ icon || image }}"
+  >
+    <view
+      wx:if="{{ image }}"
+      class="fa-toast__icon fa-toast__icon-image"
+      style="background-image: url({{ image }});"
+    ></view>
+    <view
+      wx:elif="{{ icon === 'loading' }}"
+      class="fa-toast__icon fa-toast__icon-loading"
+    >
+      <view class="fa-loading"></view>
+    </view>
+    <fa-icon
+      wx:else
+      type="{{ icon }}"
+      class="fa-toast__icon"
+    ></fa-icon>
+  </block>
+
+  <!-- 文案展示 -->
+  <view wx:if="{{ message }}">{{ message }}</view>
+</view>

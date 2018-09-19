@@ -1,0 +1,19 @@
+<view style="background-color:#F8F8F8;display: block;overflow: hidden">
+<common-search keywords="{{keywords}}" showSearchBar="true" categoryId="{{categoryId}}" categoryKeywords="{{categoryKeywords}}" bind:search-confirm="onSearchConfirm"></common-search>
+    <block wx:if="{{list.length > 0}}">
+        <view class="goods-list">
+            <section>
+                <block wx:for="{{list}}" wx:key="key" wx:for-index="page-data" wx:for-item="item">
+                    <details style="width:{{imageWidth}}px" bindtap="goGoodsDetail" data-id="{{item.id}}">
+                        <image src="{{item.img}}"  style="width:{{imageWidth}}px;height: {{imageWidth}}px" mode="aspectFill" />
+                        <view class="title-price">
+                            <text>{{item.title}}</text>
+                            <i>¥ {{item.price}}</i>
+                        </view>
+                    </details>
+                </block>
+            </section>
+            <view class="line"></view>
+        </view>
+    </block>
+</view>

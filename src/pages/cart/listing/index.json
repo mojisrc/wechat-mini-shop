@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "购物车",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "page-banner": "../../components/page/banner/index",
+    "fa-stepper": "../../ui/stepper/index",
+    "fa-button": "../../ui/btn/index"
+  }
+}

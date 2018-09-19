@@ -1,0 +1,24 @@
+<view class="user-setting-bind-phone">
+    <fa-panel>
+        <fa-cell-group>
+            <fa-cell title="手机号" >
+                <input slot="footer" placeholder="请输入手机号" />
+            </fa-cell>
+            <fa-cell title="验证码" placeholder="请输入验证码">
+                <view slot="footer" class="smscode">
+                    <input placeholder="请输入验证码" />
+                    <fa-button size="small">发送验证码</fa-button>
+                </view>
+            </fa-cell>
+            <fa-cell title="密码" placeholder="设置密码">
+                <input slot="footer" placeholder="请输入密码" />
+            </fa-cell>
+        </fa-cell-group>
+    </fa-panel>
+    <view class="footer">
+        <text>绑定成功后，下次登录即可使用手机号进行登录</text>
+    </view>
+</view>
+<fixed-bottom>
+    <fa-button size="large" type="danger">确认绑定</fa-button>
+</fixed-bottom>

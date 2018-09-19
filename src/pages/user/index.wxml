@@ -1,0 +1,124 @@
+<view class="page-container">
+    <block wx:if="{{userInfo}}">
+        <fa-panel class="order-action-area">
+            <view class="user-header">
+                <!--bindtap="goUserSetting"  fa-cell--access-->
+                <view class="fa-cell" >
+                    <view class="fa-cell__bd">
+                        <view class="avatar">
+                            <image src="{{userInfo.profile.avatar}}"
+                                   mode="aspectFit" />
+                            <view class="nickname">
+                                <text>{{userInfo.profile.nickname}}</text>
+                            </view>
+                        </view>
+                        <view class="setting-action">
+                            <!--<text>设置</text>-->
+                        </view>
+                    </view>
+                    <view class="fa-cell__ft"></view>
+                </view>
+            </view>
+        </fa-panel>
+        <fa-panel class="order-action-area">
+            <view class="header fa-cell fa-cell--access">
+                <view class="fa-cell__bd">
+                    <view class="left">
+                        <text>我的订单</text>
+                    </view>
+                    <view class="right" data-state-type="all" bindtap="goOrderList">
+                        <text>全部订单</text>
+                    </view>
+                </view>
+                <view class="fa-cell__ft"></view>
+            </view>
+            <view class="list">
+                <view class="item" data-state-type="state_new" bindtap="goOrderList">
+                    <view class="icon">
+                        <fa-badge wx:if="{{stateNum.state_new > 0}}"
+                                color="#fff"
+                                background-color="red"
+                                font-size="12"
+                        >{{stateNum.state_new}}
+                        </fa-badge>
+                        <image src="/themes/default/user/order/state_new.png"
+                               mode="aspectFit" />
+                    </view>
+                    <text>待付款</text>
+                </view>
+                <view class="item" data-state-type="state_send" bindtap="goOrderList">
+                    <view class="icon">
+                        <fa-badge wx:if="{{stateNum.state_send > 0}}"
+                                  color="#fff"
+                                  background-color="red"
+                                  font-size="12"
+                        >{{stateNum.state_send}}
+                        </fa-badge>
+                        <image src="/themes/default/user/order/state_pay.png"
+                               mode="aspectFit" />
+                    </view>
+                    <text>待收货</text>
+                </view>
+                <view class="item" data-state-type="state_success" bindtap="goOrderList">
+                    <view class="icon">
+                        <image src="/themes/default/user/order/state_send.png"
+                               mode="aspectFit" />
+                    </view>
+                    <text>已完成</text>
+                </view>
+                <view class="item" bindtap="goEvaluateList">
+                    <view class="icon">
+                        <fa-badge wx:if="{{stateNum.state_unevaluate > 0}}"
+                                  color="#fff"
+                                  background-color="red"
+                                  font-size="12"
+                        >{{stateNum.state_unevaluate}}
+                        </fa-badge>
+                        <image src="/themes/default/user/order/state_unevaluate.png"
+                               mode="aspectFit" />
+                    </view>
+                    <text>待评价</text>
+                </view>
+                <view class="item" bindtap="goRefundList">
+                    <view class="icon">
+                        <fa-badge wx:if="{{stateNum.state_refund > 0}}"
+                                  color="#fff"
+                                  background-color="red"
+                                  font-size="12"
+                        >{{stateNum.state_refund}}
+                        </fa-badge>
+                        <image src="/themes/default/user/order/state_refund.png"
+                               mode="aspectFit" />
+                    </view>
+                    <text>退款售后</text>
+                </view>
+            </view>
+        </fa-panel>
+
+        <fa-panel>
+            <fa-cell-group>
+                <fa-cell title="地址管理" is-link="true" url="/pages/user/address/list/index">
+                    <view slot="icon" class="cell-icon">
+                        <image src="/themes/default/user/address.png"
+                               mode="aspectFit" style="width:22px;height: 22px" />
+                    </view>
+                </fa-cell>
+                <fa-cell title="商品关注" is-link="true" url="/pages/collect/goods/index">
+                    <view slot="icon" class="cell-icon">
+                        <image src="/themes/default/user/collect.png"
+                               mode="aspectFit" style="width:22px;height: 22px" />
+                    </view>
+                </fa-cell>
+            </fa-cell-group>
+        </fa-panel>
+    </block>
+    <block wx:else>
+        <unlogin-ucenter bind:login-success="onLoginSuccess" bind:login-fail="onLoginFail"></unlogin-ucenter>
+    </block>
+    <view class="fashop-copyright">
+        <view class="body">
+            <image src="/themes/fashop/copyright.png" mode="aspectFit" ></image>
+            <text>提供技术支持</text>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "支付成功",
+  "usingComponents": {
+    "fa-panel": "../../../ui/panel/index",
+    "fa-button": "../../../ui/btn/index"
+  }
+}

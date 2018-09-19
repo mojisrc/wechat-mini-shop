@@ -1,0 +1,24 @@
+.getUserInfo{
+    position:relative;
+    margin-left:initial;
+    margin-right:initial;
+    padding-left:initial;
+    padding-right:initial;
+    box-sizing:initial;
+    font-size:initial;
+    text-align:initial;
+    text-decoration:initial;
+    line-height:initial;
+    -webkit-tap-highlight-color:initial;
+    overflow:initial;
+    color:initial;
+    border-radius: 0;
+    border:none;
+    background-color: #fff;
+    display: block;
+}
+.getUserInfo:after{ border:none;}
+.getUserInfo.prev{
+    background-color: initial;
+    color: initial;
+}

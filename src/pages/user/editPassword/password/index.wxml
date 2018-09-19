@@ -1,0 +1,19 @@
+<view class="page-container">
+    <view class="page">
+        <view class="form">
+            <view class="header">
+                <image src="https://ws4.sinaimg.cn/large/006tNc79ly1frmnce8ekrj302d02d749.jpg"
+                       mode="aspectFit" />
+                <text>请设置登陆密码</text>
+            </view>
+            <view class="username input-item">
+                <input placeholder="请输入6~20位字符" auto-focus />
+            </view>
+            <text class="helper">密码由6~20位字母，数字或半角符号组成，不能是10位一下纯数字/字母/半角符号，字母需区分大小写</text>
+            <text class="error">密码由6~20位字母</text>
+            <view class="btn-area">
+                <fa-button type="danger">完成</fa-button>
+            </view>
+        </view>
+    </view>
+</view>

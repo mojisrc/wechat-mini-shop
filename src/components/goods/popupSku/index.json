@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "fa-stepper": "../../../ui/stepper/index",
+    "fa-popup": "../../../ui/popup/index",
+    "login-view": "../../login/view/index",
+    "fa-button": "../../../ui/btn/index"
+  }
+}

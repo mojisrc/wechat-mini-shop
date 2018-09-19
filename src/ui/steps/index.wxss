@@ -1,0 +1,235 @@
+.fa-steps--steps.fa-steps--5 .fa-steps__step {
+    width: 25%
+}
+
+.fa-steps--steps.fa-steps--4 .fa-steps__step {
+    width: 33%
+}
+
+.fa-steps--steps.fa-steps--3 .fa-steps__step {
+    width: 50%
+}
+
+.fa-steps--steps .fa-steps__step {
+    position: relative;
+    float: left;
+    padding-bottom: 25px;
+    color: #b1b1b1
+}
+
+.fa-steps--steps .fa-steps__title {
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    font-size: 12px;
+    text-align: center
+}
+
+.fa-steps--steps .fa-steps__icons {
+    position: absolute;
+    top: 30px;
+    left: -10px;
+    padding: 0 8px;
+    background-color: #fff;
+    z-index: 10
+}
+
+.fa-steps--steps .fa-steps__circle {
+    display: block;
+    position: relative;
+    width: 5px;
+    height: 5px;
+    background-color: #e5e5e5;
+    border-radius: 50%
+}
+
+.fa-steps--steps .fa-steps__line {
+    position: absolute;
+    left: 0;
+    top: 32px;
+    width: 100%;
+    height: 1px;
+    background-color: #e5e5e5
+}
+
+.fa-steps--steps .fa-steps__step--done {
+    color: #333
+}
+
+.fa-steps--steps .fa-steps__step--done .fa-steps__line {
+    background-color: #06bf04
+}
+
+.fa-steps--steps .fa-steps__step--done .fa-steps__circle {
+    width: 5px;
+    height: 5px;
+    background-color: #09bb07
+}
+
+.fa-steps--steps .fa-steps__step--cur .fa-steps__icons {
+    top: 25px;
+    left: -14px
+}
+
+.fa-steps--steps .fa-steps__step--cur .fa-steps__circle {
+    width: 13px;
+    height: 13px;
+    background-image: url(https://b.yzcdn.cn/v2/image/wap/success_small@2x.png);
+    background-size: 13px 13px
+}
+
+.fa-steps--steps .fa-steps__step--cur .fa-steps__line {
+    background-color: #e5e5e5
+}
+
+.fa-steps--steps .fa-steps__step--first-child .fa-steps__title {
+    margin-left: 0;
+    -webkit-transform: none;
+    transform: none;
+    text-align: left
+}
+
+.fa-steps--steps .fa-steps__step--first-child .fa-steps__icons {
+    left: -7px
+}
+
+.fa-steps--steps .fa-steps__step--last-child {
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: right
+}
+
+.fa-steps--steps .fa-steps__step--last-child .fa-steps__title {
+    -webkit-transform: none;
+    transform: none;
+    text-align: right
+}
+
+.fa-steps--steps .fa-steps__step--last-child .fa-steps__icons {
+    left: auto;
+    right: -6px
+}
+
+.fa-steps--steps .fa-steps__step--last-child .fa-steps__line {
+    display: none
+}
+
+.fa-steps--steps .fa-steps__step--db-title {
+    min-height: 29px
+}
+
+.fa-steps--steps .fa-steps__step--db-title .fa-steps__line {
+    top: 45px
+}
+
+.fa-steps--steps .fa-steps__step--db-title .fa-steps__icons {
+    top: 43px
+}
+
+.fa-steps--steps .fa-steps__step--db-title.fa-steps__step--cur .fa-steps__icons {
+    top: 39px
+}
+
+.fa-steps--steps .fa-steps__title--desc {
+    color: #999999;
+    margin-top: 5px;
+    display: block;
+    height: 12px;
+    line-height: 12px;
+}
+
+.fa-steps--vsteps {
+    color: #999;
+    font-size: 14px
+}
+
+.fa-steps--vsteps .fa-steps__step {
+    position: relative;
+    padding: 15px 0
+}
+
+.fa-steps--vsteps .fa-steps__step--done {
+    color: #4b0
+}
+
+.fa-steps--vsteps .fa-steps__line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 7px;
+    width: 1px;
+    background-color: #e5e5e5
+}
+
+.fa-steps--vsteps .fa-steps__title {
+    display: inline-block;
+    line-height: 20px;
+    padding-left: 27px
+}
+
+.fa-steps--vsteps .fa-steps__title--desc {
+    padding-left: 3px;
+}
+
+.fa-steps--vsteps .fa-steps__icons {
+    position: absolute;
+    left: 7px;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    padding: 3px 0;
+    background-color: #fff
+}
+
+.fa-steps--vsteps .fa-steps__circle {
+    width: 5px;
+    height: 5px;
+    background-color: #cacaca;
+    border-radius: 10px
+}
+
+.fa-steps--vsteps .fa-steps__step--done .fa-steps__circle {
+    width: 5px;
+    height: 5px;
+    background-color: #09bb07
+}
+
+.fa-steps--vsteps .fa-steps__step--cur .fa-steps__circle {
+    width: 13px;
+    height: 13px;
+    background: transparent url(https://b.yzcdn.cn/v2/image/wap/success_small@2x.png);
+    background-size: 13px 13px;
+    border-radius: 0
+}
+
+.fa-steps--vsteps .fa-steps__icon--active {
+    width: 13px;
+    height: 13px
+}
+
+.fa-steps--vsteps .fa-steps__step--first-child .fa-steps__title::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 50%;
+    left: 7px;
+    width: 1px;
+    background-color: #fff;
+    z-index: 1
+}
+
+.fa-steps--vsteps .fa-steps__step--last-child .fa-steps__title::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+    left: 7px;
+    width: 1px;
+    background-color: #fff;
+    z-index: 1
+}
+
+.fa-steps {
+    position: relative
+}

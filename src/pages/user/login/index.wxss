@@ -1,0 +1,124 @@
+.login {
+    background-color: #ffffff;
+    padding: 30px 30px 0 30px;
+    height: 100vh;
+}
+
+.login-form {
+    display: block;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.login-form .input-item {
+    border-bottom: 1px solid #F8F8F8;
+    margin-bottom: 15px;
+}
+
+.login-form .input-item input {
+    font-size: 16px;
+    padding: 10px 0;
+}
+
+.login-form .username {
+
+}
+
+.login-form .password {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.login-form .forget-password {
+    border-left: 1px solid #F8F8F8;
+    padding-left: 15px;
+}
+
+.login-form .forget-password label {
+    font-size: 14px;
+    line-height: 28px;
+    color: #666666;
+}
+
+.login-form .btn-area {
+    margin-bottom: 15px;
+}
+
+.register {
+    font-size: 14px;
+    color: #666666;
+    text-align: right;
+}
+
+.other-login-type {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.content {
+    padding: 0 30px 30px 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.other-login-type .title {
+    margin-bottom: 15px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.other-login-type .title text {
+    font-size: 12px;
+    line-height: 12px;
+    color: #999999;
+    background-color: #ffffff;
+    z-index: 1;
+    position: relative;
+    padding: 0 10px;
+    height: 12px;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.other-login-type .title label {
+    background-color: #F8F8F8;
+    height: 1px;
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 13px;
+    left: 0px;
+
+}
+
+.other-login-type .login-type-list {
+
+}
+
+.other-login-type .login-type-list .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100px;
+}
+
+.other-login-type .login-type-list .item image {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 6px;
+}
+
+.other-login-type .login-type-list .item text {
+    font-size: 12px;
+    color: #666666;
+}

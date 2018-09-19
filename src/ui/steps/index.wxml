@@ -1,0 +1,13 @@
+<view class="fa-steps fa-steps--{{ type == 'vertical' ? 'vsteps' : 'steps' }} fa-steps--{{ steps.length }} {{ className }}">
+  <view
+    wx:for="{{ steps }}" wx:for-item="step" wx:key="unique" wx:for-index="index"
+    class="fa-steps__step {{ hasDesc ? 'fa-steps__step--db-title' : '' }} {{ index == 0 ? 'fa-steps__step--first-child' : '' }} {{ index == steps.length - 1 ? 'fa-steps__step--last-child' : '' }} {{ step.done ? 'fa-steps__step--done' : '' }} {{ step.current ? 'fa-steps__step--cur' : '' }}"
+  >
+    <view class="fa-steps__title">{{ step.text }}</view>
+    <view wx:if="{{ hasDesc && step.desc }}" class="fa-steps__title fa-steps__title--desc">{{ step.desc }}</view>
+    <view class="fa-steps__icons">
+      <view class="fa-steps__circle"></view>
+    </view>
+    <view class="fa-steps__line"></view>
+  </view>
+</view>

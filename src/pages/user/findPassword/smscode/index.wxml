@@ -1,0 +1,22 @@
+<view class="page-container">
+    <view class="page">
+        <view class="form">
+            <view class="header">
+                <image src="https://ws4.sinaimg.cn/large/006tNc79ly1frmnce8ekrj302d02d749.jpg"
+                       mode="aspectFit" />
+                <text>请输入(+86)13502176003收到的验证码</text>
+            </view>
+            <view class="username input-item">
+                <input placeholder="请输入验证码" type="number" auto-focus />
+                <label>重新发送(119)</label>
+            </view>
+            <view class="username input-item">
+                <input placeholder="请输入验证码" type="number" auto-focus />
+                <label class="onemore">重新发送</label>
+            </view>
+            <view class="btn-area">
+                <fa-button type="danger">下一步</fa-button>
+            </view>
+        </view>
+    </view>
+</view>

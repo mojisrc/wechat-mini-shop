@@ -1,0 +1,126 @@
+<view class="page-container" wx:if="{{onLoaded === true}}">
+    <fa-tab
+            list="{{ list }}"
+            selected-id="{{ selectedId }}"
+            height="35"
+            fixed="true"
+            bindtabchange="handleTabChange"
+    />
+    <fa-panel class="spacing goods-detail">
+        <swiper class="goods-image-swiper" indicator-dots="true" autoplay="true" interval="5000" duration="500">
+            <block wx:for="{{detail.images}}" wx:key="item">
+                <swiper-item>
+                    <image src="{{item}}" data-url="{{item}}" mode="aspectFill" bindtap="bannerPreview"/>
+                </swiper-item>
+            </block>
+        </swiper>
+        <view class="goods-title">
+            <text class="title">{{detail.title}}</text>
+            <view class="body">
+                <text class="price">¥ {{detail.price}}</text>
+                <button open-type="share" class="share-button"><image class="share" src="/themes/default/goods/share.png" mode="scaleToFill" /></button>
+
+            </view>
+            <view class="goods-spec-etc">
+                <text>库存 {{detail.stock}}</text>
+                <text>销量 {{detail.sale_num}}</text>
+                <text>运费 {{detail.freight_fee}}</text>
+            </view>
+        </view>
+    </fa-panel>
+    <fa-panel class="spacing" wx:if="{{detail.sku_list.length>1 || detail.pay_type === 2}}">
+        <fa-cell-group>
+            <fa-cell title="{{goodsSkuInfo.title}}" is-link="true" bindtap="toggleGoodsSkuSelect"
+                     wx:if="{{detail.sku_list.length>1}}">
+                <view slot="icon" class="cell-icon">
+                    <text>规格</text>
+                </view>
+            </fa-cell>
+            <fa-cell title="{{goodsSkuInfo.weight}} kg" wx:if="{{detail.pay_type === 2}}">
+                <view slot="icon" class="cell-icon">
+                    <text>重量</text>
+                </view>
+            </fa-cell>
+        </fa-cell-group>
+    </fa-panel>
+
+    <fa-panel class="spacing" wx:if="{{evaluateList.total_number>0}}">
+        <view class="goods-evaluate-title">
+            <fa-cell title=" " is-link="true" bind:tap="goGoodsEvaluateList">
+                <view slot="icon" class="cell-icon">
+                    <text>网友评价（{{evaluateList.total_number}}）</text>
+                </view>
+                <!--<view slot="footer" class="cell-icon">-->
+                <!--<span>好评<text>97%</text></span>-->
+                <!--</view>-->
+            </fa-cell>
+        </view>
+        <view class="goods-evaluate-list">
+            <block wx:for="{{evaluateList.list}}" wx:key="key" wx:for-index="index" wx:for-item="item">
+                <goods-evaluate-card info="{{item}}"></goods-evaluate-card>
+            </block>
+            <view class="footer" wx:if="{{evaluateList.total_number>3}}" bindtap="goGoodsEvaluateList">
+                查看全部评价
+            </view>
+        </view>
+    </fa-panel>
+
+    <fa-panel>
+        <fa-cell title=" ">
+            <view slot="icon" class="cell-icon">
+                <text>商品详情</text>
+            </view>
+        </fa-cell>
+        <view class="goods-detail-content">
+            <goods-body body="{{detail.body}}" bind:goods-click="onBodyGoodsClick" bind:image-click="bodyImagePreview"></goods-body>
+        </view>
+    </fa-panel>
+    <footer class="goods-footer">
+        <view class="item">
+            <button class="sub kf-button" open-type="contact" session-from="weapp">
+                <view class="icon">
+                    <image src="/themes/default/goods/contact.png"
+                           mode="aspectFill" />
+                </view>
+                <text>客服</text>
+            </button>
+            <login-view class="sub" bind:success="onLoginSuccess">
+                <view class="icon" bindtap="onCollect">
+                    <image src="/themes/default/goods/collect.png"
+                           mode="aspectFill" />
+                </view>
+                <text bindtap="onCollect">收藏</text>
+            </login-view>
+            <login-view class="sub" bind:success="onLoginSuccess" bindtap="goCart">
+                <view class="icon">
+                    <fa-badge wx:if="{{cartTotalNumber>0}}"
+                              color="#fff"
+                              background-color="red"
+                              font-size="12"
+                    >{{cartTotalNumber > 99 ? '99+' : cartTotalNumber}}
+                    </fa-badge>
+                    <image src="/themes/default/goods/cart.png"
+                           mode="aspectFill" />
+                </view>
+                <text>购物车</text>
+            </login-view>
+        </view>
+        <view class="item">
+            <fa-button type="warn" size="large" bind:btnclick="addCart">加入购物车</fa-button>
+            <fa-button type="danger" size="large" bind:btnclick="buyNow">立即购买</fa-button>
+        </view>
+    </footer>
+</view>
+<goods-sku-popup
+        wx:if="{{detail.id > 0}}"
+        show="{{showBottomPopup}}"
+        goodsInfo="{{detail}}"
+        inCartNumber="{{inCartNumber}}"
+        stepperNumber="{{stepper}}"
+        confirmButtonText="{{buyMode === 'cart' ? '确定' : '下一步'}}"
+        bind:close="toggleGoodsSkuSelect"
+        bind:confirm-click="buyConfirm"
+        bind:stepper-change="onStepperChange"
+        bind:goods-sku-match-success="onGoodsSkuMatchSuccess"
+        bind:goods-sku-match-fail="onGoodsSkuMatchFail"
+/>

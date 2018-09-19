@@ -1,0 +1,10 @@
+<view class="fa-panel">
+  <view
+    wx:if="{{ title }}"
+    class="fa-panel__title">{{ title }}</view>
+  <view
+    class="fa-panel__content {{ hideBorder ? 'fa-panel--without-border' : '' }}"
+  >
+    <slot></slot>
+  </view>
+</view>

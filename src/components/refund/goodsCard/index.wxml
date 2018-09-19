@@ -1,0 +1,18 @@
+<view class="refund-goods-card">
+    <view class="body">
+        <view class="item">
+            <view class="content">
+                <view class="image">
+                    <image src="{{goodsImg}}" mode="aspectFill" />
+                </view>
+                <view class="body">
+                    <text>{{goodsTitle}}</text>
+                    <view class="end">
+                        <text class="spec">{{goodsSpec}}</text>
+                        <label class="number">x {{goodsNum}}</label>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,67 @@
+<view
+        catchtap="cellTap"
+        class="fa-cell {{ isLastCell ? 'last-cell' : '' }} {{ isLink ? 'fa-cell--access' : '' }}">
+
+    <view class="fa-cell__icon">
+        <view class="fa-cell_hd" wx:if="{{ icon }}">
+            <image src="{{icon}}" style="width:20px;height:20px;margin-right:5px;display:block" />
+        </view>
+        <slot name="icon"></slot>
+    </view>
+
+    <view class="fa-cell__bd">
+        <block wx:if="{{type!=='uploader'}}">
+
+            <view wx:if="{{ title }}" class="fa-cell__text">{{ title }}</view>
+            <view wx:if="{{ label }}" class="fa-cell__desc">{{ label }}</view>
+            <slot></slot>
+        </block>
+        <block wx:else>
+            <view class="fa-uploader">
+                <view class="fa-uploader__hd">
+                    <view class="fa-uploader__title">图片上传</view>
+                    <view class="fa-uploader__info">{{files.length}}/2</view>
+                </view>
+                <view class="fa-uploader__bd">
+                    <view class="fa-uploader__files" id="uploaderFiles">
+                        <block wx:for="{{files}}" wx:key="*this">
+                            <view class="fa-uploader__file" bindtap="previewImage" id="{{item}}">
+                                <image class="fa-uploader__img" src="{{item}}" mode="aspectFill" />
+                            </view>
+                        </block>
+                        <view class="fa-uploader__file">
+                            <image class="fa-uploader__img" src="../images/pic_160.png" mode="aspectFill" />
+                        </view>
+                        <view class="fa-uploader__file">
+                            <image class="fa-uploader__img" src="../images/pic_160.png" mode="aspectFill" />
+                        </view>
+                        <view class="fa-uploader__file">
+                            <image class="fa-uploader__img" src="../images/pic_160.png" mode="aspectFill" />
+                        </view>
+                        <view class="fa-uploader__file fa-uploader__file_status">
+                            <image class="fa-uploader__img" src="../images/pic_160.png" mode="aspectFill" />
+                            <view class="fa-uploader__file-content">
+                                <icon type="warn" size="23" color="#F43530"></icon>
+                            </view>
+                        </view>
+                        <view class="fa-uploader__file fa-uploader__file_status">
+                            <image class="fa-uploader__img" src="../images/pic_160.png" mode="aspectFill" />
+                            <view class="fa-uploader__file-content">50%</view>
+                        </view>
+                    </view>
+                    <view class="fa-uploader__input-box">
+                        <view class="fa-uploader__input" bindtap="chooseImage"></view>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </view>
+
+    <view bindtap="footerTap" class="fa-cell__ft">
+        <block wx:if="{{value}}">{{ value }}</block>
+        <block wx:else>
+            <slot name="footer"></slot>
+        </block>
+    </view>
+</view>
+

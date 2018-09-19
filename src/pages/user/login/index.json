@@ -1,0 +1,17 @@
+{
+  "navigationBarTitleText": "FaShop商城系统",
+  "usingComponents": {
+    "fa-tab": "../../../ui/tab/index",
+    "fa-tag": "../../../ui/tag/index",
+    "fa-cell-group": "../../../ui/cell-group/index",
+    "fa-cell": "../../../ui/cell/index",
+    "fa-row": "../../../ui/row/index",
+    "fa-col": "../../../ui/col/index",
+    "fa-panel": "../../../ui/panel/index",
+    "fa-badge": "../../../ui/badge/index",
+    "star-rate": "../../../components/rate/index",
+    "fa-button": "../../../ui/btn/index",
+    "fa-popup": "../../../ui/popup/index",
+    "fa-stepper": "../../../ui/stepper/index"
+  }
+}

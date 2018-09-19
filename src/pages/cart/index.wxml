@@ -1,0 +1,135 @@
+<view class="cart" wx:if="{{onLoaded}}">
+    <block wx:if="{{userInfo!==null}}">
+        <block wx:if="{{cartList.length>0}}">
+            <block wx:if="{{isSaveMode === false}}">
+                <fa-panel class="save-action-panel">
+                    <view class="header">
+                        <text class="edit-save" bindtap="bindToggleSave">编辑商品</text>
+                    </view>
+                </fa-panel>
+                <fa-panel>
+                    <section>
+                        <block wx:for="{{cartList}}" wx:key="key" wx:for-index="index" wx:for-item="item">
+                            <details>
+                                <aside class="left">
+                                    <icon type="success" size="16" data-index="{{index}}"
+                                          data-goods-sku-id="{{item.goods_sku_id}}" data-id="{{item.id}}"
+                                          color="{{item.checked ? 'red' : '#ccc'}}" bindtap="onChecked"></icon>
+                                </aside>
+                                <aside class="right">
+                                    <cart-card
+                                            index="{{index}}"
+                                            image="{{item.goods_sku_img}}"
+                                            title="{{item.goods_title}}"
+                                            price="{{item.goods_price}}"
+                                            spec="{{goods_pay_type === 2 ? (item.goods_weight > 0 ? '重量:' + item.goods_weight + 'kg' : '不计重量') : ''}}{{item.goods_spec[0].id !== 0 ? item.goods_spec_string : ''}}"
+                                            canSkuSelect="{{item.goods_spec[0].id !== 0 ? true : false}}"
+                                            num="{{item.goods_num}}"
+                                            goodsSkuId="{{item.goods_sku_id}}"
+                                            goodsId="{{item.goods_id}}"
+                                            bind:click="goGoodsDetail"
+                                            bind:specClick="onCartGoodsSpecClick"
+                                            bind:numberChange="inCartNumberChange"
+                                    ></cart-card>
+                                </aside>
+                            </details>
+                        </block>
+                    </section>
+                </fa-panel>
+                <footer class="un-save-mode">
+                    <view class="footer">
+                        <view class="left">
+                            <view class="all-action" bindtap="onAllChecked">
+                                <icon type="success" size="16"
+                                      color="{{checkedGoodsSkuInfoIds.length === cartList.length ? 'red' : '#ccc'}}"></icon>
+                                <span>全选</span>
+                            </view>
+                            <details>合计：<span>¥{{total}}</span></details>
+                        </view>
+                        <view class="right">
+                            <fa-button type="danger" size="large" bind:btnclick="goOrderFill">去结算<i>({{totalNum}}件)</i>
+                            </fa-button>
+                        </view>
+                    </view>
+                </footer>
+            </block>
+            <block wx:else>
+                <fa-panel class="save-action-panel">
+                    <view class="header">
+                        <text class="edit-save" bindtap="bindToggleSave">完成</text>
+                    </view>
+                </fa-panel>
+                <fa-panel>
+                    <section>
+                        <block wx:for="{{cartList}}" wx:key="key" wx:for-index="page-data" wx:for-item="item">
+                            <details>
+                                <aside class="left">
+                                    <icon type="success" size="16" data-index="{{index}}"
+                                          data-goods-sku-id="{{item.goods_sku_id}}"
+                                          color="{{item.remove_checked ? 'red' : '#ccc'}}"
+                                          bindtap="onRemoveChecked"></icon>
+                                </aside>
+                                <aside class="right">
+                                    <cart-card-edit
+                                            image="{{item.goods_sku_img}}"
+                                            title="{{item.goods_title}}"
+                                            price="{{item.goods_price}}"
+                                            spec="{{item.goods_pay_type === 2 ? (item.goods_weight > 0 ? '重量:' + item.goods_weight + 'kg' : '不计重量') : ''}}{{item.goods_spec.length > 1 ? item.goods_spec_string : ''}}"
+                                            num="{{item.goods_num}}"
+                                            goodsSkuId="{{item.goods_sku_id}}"
+                                            goodsId="{{item.goods_id}}"
+                                            bind:click="goGoodsDetail"
+                                            cart_id="{{item.id}}"
+                                    ></cart-card-edit>
+                                </aside>
+                            </details>
+                        </block>
+                    </section>
+                </fa-panel>
+                <footer class="is-save-mode">
+                    <view class="footer">
+                        <view class="left">
+                            <view class="all-action" bindtap="onAllRemoveChecked">
+                                <icon type="success" size="16"
+                                      color="{{removeCheckSkuIds.length === cartList.length ? 'red' : '#ccc'}}"></icon>
+                                <span>全选</span>
+                            </view>
+                        </view>
+                        <view class="right">
+                            <!--<fa-button class="collect" type="warn" size="small" bind:btnclick="onCollect">移入收藏-->
+                            <!--</fa-button>-->
+                            <fa-button type="danger" size="small" bind:btnclick="onRemove">删除</fa-button>
+                        </view>
+                    </view>
+                </footer>
+            </block>
+        </block>
+        <block wx:if="{{cartListLoadedState === true && cartList.length===0}}">
+            <view class="cart-empty">
+                <image src="/themes/default/cart/empty.png" mode="aspectFill"></image>
+                <text>购物车居然是空的，再逛逛吧</text>
+            </view>
+        </block>
+    </block>
+    <block wx:if="{{userInfo===null}}">
+        <view class="unlogin">
+            <image src="../../themes/default/cart/unlogin.png" mode="aspectFill"></image>
+            <text>您还未登录，无法查看购物车</text>
+            <fa-button type="danger" size="small" bind:btnclick="login">去登陆</fa-button>
+        </view>
+    </block>
+</view>
+
+<goods-sku-popup
+        wx:if="{{goodsInfo}}"
+        show="{{cartSkuShow}}"
+        goodsInfo="{{goodsInfo}}"
+        inCartNumber="{{inCartNumber}}"
+        stepperNumber="{{stepper}}"
+        bind:close="toggleGoodsSkuSelect"
+        bind:click-overlay="toggleGoodsSkuSelect"
+        bind:confirm-click="changeSkuConfirm"
+        bind:stepper-change="onStepperChange"
+        bind:goods-sku-match-success="onGoodsSkuMatchSuccess"
+        bind:goods-sku-match-fail="onGoodsSkuMatchFail"
+/>

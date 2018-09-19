@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "fa-icon": "../icon/index",
+    "fa-cell": "../cell/index"
+  }
+}

@@ -1,0 +1,34 @@
+<view class="cart">
+    编辑/保存
+    <section>
+        <block wx:for="{{cartList}}" wx:key="key" wx:for-index="page-data" wx:for-item="item">
+            <details>
+                <aside class="left">
+                    <checkbox value="1" checked="true" />
+                </aside>
+                <aside class="right">
+                    <image src="{{item.img.url}}" />
+                    <view class="title-price">
+                        <text>{{item.title}}</text>
+                        <label>不计重量 颜色:10.0时</label>
+                        <i>¥ {{item.price}}</i>
+                    </view>
+                    <fa-stepper
+                            stepper="{{ stepper.stepper }}"
+                            min="{{ stepper.min }}"
+                            max="{{ stepper.max }}"
+                            component-id="stepper"
+                            bind:change="handleZanStepperChange">
+                    </fa-stepper>
+                </aside>
+            </details>
+        </block>
+    </section>
+    <footer>
+        <view class="left">
+            <span><checkbox value="1" checked="true" />全选</span>
+            <details>合计:¥<span>500.00</span></details>
+        </view>
+        <view class="right"><fa-button type="danger" size="large">去结算<i>(2,000,000)</i></fa-button></view>
+    </footer>
+</view>

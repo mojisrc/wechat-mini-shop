@@ -1,0 +1,104 @@
+<view class="order-fill">
+    <fa-panel>
+        <block wx:if="{{addressId > 0}}">
+            <view class="address">
+                <view class="selected">
+                    <fa-cell is-link bind:tap="goAddressList">
+                        <view class="user">
+                            <view class="name-phone">
+                                <text class="name">{{address.truename}}</text>
+                                <text class="phone">{{address.phone}}</text>
+                            </view>
+                            <view class="address">{{address.combine_detail}}</view>
+                        </view>
+                    </fa-cell>
+                </view>
+                <image src="/themes/default/cart/address-footer-line.png"
+                       class="address-footer-line"></image>
+            </view>
+
+        </block>
+        <block wx:else>
+            <view class="address" bindtap="goAddressAdd">
+                <view class="un-select">
+                    <image src="/themes/default/cart/address.png"></image>
+                    <text>添加地址</text>
+                </view>
+                <image class="address-footer-line" src="/themes/default/cart/address-footer-line.png"></image>
+            </view>
+        </block>
+    </fa-panel>
+
+    <fa-panel>
+        <fa-cell-group>
+            <!--京东废弃了这种-->
+            <!--<fa-cell is-link>-->
+            <!--<view class="goods-list">-->
+            <!--<image src="https://ws3.sinaimg.cn/large/006tNc79ly1frlfuicj18j303c03cq2v.jpg"-->
+            <!--class="address-bottom-decoration"></image>-->
+            <!--<image src="https://ws3.sinaimg.cn/large/006tNc79ly1frlfuicj18j303c03cq2v.jpg"-->
+            <!--class="address-bottom-decoration"></image>-->
+            <!--<image src="https://ws3.sinaimg.cn/large/006tNc79ly1frlfuicj18j303c03cq2v.jpg"-->
+            <!--class="address-bottom-decoration"></image>-->
+            <!--<image src="https://ws3.sinaimg.cn/large/006tNc79ly1frlfuicj18j303c03cq2v.jpg"-->
+            <!--class="address-bottom-decoration"></image>-->
+            <!--</view>-->
+            <!--<text slot="footer">共8件</text>-->
+            <!--</fa-cell>-->
+            <block wx:for="{{cartList}}" wx:key="key" wx:for-index="page-data" wx:for-item="item">
+                <fa-cell>
+                    <view class="one-item">
+                        <view class="image">
+                            <image src="{{item.goods_sku_img}}" mode="aspectFill" />
+                        </view>
+                        <view class="body">
+                            <text class="title">{{item.goods_title}}</text>
+                            <view class="spec">
+                                <text>{{item.goods_pay_type === 2 ? (item.goods_weight > 0 ? '重量:' + item.goods_weight +
+                                    'kg' : '不计重量') : ''}}{{item.goods_spec.length > 1 ? item.goods_spec_string : ''}}
+                                </text>
+                                <text>x{{item.goods_num}}</text>
+                            </view>
+                            <text class="price">¥{{item.goods_price}}</text>
+                        </view>
+                    </view>
+                </fa-cell>
+            </block>
+            <fa-cell>
+                <view class="message">
+                    <input placeholder="选填 有什么想对商家说的（45字以内）" placeholder-class="placeholder-class"
+                           value="{{message}}" bindinput="onMessageChange" />
+                </view>
+            </fa-cell>
+        </fa-cell-group>
+
+    </fa-panel>
+    <fa-panel>
+        <fa-cell-group>
+            <fa-cell title="运费" wx:if="{{calculate}}">
+                <view slot="footer">
+                    <text class="freight-price">+ ¥{{calculate.pay_freight_fee}}
+                    </text>
+                    <!--<span class="freight-desc" wx:if="{{calculate.freight_template_fee}}">重量计费：0.5kg</span>-->
+                </view>
+            </fa-cell>
+            <fa-cell title="小计">
+                <view slot="footer">
+                    <span class="total-price">¥{{calculate?(calculate.goods_amount + calculate.pay_freight_fee):total}}</span>
+                </view>
+            </fa-cell>
+        </fa-cell-group>
+    </fa-panel>
+    <fixed-bottom>
+        <view class="footer">
+            <view class="left">
+                <label>实付：</label>
+                <text>¥{{calculate?calculate.pay_amount:total}}</text>
+            </view>
+            <view class="right">
+                <fa-button size="large" type="danger" bind:btnclick="onCreateOrder" disabled="{{!calculate}}">提交订单
+                </fa-button>
+            </view>
+        </view>
+    </fixed-bottom>
+</view>

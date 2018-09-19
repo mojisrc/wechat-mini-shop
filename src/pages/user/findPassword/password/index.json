@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "手机验证码找回密码",
+  "usingComponents": {
+    "fa-button": "../../../../ui/btn/index"
+  }
+}

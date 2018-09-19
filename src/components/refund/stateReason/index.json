@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "order-button": "../../order/button/index",
+    "refund-steps": "../stateSteps/index"
+  }
+}

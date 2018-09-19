@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "添加收货地址",
+  "usingComponents": {
+    "fa-panel": "../../../../ui/panel/index",
+    "fa-button": "../../../../ui/btn/index",
+    "fa-switch": "../../../../ui/switch/index",
+    "fa-field": "../../../../ui/field/index",
+    "fixed-bottom": "../../../../components/common/fixedBottom/index"
+  }
+}

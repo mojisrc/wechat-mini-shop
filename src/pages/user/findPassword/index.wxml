@@ -1,0 +1,13 @@
+<view class="page-container">
+    <view class="page">
+        <view class="form">
+            <view class="username input-item">
+                <label>+86</label>
+                <input placeholder="手机号" type="number" auto-focus />
+            </view>
+            <view class="btn-area">
+                <fa-button type="danger">下一步</fa-button>
+            </view>
+        </view>
+    </view>
+</view>

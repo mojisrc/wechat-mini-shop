@@ -1,0 +1,42 @@
+<view style="background-color:#F8F8F8;display: block;overflow: hidden">
+    <fa-tab
+            list="{{ orderStateTabs }}"
+            selected-id="{{state_type}}"
+            height="40"
+            fixed="true"
+            bindtabchange="onTabChange"
+    />
+    <view>
+        <block wx:for="{{list}}" wx:key="key" wx:for-index="index" wx:for-item="item">
+            <fa-panel>
+                <order-card>
+                    <order-card-header orderId="{{item.id}}" state="{{item.state}}"
+                                       sn="{{item.sn}}"></order-card-header>
+                    <order-card-goods orderId="{{item.id}}" goodsList="{{item.extend_order_goods}}"
+                                      bind:click="goDetail"></order-card-goods>
+                    <order-card-footer
+                            orderInfo="{{item}}"
+                            orderId="{{item.id}}"
+                            goodsNumber="{{item.goods_num}}"
+                            totalCost="{{item.amount}}"
+                            showEvaluateBtn="{{item.if_evaluate}}"
+                            showPayBtn="{{item.if_pay}}"
+                            showReceiveBtn="{{item.if_receive}}"
+                            showLogisticsBtn="{{item.showLogisticsBtn}}"
+                            bind:pay="onPay"
+                            bind:receive="onReceive"
+                            bind:cancel="onCancel"
+                            bind:evaluate="onEvaluate"
+                    ></order-card-footer>
+                </order-card>
+            </fa-panel>
+        </block>
+    </view>
+    <block wx:if="{{list.length===0}}">
+        <view class="list-empty">
+            <image src="/themes/default/order/list-empty.png" mode="aspectFill"></image>
+            <text>暂无相关数据</text>
+        </view>
+    </block>
+</view>
+<fa-dialog id="fa-dialog-receive"></fa-dialog>

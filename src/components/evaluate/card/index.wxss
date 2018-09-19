@@ -1,0 +1,47 @@
+.evaluate-goods-card {
+    position: relative;
+    border-bottom: 1px solid #F8F8F8;
+    background-color: #FFFFFF;
+}
+
+.evaluate-goods-card .item {
+    padding: 15px;
+}
+
+.evaluate-goods-card .content {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.evaluate-goods-card .item image {
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin-right: 10px;
+}
+
+.evaluate-goods-card .item .body {
+
+}
+
+.evaluate-goods-card .item .body text {
+    font-size: 14px;
+    color: #333;
+    line-height: 18px;
+    display: block;
+    overflow: hidden;
+}
+.evaluate-goods-card .item .end{
+    text-align: right;
+    margin-left: 20px;
+}
+
+.evaluate-goods-card .item .footer{
+    display: flex;
+    justify-content: flex-end;
+}
+.evaluate-goods-card .button-area{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}

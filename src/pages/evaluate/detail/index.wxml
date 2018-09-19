@@ -1,0 +1,53 @@
+<view class="evaluate-detail" wx:if="{{evaluate}}">
+
+    <view class="goods-evaluate-item">
+        <view class="header">
+            <view class="avatar">
+                <image src="{{evaluate.avatar}}" mode="aspectFill" />
+                <view class="nickname">
+                    <text>{{evaluate.nickname}}</text>
+                    <label>
+                        <time-format value="{{evaluate.create_time}}" />
+                    </label>
+                </view>
+            </view>
+            <view class="star">
+                <common-rater size="12" num="5" value="{{evaluate.score}}"></common-rater>
+            </view>
+        </view>
+
+        <view class="content" wx:if="{{evaluate.content}}">{{evaluate.content}}</view>
+        <block wx:if="{{evaluate.images}}">
+            <view class="photo-list">
+                <block wx:for="{{evaluate.images}}" wx:key="key" wx:for-index="index" wx:for-item="item">
+                    <image src="{{item}}" mode="aspectFill" data-url="{{item}}" bindtap="previewImage" data-images="{{evaluate.images}}"/>
+                </block>
+            </view>
+        </block>
+        <view class="reply-content" wx:if="{{evaluate.reply_content}}">
+            <label>客服：</label><text>{{evaluate.reply_content}}</text>
+            <time-format value="{{evaluate.reply_time}}" />
+        </view>
+
+        <view class="content" wx:if="{{evaluate.additional_content || evaluate.additional_images}}"><label>{{evaluate.additional_interval_day === 0 ? '当天' : evaluate.additional_interval_day + '天后'}}追评</label><text wx:if="{{evaluate.additional_content}}">{{evaluate.additional_content}}</text></view>
+        <block wx:if="{{evaluate.additional_images}}">
+            <view class="photo-list">
+                <block wx:for="{{evaluate.additional_images}}" wx:key="key" wx:for-index="index" wx:for-item="item">
+                    <image src="{{item}}" mode="aspectFill" data-url="{{item}}" bindtap="previewImage" data-images="{{evaluate.additional_images}}" />
+                </block>
+            </view>
+        </block>
+        <view class="reply-content" wx:if="{{evaluate.reply_content2}}">
+            <label>客服：</label><text>{{evaluate.reply_content2}}</text><time-format value="{{evaluate.reply_time2}}" />
+        </view>
+
+        <view class="spec">
+            {{goodsInfo.goods_spec_string}}
+        </view>
+        <view class="goods-evaluate">
+            <image src="{{goodsInfo.goods_img}}" mode="aspectFill" />
+            <text>{{goodsInfo.goods_title}}</text>
+        </view>
+    </view>
+
+</view>

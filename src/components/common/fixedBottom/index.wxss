@@ -1,0 +1,7 @@
+.fixedBottom {
+    position: fixed;
+    z-index: 2;
+    width: 100vw;
+    bottom: 0;
+    left: 0;
+}

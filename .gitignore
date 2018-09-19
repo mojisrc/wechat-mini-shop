@@ -1,0 +1,16 @@
+node_modules/
+sftp-config.json
+diff
+log
+npm-debug.log
+lib/
+demo/
+.vscode
+coverage
+lerna-debug.log
+/packages/*/lib
+.DS_Store
+.idea
+/yarn.lock
+dist/
+project.config.json

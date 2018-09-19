@@ -1,0 +1,43 @@
+<view style="background-color:#F8F8F8;display: block;overflow: hidden;margin-bottom:100px">
+    <view>
+        <block wx:for="{{list}}" wx:key="key" wx:for-index="index" wx:for-item="item">
+            <fa-panel>
+                <view class="address-card">
+                    <view class="info">
+                        <view class="user" data-id="{{item.id}}" bindtap="onChecked">
+                            <view class="name-phone">
+                                <text class="name">{{item.truename}}</text>
+                                <text class="phone">{{item.phone}}</text>
+                            </view>
+                            <view class="address">{{item.address}}</view>
+                        </view>
+                    </view>
+                    <view class="action">
+                        <view class="checked" wx:if="{{item.is_default===1}}" data-id="{{item.id}}">
+                            <icon class="weui-icon-radio" type="success" size="16" color="red"></icon>
+                            <text>默认地址</text>
+                        </view>
+                        <view class="checked" wx:if="{{item.is_default===0}}" data-id="{{item.id}}" bindtap="onChecked">
+                            <icon class="weui-icon-radio" type="success" size="16" color="#ccc"></icon>
+                            <text>设为默认</text>
+                        </view>
+                        <view class="button-area">
+                            <view class="item" data-id="{{item.id}}" bindtap="onEdit">
+                                <image src="/themes/default/user/address/edit.png" mode="aspectFill" />
+                                <text class="edit">编辑</text>
+                            </view>
+                            <view class="item" data-id="{{item.id}}" bindtap="onDelete">
+                                <image src="/themes/default/user/address/del.png" mode="aspectFill" />
+                                <text class="edit">删除</text>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </fa-panel>
+        </block>
+    </view>
+    <fixed-bottom>
+        <fa-button size="large" type="danger" bindtap="onAdd">+ 新建地址</fa-button>
+    </fixed-bottom>
+</view>
+<fa-dialog id="fa-dialog-confirm"></fa-dialog>

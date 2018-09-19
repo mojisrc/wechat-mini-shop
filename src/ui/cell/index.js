@@ -1,0 +1,103 @@
+const warn = (msg, getValue) => {
+    console.warn(msg);
+
+};
+
+Component({
+    options: {
+        multipleSlots: true
+    },
+    relations: {
+        '../cell-group/index': {
+            type: 'parent'
+        }
+    },
+    properties: {
+        type: {
+            type: String,
+            value: null
+        },
+        title: {
+            type: String,
+            description: '左侧标题'
+        },
+        label: {
+            type: String,
+            description: '标题下方的描述信息'
+        },
+        value: {
+            type: String,
+            description: '右侧内容'
+        },
+        onlyTapFooter: {
+            type: Boolean,
+            description: '只有点击 footer 区域才触发 tab 事件'
+        },
+        isLink: {
+            type: null,
+            value: '',
+            description: '是否展示右侧箭头并开启尝试以 url 跳转'
+        },
+        linkType: {
+            type: String,
+            value: 'navigateTo',
+            description: '链接类型，可选值为 navigateTo，redirectTo，switchTab，reLaunch'
+        },
+        icon: {
+            type: String,
+            value: ''
+        },
+        url: {
+            type: String,
+            value: ''
+        }
+    },
+    data: {
+        isLastCell: true
+    },
+    methods: {
+        footerTap() {
+            // 如果并没有设置只点击 footer 生效，那就不需要额外处理。cell 上有事件会自动处理
+            if (!this.data.onlyTapFooter) {
+                return;
+            }
+
+            this.triggerEvent('tap', {});
+            doNavigate.call(this);
+        },
+
+        cellTap() {
+            // 如果只点击 footer 生效，那就不需要在 cell 根节点上处理
+            if (this.data.onlyTapFooter) {
+                return;
+            }
+
+            this.triggerEvent('tap', {});
+            doNavigate.call(this);
+        },
+
+        // 用于被 cell-group 更新，标志是否是最后一个 cell
+        updateIsLastCell(isLastCell) {
+            this.setData({ isLastCell });
+        }
+    }
+});
+
+// 处理跳转
+function doNavigate() {
+    const { url = '' } = this.data;
+    const type = typeof this.data.isLink;
+
+    if (!this.data.isLink || !url || url === 'true' || url === 'false') return;
+
+    if (type !== 'boolean' && type !== 'string') {
+        warn('isLink 属性值必须是一个字符串或布尔值', this.data.isLink);
+        return;
+    }
+
+    if (['navigateTo', 'redirectTo', 'switchTab', 'reLaunch'].indexOf(this.data.linkType) === -1) {
+        warn('linkType 属性可选值为 navigateTo，redirectTo，switchTab，reLaunch', this.data.linkType);
+        return;
+    }
+    wx[this.data.linkType].call(wx, { url });
+}

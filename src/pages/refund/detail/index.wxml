@@ -1,0 +1,14 @@
+<view style="background-color:#F8F8F8;display: block;overflow: hidden" wx:if="{{refundInfo}}">
+    <fa-panel>
+        <refund-state-card refundInfo="{{refundInfo}}"></refund-state-card>
+        <refund-state-reason refundInfo="{{refundInfo}}" bind:undo="onUndo" bind:track="onTrack"></refund-state-reason>
+    </fa-panel>
+    <fa-panel>
+        <refund-goods-info refundInfo="{{refundInfo}}" bind:goods="onGoods"></refund-goods-info>
+    </fa-panel>
+    <fa-panel>
+        <refund-base-info refundInfo="{{refundInfo}}"></refund-base-info>
+        <order-contact></order-contact>
+    </fa-panel>
+</view>
+<fa-dialog id="fa-dialog-receive"></fa-dialog>

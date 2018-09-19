@@ -1,0 +1,30 @@
+<view class="cart-card">
+    <image src="{{image}}" mode="aspectFill" bindtap="onClick" />
+    <view class="title-price">
+        <text class="title" data-goods-sku-id="" bindtap="onClick">{{title}}</text>
+            <view class="spec" bindtap="onClick">
+                <text>{{spec}}</text>
+            </view>
+        <view class="footer">
+            <i class="price" bindtap="onClick">¥ {{price}}</i>
+        </view>
+    </view>
+
+
+</view>
+
+<fa-cell>
+    <view class="one-item">
+        <view class="image">
+            <image src="https://ws3.sinaimg.cn/large/006tNc79ly1frlfuicj18j303c03cq2v.jpg" mode="scaleToFill" />
+        </view>
+        <view class="body">
+            <text class="title">新款风衣文艺范韩版修身款翻领纯棉七分袖百搭短款</text>
+            <view class="spec">
+                <text>0.5kg 长款 红色</text>
+                <text>x2</text>
+            </view>
+            <text class="price">¥112.00</text>
+        </view>
+    </view>
+</fa-cell>

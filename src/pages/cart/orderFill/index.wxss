@@ -1,0 +1,183 @@
+.order-fill{display: block;padding-bottom: 160px}
+.order-fill fa-panel{background-color: #ffffff;margin-bottom: 15px;display: block}
+.order-fill fa-cell{background-color: #ffffff}
+.order-fill .address{
+    background-color: #ffffff;
+    display: block;
+    overflow: hidden;
+}
+.order-fill .address .un-select{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 15px;
+}
+.order-fill .address .un-select image{
+    width: 32px;
+    height: 32px;
+    margin-bottom: 10px;
+}
+.order-fill .address .un-select text{
+    font-size: 14px;
+    line-height: 14px;
+    display: block;
+    color: #ff4400;
+    margin-bottom: 15px;
+}
+.order-fill .address .selected{
+}
+.order-fill .address .selected .name-phone {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.order-fill .address .selected .user .name {
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 10px;
+    line-height: 16px;
+    display: block;
+}
+
+.order-fill .address .selected .user .phone {
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 15px;
+    line-height: 14px;
+    display: block;
+}
+
+.order-fill .address .selected .address {
+    font-size: 14px;
+    line-height: 14px;
+    display: block;
+    color: #999999;
+}
+.address-bottom-decoration{
+    width: 100vw;
+    height: 5px;
+    display: block;
+    overflow: hidden;
+}
+.order-fill .goods-list{
+    display: flow;
+    overflow: hidden;
+    justify-content: flex-start;
+}
+.order-fill .goods-list image{
+    margin-right: 5px;
+    width: 48px;
+    height: 48px;
+    float: left;
+}
+.order-fill .message{
+}
+.order-fill .message input{
+    font-size: 14px;
+    padding: 5px 15px;
+    background-color: #F8F8F8;
+    border-radius: 3px;
+
+}
+.placeholder-class{color: #cccccc}
+.order-fill .footer{
+    display: flex;
+    justify-content: flex-end;
+    background-color: #FFFFFF;
+
+}
+.order-fill .footer .left{
+    display: flex;
+    align-items: center;
+}
+.order-fill .footer  .left label{
+    font-size: 16px;
+    line-height: 16px;
+    color: #999999;
+    display: block;
+}
+.order-fill .footer  .left text{
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: bold;
+    color: #FF635C;
+    display: block;
+    margin-right: 15px;
+
+}
+.order-fill .freight-price{
+    color: #FF635C;
+    font-size: 12px;
+    line-height: 12px;
+    display: block;
+}
+.order-fill .freight-desc{
+    color: #CCCCCC;
+    font-size: 12px;
+    line-height: 12px;
+    display: block;
+    margin-top: 10px;
+}
+.order-fill .total-price{
+    font-size: 18px;
+    font-weight: bold;
+    color: #FF635C;
+}
+
+
+
+.order-fill .one-item {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.order-fill .one-item image {
+    width: 75px;
+    height: 75px;
+    display: block;
+    margin-right: 10px;
+}
+
+.order-fill .one-item .body {
+    flex: 1;
+}
+
+.order-fill .one-item .body .title {
+    font-size: 14px;
+    color: #333;
+    line-height: 20px;
+    font-weight: bold;
+    display: block;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.order-fill .one-item .body .price {
+    font-size: 12px;
+    color: #333;
+    line-height: 12px;
+    display: block;
+    overflow: hidden;
+    font-weight: bold;
+}
+
+.order-fill .one-item .body .spec {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    flex:1
+}
+
+.order-fill .one-item .body .spec text {
+    font-size: 12px;
+    color: #999;
+    line-height: 12px;
+    display: block;
+    overflow: hidden;
+}
+.address-footer-line{
+    width: 100vw;
+    height: 3px;
+    display: block;
+}

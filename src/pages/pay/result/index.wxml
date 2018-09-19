@@ -1,0 +1,12 @@
+<view class="pay-result">
+    <view class="result">
+        <image class="icon" src="/themes/default/pay/pay-success.png"></image>
+        <text class="desc">支付成功</text>
+        <text class="price">¥{{payAmount}}</text>
+        <label class="way">微信支付</label>
+    </view>
+    <view class="button-area">
+        <fa-button class="portal" type="danger" bind:btnclick="goPortal">返回首页</fa-button>
+        <fa-button class="order-detail" plain="true" type="danger" bind:btnclick="goDetail">查看订单</fa-button>
+    </view>
+</view>

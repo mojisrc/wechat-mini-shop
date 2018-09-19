@@ -1,0 +1,33 @@
+<view class="fa-card card-class">
+  <!-- 左侧图片 -->
+  
+  <view class="fa-card__thumb">
+    <image class="fa-card__img"
+      src="{{ thumb }}"
+      mode="aspectFit"
+    ></image>
+  </view>
+  <!-- 右侧详情 -->
+  <view class="fa-card__detail">
+    <slot wx:if="{{ useDetailSlot }}" name="detail-slot"></slot>
+    <block wx:else>
+      <view class="fa-card__detail-row">
+        <view class="fa-card__right-col">¥ {{ price }}</view>
+        <view class="fa-card__left-col fa-ellipsis--l2">
+          {{ title }}
+        </view>
+      </view>
+
+      <view class="fa-card__detail-row fa-c-gray-darker">
+        <view wx:if="{{ num }}" class="fa-card__right-col">x {{ num }}</view>
+        <view wx:if="{{ desc }}" class="fa-card__left-col">
+          {{ desc }}
+        </view>
+      </view>
+
+      <view wx:if="{{ status }}" class="fa-card__detail-row">
+        <view class="fa-card__left-col fa-c-red">{{ status }}</view>
+      </view>
+    </block>
+  </view>
+</view>

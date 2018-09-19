@@ -1,0 +1,33 @@
+.page-pic-window {
+    height: 66.666667vw
+}
+.page-pic-window .page-pic-window-mix image{
+    float: left;
+}
+.page-pic-window .page-pic-window-mix image:nth-child(1) {
+    width: 50vw;
+    height: 66.666667vw
+}
+
+.page-pic-window .page-pic-window-mix image:nth-child(2) {
+    width: 50vw;
+    height: 33.333334vw
+}
+
+.page-pic-window .page-pic-window-mix image:nth-child(3) {
+    width: 50vw;
+    height: 33.333334vw
+}
+
+.page-pic-window .page-pic-window-rows {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: 33.333vw;
+}
+
+.page-pic-window .page-pic-window-rows image {
+    width: 33.333vw;
+    height: 33.333vw;
+    float: left
+}

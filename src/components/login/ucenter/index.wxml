@@ -1,0 +1,89 @@
+<fa-panel class="order-action-area">
+    <view class="user-header">
+        <login-view bind:success="onSuccess" bind:fail="onFail">
+            <view class="fa-cell fa-cell--access">
+                <view class="fa-cell__bd">
+                    <view class="avatar">
+                        <image src="/themes/default/user/default-avatar.png"
+                               mode="aspectFit" />
+                        <view class="nickname">
+                            <text>点击登录</text>
+                        </view>
+                    </view>
+                </view>
+                <view class="fa-cell__ft"></view>
+            </view>
+        </login-view>
+    </view>
+</fa-panel>
+<fa-panel class="order-action-area">
+    <view class="header fa-cell fa-cell--access">
+        <view class="fa-cell__bd">
+            <view class="left">
+                <text>我的订单</text>
+            </view>
+            <login-view class="right" data-state="0" bind:success="onSuccess" bind:fail="onFail">
+                <text>全部订单</text>
+            </login-view>
+        </view>
+        <view class="fa-cell__ft"></view>
+    </view>
+    <login-view bind:success="onSuccess" bind:fail="onFail">
+        <view class="list">
+            <view class="item" data-state="1">
+                <view class="icon">
+                    <image src="/themes/default/user/order/state_new.png"
+                           mode="aspectFit" />
+                </view>
+                <text>待付款</text>
+            </view>
+            <view class="item" data-state="1">
+                <view class="icon">
+                    <image src="/themes/default/user/order/state_pay.png"
+                           mode="aspectFit" />
+                </view>
+                <text>待收货</text>
+            </view>
+            <iew class="item" data-state="1">
+                <view class="icon">
+                    <image src="/themes/default/user/order/state_send.png"
+                           mode="aspectFit" />
+                </view>
+                <text>已完成</text>
+            </iew>
+            <view class="item" data-state="1">
+                <view class="icon">
+                    <image src="/themes/default/user/order/state_unevaluate.png"
+                           mode="aspectFit" />
+                </view>
+                <text>待评价</text>
+            </view>
+            <view class="item" data-state="1">
+                <view class="icon">
+                    <image src="/themes/default/user/order/state_refund.png"
+                           mode="aspectFit" />
+                </view>
+                <text>退款售后</text>
+            </view>
+        </view>
+    </login-view>
+</fa-panel>
+
+<fa-panel>
+    <login-view bind:success="onSuccess" bind:fail="onFail">
+        <fa-cell-group>
+            <fa-cell title="地址管理" is-link="{{true}}">
+                <view slot="icon" class="cell-icon">
+                    <image src="/themes/default/user/address.png"
+                           mode="aspectFit" style="width:22px;height: 22px" />
+                </view>
+            </fa-cell>
+            <fa-cell title="商品关注" bind:success="onSuccess" bind:fail="onFail" is-link="{{true}}">
+                <view slot="icon" class="cell-icon">
+                    <image src="/themes/default/user/collect.png"
+                           mode="aspectFit" style="width:22px;height: 22px" />
+                </view>
+            </fa-cell>
+        </fa-cell-group>
+    </login-view>
+</fa-panel>

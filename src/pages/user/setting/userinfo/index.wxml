@@ -1,0 +1,16 @@
+<view class="user-setting-userinfo">
+    <fa-panel>
+        <fa-cell-group>
+            <fa-cell title="头像" is-link>
+                <image slot="footer" src="https://ws3.sinaimg.cn/large/006tNc79ly1frlfuicj18j303c03cq2v.jpg"
+                       mode="aspectFit" class="avatar" />
+            </fa-cell>
+            <fa-cell title="昵称">
+                <input slot="footer" placeholder="请输入昵称" />
+            </fa-cell>
+        </fa-cell-group>
+    </fa-panel>
+</view>
+<fixed-bottom>
+    <fa-button size="large" type="danger">保存</fa-button>
+</fixed-bottom>

@@ -1,0 +1,16 @@
+<block wx:if="{{dataSource.options.layout_style === 1}}">
+    <swiper class="page-banner-swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000" style="height: {{height}}px">
+        <block wx:for="{{dataSource.data}}" wx:for-index="index" wx:key="item">
+            <swiper-item>
+                <image src="{{item.img.url}}" mode="scaleToFill" style="height: {{height}}px" data-index="{{index}}" bindtap="onClick"/>
+            </swiper-item>
+        </block>
+    </swiper>
+</block>
+<block wx:else>
+    <view class="page-banner-list">
+        <block wx:for="{{dataSource.data}}" wx:key="item">
+            <image src="{{item.img.url}}" mode="widthFix" data-index="{{index}}" bindtap="onClick"/>
+        </block>
+    </view>
+</block>

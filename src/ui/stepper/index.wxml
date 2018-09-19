@@ -1,0 +1,23 @@
+<view class="fa-stepper {{ size === 'small' ? 'fa-stepper--small' : '' }}">
+  <view
+    class="fa-stepper__minus {{ stepper <= min ? 'fa-stepper--disabled' : '' }}"
+    data-disabled="{{ stepper <= min }}"
+    bindtap="handleZanStepperMinus"
+  >
+    -
+  </view>
+  <input
+    class="fa-stepper__text {{ min >= max ? 'fa-stepper--disabled' : '' }}"
+    type="number"
+    value="{{ stepper }}"
+    disabled="{{ min >= max }}"
+    bindblur="handleZanStepperBlur"
+  />
+  <view
+    class="fa-stepper__plus {{ stepper >= max ? 'fa-stepper--disabled' : '' }}"
+    data-disabled="{{ stepper >= max }}"
+    bindtap="handleZanStepperPlus"
+  >
+    +
+  </view>
+</view>

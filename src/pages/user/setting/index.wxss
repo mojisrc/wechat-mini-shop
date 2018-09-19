@@ -1,0 +1,13 @@
+.user-setting{
+    background-color: #F8F8F8;
+    padding-bottom: 160px;
+}
+.user-setting .avatar{
+    width: 60px;
+    height: 60px;
+    border-radius: 100px;
+}
+.user-setting fa-panel{
+    margin-bottom: 10px;
+    display: block;
+}

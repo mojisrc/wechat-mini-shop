@@ -1,0 +1,16 @@
+fa-panel{margin-bottom: 10px;display: block}
+.choice-wechat-address{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+.choice-wechat-address text{
+    font-size: 14px;
+    color:#527fc9;
+}
+.choice-wechat-address image{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}

@@ -1,0 +1,32 @@
+<view style="background-color:#F8F8F8;display: block;overflow: hidden">
+    <fa-panel>
+        <view class="refund-goods-card">
+            <view class="body">
+                <view class="item">
+                    <view class="content">
+                        <view class="image">
+                            <image src="{{goodsInfo.goods_img}}" mode="aspectFill" />
+                        </view>
+                        <view class="body">
+                            <text>{{goodsInfo.goods_title}}</text>
+                            <view class="end">
+                                <text class="spec">{{goodsInfo.goods_spec_string}}</text>
+                                <label class="number">x {{goodsInfo.goods_num}}</label>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </fa-panel>
+    <fa-panel>
+        <fa-cell-group>
+            <fa-cell is-link="true" title="仅退款"
+                     label="未收到货（包含未签收），或卖家协商同意前提现" data-refund-type="1" bind:tap="onClick" icon="/themes/default/refund/refund-type-1.png">
+            </fa-cell>
+            <fa-cell is-link="true" title="退货退款"
+                     label="已收到货，需要退换已收到的货物" data-refund-type="2" bind:tap="onClick" icon="/themes/default/refund/refund-type-2.png">
+            </fa-cell>
+        </fa-cell-group>
+    </fa-panel>
+</view>

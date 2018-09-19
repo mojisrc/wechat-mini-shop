@@ -1,0 +1,6 @@
+<view class="page-goods-search" style="background-color: {{dataSource.options.background_color}}">
+    <section bindtap="onClick">
+        <image src="goods-search-icon.png" mode="aspectFit"/>
+        <text>搜索商品</text>
+    </section>
+</view>

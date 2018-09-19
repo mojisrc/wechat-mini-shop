@@ -1,0 +1,12 @@
+<block wx:if="{{userInfo === null}}">
+    <button open-type="getUserInfo" class="getUserInfo" bindgetuserinfo="onLogin" wx:if="{{!scopeUserInfo}}">
+        <slot></slot>
+    </button>
+    <button class="getUserInfo" bindtap="onLogin" wx:if="{{scopeUserInfo}}">
+        <slot></slot>
+    </button>
+</block>
+
+<block wx:if="{{userInfo}}">
+    <slot></slot>
+</block>

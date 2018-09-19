@@ -1,0 +1,30 @@
+<view class="cart-card">
+    <image src="{{image}}" mode="aspectFill" bindtap="onClick" />
+    <!--当sku就一条的时候不可以选-->
+    <view class="title-price">
+        <text class="title" bindtap="onClick">{{title}}</text>
+        <block wx:if="{{canSkuSelect === true}}">
+            <view class="spec can-sku-select" bindtap="bindSpecClick">
+                <text>{{spec}}</text>
+                <image src="/themes/default/cart/slices.png" mode="widthFix" />
+            </view>
+        </block>
+        <block wx:else>
+            <view class="spec" bindtap="onClick">
+                <text>{{spec}}</text>
+            </view>
+        </block>
+        <view class="footer">
+            <i class="price" bindtap="onClick">¥ {{price}}</i>
+            <fa-stepper
+                    id="{{index}}"
+                    size="small"
+                    stepper="{{num}}"
+                    min="1"
+                    max="99999"
+                    data-component-id="{{index}}"
+                    bind:change="bindNumberChange">
+            </fa-stepper>
+        </view>
+    </view>
+</view>

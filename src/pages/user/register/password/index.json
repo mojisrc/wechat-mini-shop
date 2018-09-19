@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "新用户注册",
+  "usingComponents": {
+    "fa-button": "../../../../ui/btn/index"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "common-static-countdown": "../../common/staticCountdown/index",
+    "time-format": "../../common/timeFormat/index"
+  }
+}

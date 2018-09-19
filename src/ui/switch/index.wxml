@@ -1,0 +1,12 @@
+<view
+  class="fa-switch fa-switch--{{ checked ? 'on' : 'off' }} {{ disabled ? 'fa-swtich--disabled' : '' }}"
+  checked="{{ checked }}"
+  loading="{{ loading }}"
+  disabled="{{ disabled }}"
+  bindtap="handleZanSwitchChange"
+>
+  <view class="fa-switch__circle">
+    <view hidden="{{ !loading }}" class="fa-switch__loading"></view>
+  </view>
+  <view class="fa-switch__bg"></view>
+</view>

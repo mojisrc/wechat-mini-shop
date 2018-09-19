@@ -1,0 +1,14 @@
+<view style="background-color:#F8F8F8;display: block;overflow: hidden;margin-bottom:100px">
+    <view>
+        <fa-panel>
+            <block wx:for="{{list}}" wx:key="key" wx:for-index="index" wx:for-item="item">
+                <address-card name="{{item.truename}}" phone="{{item.phone}}" addressId="{{item.id}}" address="{{item.combine_detail}}"
+                              checked="{{item.is_default ===1}}" data-index="{{index}}" data-id="{{item.id}}"
+                              bind:edit="goEdit" bind:checked="onAddressChecked"></address-card>
+            </block>
+        </fa-panel>
+    </view>
+    <fixed-bottom>
+        <fa-button size="large" bindtap="goAdd">+ 新建地址</fa-button>
+    </fixed-bottom>
+</view>

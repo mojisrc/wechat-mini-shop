@@ -1,0 +1,26 @@
+<view style="background-color:#F8F8F8;display: block;overflow: hidden">
+    <fa-tab
+            list="{{ stateTabs }}"
+            selected-id="{{evaluate_state}}"
+            height="40"
+            fixed="true"
+            bindtabchange="onTabChange"
+    />
+    <view>
+        <block wx:for="{{list}}" wx:key="key" wx:for-index="index" wx:for-item="item">
+            <evaluate-card
+                    goodsInfo="{{item}}"
+                    bind:goods="onGoods"
+                    bind:add="onAdd"
+                    bind:detail="onDetail"
+                    bind:additional="onAdditional"
+                    ></evaluate-card>
+        </block>
+    </view>
+    <block wx:if="{{list.length===0}}">
+        <view class="list-empty">
+            <image src="/themes/default/order/list-empty.png" mode="aspectFill"></image>
+            <text>暂无相关数据</text>
+        </view>
+    </block>
+</view>

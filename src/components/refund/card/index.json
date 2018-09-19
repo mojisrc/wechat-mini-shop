@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "refund-goods-card": "../goodsCard/index",
+    "common-static-countdown": "../../common/staticCountdown/index",
+    "order-button": "../../order/button/index"
+  }
+}

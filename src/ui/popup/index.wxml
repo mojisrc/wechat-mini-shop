@@ -1,0 +1,9 @@
+<pop-manager
+  show="{{ show }}"
+  type="{{ type }}"
+  show-overlay="{{ overlay }}"
+  bindclickmask="handleMaskClick"
+  bindclose="togglePopup"
+>
+  <slot></slot>
+</pop-manager>

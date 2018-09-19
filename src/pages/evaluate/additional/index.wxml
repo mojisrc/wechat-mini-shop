@@ -1,0 +1,52 @@
+<view style="background-color:#F8F8F8;display: block;overflow: hidden">
+    <fa-panel>
+        <view class="refund-goods-card">
+            <view class="body">
+                <view class="item">
+                    <view class="content">
+                        <view class="image">
+                            <image src="{{goodsInfo.goods_img}}" mode="aspectFill" />
+                        </view>
+                        <view class="body">
+                            <text>已评价</text>
+                            <common-rater num="5" value="5" size="20"></common-rater>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </fa-panel>
+    <fa-panel>
+        <view class="add-title">
+            追加评价
+        </view>
+        <fa-field
+                type="textarea"
+                title=""
+                placeholder="对评价进行补充，更客观，更全面~"
+                value="{{content}}"
+                bind:change="onContentChange"
+        >
+        </fa-field>
+        <fa-field
+                type="uploader"
+                title=""
+                uploaderButtonText="{{uploaderButtonText}}"
+                uploaderFormData="{{uploaderFormData}}"
+                uploaderUrl="{{uploaderUrl}}"
+                uploaderHeader="{{uploaderHeader}}"
+                uploaderFiles="{{uploaderFiles}}"
+                uploaderCount="{{uploaderCount}}"
+                uploaderAllowDel="true"
+                bind:success="onUploadFileSuccess"
+                bind:change="handleFieldChange"
+                bind:delete="onUploadFileDelete"
+        >
+        </fa-field>
+    </fa-panel>
+</view>
+<fixed-bottom>
+    <view class="footer">
+        <fa-button type="danger" size="large" bind:btnclick="onSubmit">提交</fa-button>
+    </view>
+</fixed-bottom>

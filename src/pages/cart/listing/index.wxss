@@ -1,0 +1,129 @@
+page{
+    background-color: #F8F8F8;
+}
+.cart {
+}
+
+.cart section {
+
+}
+
+.cart section details {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: #fff;
+    padding: 15px 0 0 0 ;
+}
+
+.cart section details .left {
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart section details .right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    border-bottom: 1px solid #F8F8F8;
+    height: 105px;
+}
+.cart section details:last-child .right{
+    border-bottom: none;
+}
+
+.cart section details .right image {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: block;
+    width: 90px;
+    height: 90px;
+}
+
+.cart section details .right .title-price {
+    background-color: #fff;
+    display: block;
+    overflow: hidden;
+    padding: 0 20px 10px 10px;
+    flex: 1;
+    position: relative;
+}
+
+.cart section details .right .title-price text {
+    color: #333333;
+    line-height: 16px;
+    margin-bottom: 6px;
+    height: 32px;
+    font-size: 13px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+.cart section details .right .title-price label {
+    color: #999;
+    line-height: 11px;
+    height: 11px;
+    font-size: 11px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+
+.cart section details .right .title-price i {
+    line-height: 14px;
+    height: 14px;
+    color: #FF0000;
+    margin-bottom: 5px;
+    font-size: 14px;
+    display: inline-block;
+    font-weight: bold;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+}
+.cart section details .right fa-stepper {
+    position: absolute;
+    right: 20px;
+    bottom: 15px;
+}
+.cart footer{
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    border-top: 1px solid #F8F8F8;
+    height: 48px;
+}
+.cart footer .left{
+    margin-left: 20px;
+}
+.cart footer .left>span{
+    font-size: 12px;
+    color:#333;
+    margin-right: 20px;
+}
+.cart footer .left>details{
+    font-size: 14px;
+    color:#333;
+
+}
+.cart footer .left>details>span{
+    font-size: 13px;
+    color: #333;
+}
+.cart footer .right{
+}

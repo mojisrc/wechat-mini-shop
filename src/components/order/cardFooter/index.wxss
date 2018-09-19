@@ -1,0 +1,54 @@
+.order-card-footer {
+    padding: 0 15px;
+}
+
+.order-card-footer .header {
+    text-align: right;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.order-card-footer .header .number {
+    font-size: 14px;
+    line-height: 14px;
+    color: #333333;
+    display: block;
+}
+
+.order-card-footer .header .price-desc {
+    font-size: 14px;
+    line-height: 14px;
+    color: #333333;
+    display: block;
+    margin-left: 10px;
+}
+
+.order-card-footer .header .price {
+    font-size: 16px;
+    line-height: 16px;
+    color: #333333;
+    font-weight: bold;
+    display: block;
+}
+
+.order-card-footer .footer {
+    border-top: 1px solid #F8F8F8;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 0;
+}
+.order-card-footer .footer .btn{
+    border: 1px solid #cccccc;
+    display: flex;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 100px;
+    padding: 5px 15px;
+    margin-left: 10px;
+}
+.order-card-footer .footer .btn.btn-danger{
+    border:1px solid #ff4400;
+    color: #ff4400;
+}

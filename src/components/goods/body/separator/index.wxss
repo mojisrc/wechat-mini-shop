@@ -1,0 +1,7 @@
+.page-divier{
+    margin:20px auto;
+    background-color: rgba(0, 0, 0, 0);
+    display: block;
+    overflow: hidden;
+    width: 84vw;
+}

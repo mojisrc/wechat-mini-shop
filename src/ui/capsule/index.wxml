@@ -1,0 +1,17 @@
+<view class="fa-capsule fa-capsule--{{type}}">
+  <block wx:if="{{color}}">
+    <view
+      class="fa-capsule__left"
+      style="background: {{ color }}; border-color: {{ color }}"
+    >{{ leftText }}</view>
+    <view
+      class="fa-capsule__right"
+      style="color: {{ color }}; border-color: {{ color }}"
+    >{{ rightText }}</view>
+  </block>
+  <block wx:else>
+    <view class="fa-capsule__left">{{ leftText }}</view>
+    <view class="fa-capsule__right">{{ rightText }}</view>
+  </block>
+</view>
+

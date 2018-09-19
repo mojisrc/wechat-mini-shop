@@ -1,0 +1,65 @@
+<view class="popup-sku">
+    <fa-popup show="{{show}}" type="bottom" bind:close="onPopupClose">
+        <view class="choice-spec">
+            <view class="header">
+                <view class="goods-img">
+                    <image src="{{goodsInfo.img}}"
+                           mode="aspectFill" />
+                    <view class="goods-title">
+                        <text>¥ {{price}}</text>
+                        <label wx:if="{{goodsSkuInfo===null}}">{{goodsInfo.title}}</label>
+                        <label wx:if="{{goodsSkuInfo!==null}}">已选：{{goodsSkuInfo.title}}
+                            <block wx:if="{{inCartNumber > 0}}">{{inCartNumber}}件</block>
+                        </label>
+                    </view>
+                </view>
+                <view class="close-action" bindtap="onPopupClose">
+                    <image src="goods-sku-close.png" mode="aspectFill" />
+                </view>
+            </view>
+            <scroll-view scroll-y="true" scroll-with-animation="true" style="max-height: 50vh"
+                         wx:if="{{goodsInfo.spec_list[0].id>0}}">
+                <view class="spec-list">
+                    <block wx:for="{{goodsInfo.spec_list}}" wx:key="spec_list" wx:for-index="spec_index"
+                           wx:for-item="spec">
+                        <view class="item">
+                            <text class="title">{{spec.name}}</text>
+                            <view class="spec">
+                                <block wx:for="{{spec.value_list}}" wx:key="value_list" wx:for-index="value_index"
+                                       wx:for-item="value">
+                                    <block wx:if="{{value.checked===true}}">
+                                        <text class="spec-title active" data-spec-id="{{spec.id}}"
+                                              data-spec-value-id="{{value.id}}" bindtap="onSpecClick">{{value.name}}
+                                        </text>
+                                    </block>
+                                    <block wx:else>
+                                        <text class="spec-title" data-spec-id="{{spec.id}}"
+                                              data-spec-value-id="{{value.id}}" bindtap="onSpecClick">{{value.name}}
+                                        </text>
+                                    </block>
+                                    <!--<text class="{{value.checked===true ? 'spec-title-active' : 'spec-title'}}">这样写有bug 具体原因不详</text>-->
+                                </block>
+                            </view>
+                        </view>
+                    </block>
+                </view>
+            </scroll-view>
+
+            <view class="number">
+                <text>数量</text>
+                <fa-stepper
+                        stepper="{{ stepperNumber }}"
+                        min="1"
+                        max="999"
+                        bind:change="onStepperChange">
+                </fa-stepper>
+            </view>
+            <view class="footer">
+                <login-view bind:success="onLoginSuccess">
+                    <fa-button type="danger" size="large" bind:btnclick="onConfirmClick" disabled="{{!goodsSkuInfo}}">{{confirmButtonText}}
+                    </fa-button>
+                </login-view>
+            </view>
+        </view>
+    </fa-popup>
+</view>

@@ -1,0 +1,34 @@
+<view style="background-color:#F8F8F8;display: block;overflow: hidden" wx:if="{{orderInfo}}">
+    <fa-panel>
+        <order-state-card orderState="{{orderInfo.state}}" expireSeconds="1000" cost="{{orderInfo.amount}}"></order-state-card>
+        <order-address name="{{orderInfo.extend_order_extend.reciver_name}}" phone="{{orderInfo.extend_order_extend.receiver_phone}}"
+                       address="{{orderInfo.extend_order_extend.reciver_name}}"></order-address>
+    </fa-panel>
+
+    <fa-panel>
+        <order-goods-list orderInfo="{{orderInfo}}" goodsList="{{orderInfo.extend_order_goods}}" bind:goods-detail="onGoodsDetail" bind:goods-refund-click="onRefund"  bind:goods-refund-detail="onRefundDetail"></order-goods-list>
+        <order-contact number="{{serviceNumber}}"></order-contact>
+    </fa-panel>
+    <fa-panel>
+        <order-base-info orderInfo="{{orderInfo}}" orderNumber="{{orderInfo.sn}}" createTime="{{orderInfo.create_time}}" payment="微信支付"
+                         payTime="{{orderInfo.payment_time}}"></order-base-info>
+    </fa-panel>
+    <fa-panel>
+
+        <order-cost-list goodsTotal="{{orderInfo.goods_amount}}" freight="{{orderInfo.freight_fee}}" totalCost="{{orderInfo.amount}}"></order-cost-list>
+        <order-footer-action
+                orderInfo="{{orderInfo}}"
+                orderState="{{orderInfo.state}}"
+                showDelBtn="false"
+                showEvaluateBtn="{{orderInfo.if_evaluate}}"
+                showPayBtn="{{orderInfo.if_pay}}"
+                showLogisticsBtn="{{orderInfo.showLogisticsBtn}}"
+                showReceiveBtn="{{orderInfo.if_receive}}"
+                bind:pay="onPay"
+                bind:receive="onReceive"
+                bind:cancel="onCancel"
+                bind:evaluate="onEvaluate"
+        ></order-footer-action>
+    </fa-panel>
+</view>
+<fa-dialog id="fa-dialog-receive"></fa-dialog>

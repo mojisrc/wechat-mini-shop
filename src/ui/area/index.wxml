@@ -1,0 +1,10 @@
+<view class="section">
+    <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{selected}}" range="{{displayList}}"
+            bindcolumnchange="columnChange" bindchange="change"
+    >
+        <view class="picker">
+            <block wx:if="{{areaNames}}"><text class="text">{{areaNames}}</text></block>
+            <block wx:else="{{placeholder}}"><text class="placeholder">{{placeholder}}</text></block>
+        </view>
+    </picker>
+</view>

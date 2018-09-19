@@ -1,0 +1,38 @@
+.refund-card {
+}
+
+.refund-card {
+    border-bottom: 1px solid #F8F8F8;
+}
+
+.refund-card .body{
+    padding: 15px;
+    display: flex;
+    font-size: 14px;
+    color: #333333;
+    line-height: 14px;
+    height: 14px;
+    border-bottom: 1px solid #F8F8F8;
+}
+.refund-card .body .icon{
+    background-color: #ff8855;
+    color: #FFFFFF;
+    margin-right: 5px;
+}
+.refund-card .body .icon image{
+    width: 14px;
+    height: 14px;
+    display: block;
+}
+.refund-card .body text{
+    margin-right: 10px;
+}
+.refund-card .body label{
+    display: flex;
+}
+.refund-card .footer{
+    padding: 10px 15px;
+    display: flex;
+    justify-content: flex-end;
+
+}

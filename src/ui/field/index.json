@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "fa-area": "../../../ui/area/index",
+    "fa-switch": "../../../ui/switch/index",
+    "fa-picker": "../../../ui/switch/index"
+  }
+
+}

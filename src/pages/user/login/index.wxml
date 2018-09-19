@@ -1,0 +1,41 @@
+<view class="page-container">
+    <view class="login">
+        <view class="login-form">
+            <view class="username input-item">
+                <input placeholder="手机号" type="number" bindinput="bindUsername" value="{{username}}"/>
+            </view>
+            <view class="password input-item">
+                <view class="password-input">
+                    <input placeholder="请输入密码" bindinput="bindPassword" value="{{password}}"/>
+                </view>
+                <view class="forget-password">
+                    <label>忘记密码</label>
+                </view>
+            </view>
+            <view class="btn-area">
+                <fa-button type="danger" bind:btnclick="passwordLogin">登陆</fa-button>
+            </view>
+        </view>
+        <view class="register">
+            <text>新用户注册</text>
+        </view>
+        <view class="other-login-type">
+            <view class="content">
+                <view class="title">
+                    <text>其他登陆方式</text>
+                    <label></label>
+                </view>
+                <view class="login-type-list">
+                    <view class="item">
+                        <image class="share" src="https://ws3.sinaimg.cn/large/006tNc79ly1frlfuicj18j303c03cq2v.jpg"
+                               mode="scaleToFill" bindtap="wechatLogin" />
+                        <text>微信登陆</text>
+                    </view>
+                </view>
+            </view>
+            <!--<view class="privacy">-->
+            <!--<view>登陆即代表您已经同意<text>隐私政策</text></view>-->
+            <!--</view>-->
+        </view>
+    </view>
+</view>

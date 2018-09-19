@@ -1,0 +1,17 @@
+<view wx:for="{{body}}" wx:key="key" wx:for-index="page-data" wx:for-item="item">
+    <block wx:if="{{item.type === 'text'}}">
+        <body-goods-text text="{{item.value.content}}" />
+    </block>
+    <block wx:if="{{item.type === 'image'}}">
+        <body-goods-image url="{{item.value.url}}" bind:click="onImageClick" />
+    </block>
+    <block wx:if="{{item.type === 'video'}}">
+        <body-goods-video url="{{item.value.url}}" />
+    </block>
+    <block wx:if="{{item.type === 'goods'}}">
+        <body-goods-list goodsList="{{item.value}}" bind:click="onGoodsClick" />
+    </block>
+    <block wx:if="{{item.type === 'separator'}}">
+        <body-goods-separator />
+    </block>
+</view>

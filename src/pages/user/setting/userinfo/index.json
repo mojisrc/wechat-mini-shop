@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "资料设置",
+  "usingComponents": {
+    "fa-panel": "../../../../ui/panel/index",
+    "fixed-bottom": "../../../../components/common/fixedBottom/index",
+    "fa-cell": "../../../../ui/cell/index",
+    "fa-button": "../../../../ui/btn/index",
+    "fa-cell-group": "../../../../ui/cell-group/index"
+  }
+}

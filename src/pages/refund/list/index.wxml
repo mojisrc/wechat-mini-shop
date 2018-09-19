@@ -1,0 +1,14 @@
+<view style="background-color:#F8F8F8;display: block;overflow: hidden">
+
+    <block wx:for="{{list}}" wx:key="key" wx:for-index="index" wx:for-item="item">
+        <fa-panel>
+            <refund-card refundInfo="{{item}}" bind:click="onDetail"></refund-card>
+        </fa-panel>
+    </block>
+    <block wx:if="{{list.length===0}}">
+        <view class="list-empty">
+            <image src="/themes/default/order/list-empty.png" mode="aspectFill"></image>
+            <text>暂无相关数据</text>
+        </view>
+    </block>
+</view>

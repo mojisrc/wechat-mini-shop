@@ -1,0 +1,10 @@
+<view class="page-grid-nav-bar">
+    <view class="body rows-{{dataSource.options.rows}}">
+        <block wx:for="{{dataSource.data}}" wx:for-index="index" wx:key="item">
+            <section class="column-{{dataSource.options.each_row_display}}" data-index="{{index}}" bindtap="onClick">
+                <image src="{{item.img.url}}" mode="aspectFit" />
+                <text>{{item.title}}</text>
+            </section>
+        </block>
+    </view>
+</view>

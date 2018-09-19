@@ -1,0 +1,17 @@
+<view class="user-setting">
+    <fa-panel>
+        <fa-cell is-link title="点击我设置昵称" label="188****8223" url="/pages/user/setting/userinfo/index">
+            <image slot="icon" src="https://ws3.sinaimg.cn/large/006tNc79ly1frlfuicj18j303c03cq2v.jpg"
+                   mode="aspectFit" class="avatar" />
+        </fa-cell>
+    </fa-panel>
+    <fa-panel>
+        <fa-cell-group>
+            <fa-cell is-link title="修改密码" url="/pages/user/editPassword/index"></fa-cell>
+            <fa-cell is-link title="账号关联" url="/pages/user/setting/bind/index"></fa-cell>
+        </fa-cell-group>
+    </fa-panel>
+</view>
+<fixed-bottom>
+    <fa-button size="large" bind:btnclick="logout">退出</fa-button>
+</fixed-bottom>

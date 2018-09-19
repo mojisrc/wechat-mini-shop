@@ -1,0 +1,3 @@
+<view class="refund-steps">
+    <fa-steps type="horizon" steps="{{steps}}" hasDesc="true"></fa-steps>
+</view>

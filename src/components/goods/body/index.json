@@ -1,0 +1,10 @@
+{
+  "component": true,
+  "usingComponents": {
+    "body-goods-list": "goods/index",
+    "body-goods-image": "image/index",
+    "body-goods-text": "text/index",
+    "body-goods-video": "video/index",
+    "body-goods-separator": "separator/index"
+  }
+}

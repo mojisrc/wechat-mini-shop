@@ -1,0 +1,24 @@
+<template name="fa-loadmore">
+
+  <block wx:if="{{nomore}}">
+    <view class="fa-loadmore fa-loadmore--nomore">
+      <view class="fa-loadmore__tips">
+        <view class="fa-loadmore__dot"></view>
+      </view>
+    </view>
+  </block>
+
+  <block wx:elif="{{nodata}}">
+    <view class="fa-loadmore fa-loadmore--nodata">
+      <view class="fa-loadmore__tips">{{ nodata_str || '暂无数据' }}</view>
+    </view>
+  </block>
+
+  <block wx:elif="{{loading}}">
+    <view class="fa-loadmore">
+      <view class="fa-loading"></view>
+      <view class="fa-loadmore__tips">加载中...</view>
+    </view>
+  </block>
+
+</template>

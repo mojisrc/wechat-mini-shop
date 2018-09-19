@@ -1,0 +1,83 @@
+<view style="background-color:#F8F8F8;display: block;overflow: hidden">
+    <block wx:if="{{style === 1}}">
+        <view class="goods-category-style-1">
+            <aside>
+                <scroll-view scroll-y="true" scroll-with-animation="true">
+                    <block wx:for="{{style1.categoryList}}" wx:key="item" wx:for-index="index">
+                        <view id="category_main_{{index}}">
+                            <details data-id="{{item.id}}" data-index="{{index}}" bindtap="mainNavTap"
+                                     class="{{style1.mainNavScrollIndex === index ? 'active' : ''}}">
+                                <text>{{item.name}}</text>
+                            </details>
+                        </view>
+                    </block>
+
+                </scroll-view>
+            </aside>
+            <aside>
+                <scroll-view scroll-y="true" scroll-with-animation="true"
+                             scroll-into-view="category_parents_{{style1.mainNavClickIndex}}" bindscroll="subNavScroll">
+                    <block wx:for="{{style1.categoryList}}" data-index="{{index}}" wx:key="item">
+                        <section id="category_parents_{{index}}">
+                            <block wx:for="{{item.childs}}" wx:key="sub" wx:for-item="sub">
+                                <details data-index="{{index}}" data-category-id="{{sub.id}}" data-category-name="{{sub.name}}" bindtap="categoryClick">
+                                    <image src="{{sub.icon}}" mode="aspectFit" />
+                                    <text>{{sub.name}}</text>
+                                </details>
+                            </block>
+                        </section>
+                    </block>
+                </scroll-view>
+            </aside>
+            <view class="line"></view>
+        </view>
+    </block>
+
+    <block wx:if="{{style === 2}}">
+        <view class="goods-category-style-2">
+            <aside>
+                <block wx:for="{{style2.categoryList}}" data-index="{{index}}" wx:key="item">
+                    <title><em class="before"></em>{{item.name}}<em class="after"></em></title>
+                    <section data-index="{{index}}">
+                        <block wx:for="{{item.childs}}" wx:key="sub" wx:for-item="sub">
+                            <details data-category-id="{{sub.id}}" data-category-name="{{sub.name}}" bindtap="categoryClick">
+                                <image src="{{sub.icon}}" mode="aspectFit" />
+                                <text>{{sub.name}}</text>
+                            </details>
+                        </block>
+                    </section>
+                </block>
+            </aside>
+        </view>
+    </block>
+
+    <block wx:if="{{style === 3}}">
+        <view class="goods-category-style-3">
+            <aside>
+                <scroll-view scroll-x="true" scroll-with-animation="true">
+                    <details data-id="0" data-index="-1" bindtap="style3CategoryClick">
+                        <text class="{{style3.categoryClickIndex === -1 ? 'active' : ''}}">全部</text>
+                    </details>
+                    <block wx:for="{{style3.categoryList}}" wx:key="item" wx:for-index="index">
+                            <details data-id="{{item.id}}" data-index="{{index}}" data-category-id="{{item.id}}" bindtap="style3CategoryClick">
+                                <text class="{{style3.categoryClickIndex === index ? 'active' : ''}}">{{item.name}}</text>
+                            </details>
+                    </block>
+                </scroll-view>
+            </aside>
+            <section>
+                <block wx:for="{{style3.list}}" wx:key="key" wx:for-index="page-data" wx:for-item="item">
+                    <details style="width:{{style3.smallImageWidth}}px" data-id="{{item.id}}" bindtap="goGoodsDetail">
+                        <image src="{{item.img}}"  style="width:{{style3.smallImageWidth}}px;height: {{style3.smallImageWidth}}px"  mode="aspectFill" />
+                        <view class="title-price">
+                            <text>{{item.title}}</text>
+                            <i>¥ {{item.price}}</i>
+                        </view>
+                    </details>
+                </block>
+            </section>
+            <view class="line"></view>
+        </view>
+    </block>
+</view>
+<!--<view class="change-style-button" bindtap="changeStyle">切换样式</view>-->

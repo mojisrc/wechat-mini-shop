@@ -1,0 +1,17 @@
+<view class="page-pic-window">
+    <block wx:if="{{dataSource.options.layout_style === 1}}">
+        <view class="page-pic-window-mix">
+            <block wx:for="{{dataSource.data}}" wx:key="key" wx:for-index="index" wx:for-item="item">
+                <image src="{{item.img.url}}" mode="aspectFill" data-index="{{index}}" bindtap="onClick" />
+            </block>
+        </view>
+    </block>
+
+    <block wx:if="{{dataSource.options.layout_style === 2}}">
+        <view class="page-pic-window-rows">
+            <block wx:for="{{dataSource.data}}" wx:key="key" wx:for-index="index" wx:for-item="item">
+                <image src="{{item.img.url}}" mode="aspectFill" data-index="{{index}}" bindtap="onClick" />
+            </block>
+        </view>
+    </block>
+</view>

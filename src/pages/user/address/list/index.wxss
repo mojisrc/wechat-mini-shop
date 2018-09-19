@@ -1,0 +1,89 @@
+fa-panel{margin-bottom: 10px;display: block}
+.address-card {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.address-card .checked{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+.address-card .checked image{
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+.address-card .checked text{
+    font-size: 14px;
+    color: #999999;
+    margin-left: 5px;
+}
+.address-card .info{
+    display: flex;
+    flex: 1;
+    border-bottom: 1px solid #F8F8F8;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+.address-card .info .name-phone {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.address-card .info .user .name {
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 15px;
+    line-height: 14px;
+    display: block;
+}
+
+.address-card .info .user .phone {
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 15px;
+    line-height: 14px;
+    display: block;
+}
+
+.address-card .info .address {
+    font-size: 14px;
+    line-height: 14px;
+    display: block;
+    color: #999999;
+}
+.address-card .action{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.address-card .action image{
+    width: 20px;
+    height: 20px;
+}
+.address-card .button-area{
+    display: flex;
+    justify-content:flex-end;
+    flex: 1;
+}
+.address-card .button-area .item{
+    font-size: 14px;
+    line-height: 14px;
+    display: flex;
+    margin-left: 10px;
+}
+.address-card .button-area .item image{
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+.address-card .button-area .item text{
+    font-size: 14px;
+    line-height: 14px;
+    display: block;
+    color: #999999;
+}

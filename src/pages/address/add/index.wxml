@@ -1,0 +1,53 @@
+<view style="background-color:#F8F8F8;display: block;overflow: hidden">
+    <fa-panel wx:if="{{onLoaded === true}}">
+        <fa-field
+                title="收货人："
+                placeholder="请输入姓名"
+                focus="true"
+                value="{{truename}}"
+                bind:change="onTruenameChange"
+        >
+        </fa-field>
+        <fa-field
+                title="联系方式："
+                inputType="number"
+                placeholder="请输入手机号"
+                value="{{ mobile_phone }}"
+                bind:change="onMobilePhoneChange"
+        >
+        </fa-field>
+        <fa-field
+                title="所在地区："
+                type="area"
+                areaList="{{areaList}}"
+                areaNames="{{combine_detail}}"
+                placeholder="-- 请选择 --"
+                bind:change="onAreaChange"
+        >
+        </fa-field>
+        <fa-field
+                title="详细地址："
+                value="{{address}}"
+                placeholder="填写楼栋楼层或房间号信息"
+                bind:change="onAddressChange"
+        >
+        </fa-field>
+        <fa-field
+                title="设置默认地址："
+                desc="注：每次下单时会使用该地址"
+                type="switch"
+                right="true"
+                checked="{{ is_default }}"
+                bind:change="onIsDefaultChange"
+        >
+        </fa-field>
+    </fa-panel>
+    <view class="choice-wechat-address" bindtap="onWechatAddressChoose">
+        <image src="/themes/default/user/address/wechat.png" mode="aspectFill"></image>
+        <text>使用微信收货地址</text>
+    </view>
+    <fixed-bottom>
+        <fa-button type="danger" size="large" bind:btnclick="onSubmit">保存</fa-button>
+    </fixed-bottom>
+    <!--<view>在个人中心设置的时候语言要变，或者是把这俩封装成组件 完全分离</view>-->
+</view>

@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "评价晒单",
+  "usingComponents": {
+    "refund-goods-card":"../../../components/refund/goodsCard/index",
+    "fixed-bottom": "../../../components/common/fixedBottom/index",
+    "common-rater": "../../../components/common/rater/index",
+    "fa-panel": "../../../ui/panel/index",
+    "fa-field": "../../../ui/field/index",
+    "fa-button": "../../../ui/btn/index"
+  }
+}

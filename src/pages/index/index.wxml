@@ -1,0 +1,40 @@
+<view style="background-color:{{backgroundColor}};display: block;overflow: hidden">
+    <view wx:for="{{pageData}}" wx:key="key" wx:for-index="page-data" wx:for-item="item">
+        <block wx:if="{{item.type === 'image_ads'}}">
+            <page-banner dataSource="{{item}}" bind:click="onBannerClick"/>
+        </block>
+        <block wx:elif="{{item.type === 'image_nav'}}">
+            <page-grid-nav-bar dataSource="{{item}}" bind:click="onGridNavBarClick"/>
+        </block>
+        <block wx:elif="{{item.type === 'goods'}}">
+            <page-goods-list dataSource="{{item}}" bind:click="onGoodsClick"/>
+        </block>
+        <block wx:elif="{{item.type === 'goods_list'}}">
+            <page-goods-list dataSource="{{item}}" bind:click="onGoodsClick"/>
+        </block>
+        <block wx:elif="{{item.type === 'separator'}}">
+            <page-divider dataSource="{{item}}"/>
+        </block>
+        <block wx:elif="{{item.type === 'goods_search'}}">
+            <page-goods-search dataSource="{{item}}" bind:click="onSearchClick"/>
+        </block>
+        <block wx:elif="{{item.type === 'shop_window'}}">
+            <page-pic-window dataSource="{{item}}" bind:click="onShopWindowClick"/>
+        </block>
+        <block wx:elif="{{item.type === 'top_menu'}}">
+            <page-icon-nav-bar dataSource="{{item}}" bind:click="onIconNavClick"/>
+        </block>
+        <block wx:elif="{{item.type === 'auxiliary_blank'}}">
+            <page-placeholder-line dataSource="{{item}}"/>
+        </block>
+        <block wx:elif="{{item.type === 'title'}}">
+            <page-column-title dataSource="{{item}}"/>
+        </block>
+        <block wx:elif="{{item.type === 'text_nav'}}">
+            <page-text-nav dataSource="{{item}}" bind:click="onTextNavClick"/>
+        </block>
+        <block wx:elif="{{item.type === 'video'}}">
+            <page-video dataSource="{{item}}"/>
+        </block>
+    </view>
+</view>

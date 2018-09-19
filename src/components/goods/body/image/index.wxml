@@ -1,0 +1,1 @@
+<image class="goods-body-image" src="{{url}}" mode="widthFix" data-url="{{url}}" bindtap="onClick" />

@@ -1,0 +1,6 @@
+
+<view 
+  class="fa-tag {{type ? 'fa-tag--'+type : ''}} {{disabled ? 'fa-tag--disabled' : ''}} {{plain ? 'fa-tag--plain' : ''}}"
+>
+  <slot></slot>
+</view>

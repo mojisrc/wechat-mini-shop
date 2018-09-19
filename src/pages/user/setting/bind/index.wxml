@@ -1,0 +1,25 @@
+<view class="user-setting-bind">
+    <fa-panel>
+        <fa-cell-group>
+            <fa-cell title="手机号" is-link>
+                <view class="icon" slot="icon">
+                    <image src="https://ws3.sinaimg.cn/large/006tNc79ly1frlfuicj18j303c03cq2v.jpg"
+                           mode="aspectFit"></image>
+                </view>
+                <text slot="footer">未绑定/已绑定</text>
+            </fa-cell>
+            <fa-cell title="微信" is-link>
+                <view class="icon" slot="icon">
+                    <image src="https://ws3.sinaimg.cn/large/006tNc79ly1frlfuicj18j303c03cq2v.jpg"
+                           mode="aspectFit"></image>
+                </view>
+                <text slot="footer">未绑定/已绑定</text>
+            </fa-cell>
+        </fa-cell-group>
+    </fa-panel>
+    <view class="footer">
+        <text>账号关联之后，用户可使用微信或手机号登录FaShop。</text>
+        <text>在各个渠道进行购物时，均可同步FaShop账号，享受FaShop特权，同步订单信息。</text>
+        <text>FaShop承诺保障您的账号隐私安全。</text>
+    </view>
+</view>

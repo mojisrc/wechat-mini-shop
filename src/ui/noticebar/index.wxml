@@ -1,0 +1,31 @@
+<view
+  wx:if="{{ show }}"
+  class="fa-noticebar {{ hasRightIcon ? 'fa-noticebar--within-icon' : '' }}"
+  style="color: {{ color }};background-color: {{ backgroundColor }}"
+>
+  <view wx:if="{{ leftIcon }}" class="fa-noticebar__left-icon">
+    <image src="{{ leftIcon }}" />
+  </view>
+  <view class="fa-noticebar__content-wrap">
+    <view class="fa-noticebar__content" animation="{{ animationData }}">
+      {{ text }}
+    </view>
+  </view>
+
+  <block wx:if="{{ mode }}">
+    <fa-icon
+      wx:if="{{ mode === 'closeable' }}"
+      class="fa-noticebar__right-icon"
+      type="close"
+      bindtap="_handleButtonClick"
+    />
+    <navigator
+      wx:if="{{ mode === 'link' }}"
+      url="{{ url }}"
+      open-type="{{ openType }}"
+    >
+      <fa-icon class="fa-noticebar__right-icon" type="arrow" />
+    </navigator>
+  </block>
+
+</view>

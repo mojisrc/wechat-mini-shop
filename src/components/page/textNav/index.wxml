@@ -1,0 +1,8 @@
+<view class="page-text-nav">
+    <block wx:for="{{dataSource.data}}" wx:key="key" wx:for-index="index" wx:for-item="item">
+        <details bindtap="onClick"  data-index="{{index}}">
+            <text>{{item.title}}</text>
+            <image src="right.png" mode="aspectFit"/>
+        </details>
+    </block>
+</view>

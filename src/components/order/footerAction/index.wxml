@@ -1,0 +1,26 @@
+<view class="order-footer-action">
+    <view class="footer">
+        <view class="left">
+            <!--<block wx:if="{{showDelBtn === true}}">-->
+                <!--<view class="del-action">删除订单</view>-->
+            <!--</block>-->
+        </view>
+        <view class="right">
+            <block wx:if="{{showCancelBtn === true}}">
+                <order-button text="取消订单" bind:click="onCancel"></order-button>
+            </block>
+            <block wx:if="{{showPayBtn === true}}">
+                <order-button text="去支付" type="danger" bind:click="onPay"></order-button>
+            </block>
+            <block wx:if="{{showReceiveBtn === true}}">
+                <order-button text="确认收货" type="danger" bind:click="onReceive"></order-button>
+            </block>
+            <block wx:if="{{showEvaluateBtn === true}}">
+                <order-button text="评价" bind:click="onEvaluate"></order-button>
+            </block>
+            <!--<block wx:if="{{showLogisticsBtn === true}}">-->
+                <!--<order-button text="查看物流">查看物流</order-button>-->
+            <!--</block>-->
+        </view>
+    </view>
+</view>

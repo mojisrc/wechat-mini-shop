@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "个人设置",
+  "usingComponents": {
+    "fa-panel": "../../../ui/panel/index",
+    "fa-cell": "../../../ui/cell/index",
+    "fa-button": "../../../ui/btn/index",
+    "fixed-bottom": "../../../components/common/fixedBottom/index",
+    "fa-cell-group": "../../../ui/cell-group/index"
+  }
+}

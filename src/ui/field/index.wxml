@@ -1,0 +1,112 @@
+<view class="fa-cell fa-field {{ error ? 'fa-field--error' : '' }} {{ mode === 'wrapped' ? 'fa-field--wrapped' : '' }}"
+      wx:if="{{ type === 'textarea' }}">
+    <view class="fa-cell__hd">
+        <text class="fa-field__title" wx:if="{{ title }}">{{ title }}</text>
+        <view class="fa-cell__desc" wx:if="{{ desc }}">{{desc}}</view>
+    </view>
+    <textarea
+            auto-height
+            disabled="{{ disabled }}"
+            focus="{{ focus }}"
+            value="{{ value }}"
+            placeholder="{{ placeholder }}"
+            maxlength="{{ maxlength }}"
+            class="fa-field__textarea fa-cell__bd {{ right ? 'fa-field__input--right' : '' }}"
+            placeholder-class="fa-field__placeholder"
+            bindinput="handleFieldChange"
+            bindfocus="handleFieldFocus"
+            bindblur="handleFieldBlur"
+    ></textarea>
+</view>
+<view class="fa-cell fa-field {{ error ? 'fa-field--error' : '' }} {{ mode === 'wrapped' ? 'fa-field--wrapped' : '' }}"
+      wx:if="{{type!=='textarea'}}">
+    <block wx:if="{{type!=='uploader'}}">
+        <view class="fa-cell__hd">
+            <text class="fa-field__title" wx:if="{{ title }}">{{ title }}</text>
+            <view class="fa-cell__desc" wx:if="{{ desc }}">{{desc}}</view>
+        </view>
+        <!--多层if elif有bug 临时改为if-->
+        <input
+                wx:if="{{type==='input'}}"
+                type="{{ inputType || 'text' }}"
+                disabled="{{ disabled }}"
+                focus="{{ focus }}"
+                value="{{ value }}"
+                placeholder="{{ placeholder }}"
+                maxlength="{{ maxlength }}"
+                class="fa-field__input fa-cell__bd {{ right ? 'fa-field__input--right' : '' }}"
+                placeholder-class="fa-field__placeholder"
+                bindinput="handleFieldChange"
+                bindfocus="handleFieldFocus"
+                bindblur="handleFieldBlur"
+        />
+        <picker
+                wx:if="{{type==='picker'}}"
+                mode="{{ pickerMode || 'selector' }}"
+                class="fa-field__input fa-cell__bd {{ right ? 'fa-field__input--right' : '' }}"
+                placeholder-class="fa-field__placeholder"
+                bindchange="handleFieldChange"
+                value="{{index}}"
+                range="{{range}}">
+            <view class="picker">
+                {{value || value === 0?range[value]:placeholder}}
+            </view>
+        </picker>
+        <fa-area
+                wx:if="{{type==='area'}}"
+                areaNames="{{ areaNames }}"
+                placeholder="{{ placeholder }}"
+                class="fa-field__input fa-cell__bd {{ right ? 'fa-field__input--right' : '' }}"
+                placeholder-class="fa-field__placeholder"
+                areaList="{{areaList}}"
+                bind:change="handleFieldChange"
+                bindfocus="handleFieldFocus"
+                bindblur="handleFieldBlur"
+        />
+        <fa-switch
+                wx:if="{{type==='switch'}}"
+                checked="{{ checked }}"
+                loading="{{ loading }}"
+                disabled="{{ disabled }}"
+                class="fa-field__input fa-cell__bd {{ right ? 'fa-field__input--right' : '' }}"
+                bind:change="handleFieldChange"
+                bindfocus="handleFieldFocus"
+                bindblur="handleFieldBlur"
+        />
+    </block>
+    <block wx:else>
+        <view class="fa-cell__bd">
+            <view class="fa-uploader">
+                <view class="fa-uploader__hd" wx:if="{{title}}">
+                    <view class="fa-uploader__title">{{ title }}</view>
+                    <!--<view class="fa-uploader__info">{{files.length}}/2</view>-->
+                </view>
+                <view class="fa-uploader__bd">
+                    <view class="fa-uploader__files" id="uploaderFiles">
+                        <block wx:for="{{uploaderFiles}}" wx:key="*this" wx:for-index="uploader_image_index">
+                            <view class="fa-uploader__file">
+                                <image class="fa-uploader__img" src="{{item}}" mode="aspectFill"
+                                       bindtap="uploaderPreviewImage" id="{{item}}" />
+                                <view class="fa-icon-delete" wx:if="{{uploaderAllowDel === true}}"
+                                      bindtap="uploaderDelImage" data-index="{{uploader_image_index}}"
+                                      data-url="{{item}}">x
+                                </view>
+                            </view>
+                        </block>
+                    </view>
+                    <block wx:if="{{uploaderButtonText}}">
+                        <view class="fa-uploader__input-box-type-text" bindtap="uploaderChooseImage">
+                            <text>{{uploaderButtonText}}</text>
+                        </view>
+                    </block>
+                    <block wx:else>
+                        <view class="fa-uploader__input-box">
+                            <view class="fa-uploader__input" bindtap="uploaderChooseImage"></view>
+                        </view>
+                    </block>
+
+                </view>
+            </view>
+        </view>
+    </block>
+</view>

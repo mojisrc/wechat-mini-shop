@@ -1,0 +1,9 @@
+.page-banner-swiper {width: 100%;}
+.page-banner-swiper image{width: 100%;}
+.page-banner-list {
+    width: 100%;
+}
+.page-banner-list image {
+    width: 100%;
+    display: block;
+}

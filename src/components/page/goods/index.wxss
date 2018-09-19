@@ -1,0 +1,171 @@
+.page-goods-list-small-image{
+    overflow: hidden;
+    display: block;
+}
+.page-goods-list-small-image section{
+    display:block;
+    border-top:6px solid rgba(0, 0, 0, 0);
+    border-left:6px solid rgba(0, 0, 0, 0);
+    border-right:6px solid rgba(0, 0, 0, 0);
+    box-sizing:boder-box;
+    overflow:hidden;
+}
+.page-goods-list-small-image section details{
+    background-color: #fff;
+    display: block;
+    overflow: hidden;
+    float: left;
+    margin-bottom: 6px;
+}
+.page-goods-list-small-image section details:nth-child(odd){
+    margin-right: 6px;
+}
+.page-goods-list-small-image section details>image{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: block;
+}
+.page-goods-list-small-image section details .title-price{
+    background-color: #fff;
+    display: block;
+    overflow: hidden;
+    padding: 10px;
+}
+.page-goods-list-small-image section details .title-price text{
+    color: #333333;
+    height: 40px;
+    line-height: 20px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2;
+}
+.page-goods-list-small-image section details .title-price i{
+    line-height:14px;
+    height:14px;
+    color:#FF0000;
+    margin-bottom:5px;
+    font-size:14px;
+    display:inherit;
+    font-weight: bold;
+}
+/*大图*/
+.page-goods-list-big-image{
+    overflow: hidden;
+    display: block;
+}
+.page-goods-list-big-image section{
+    display:block;
+    box-sizing: border-box;
+}
+.page-goods-list-big-image section details{
+    background-color: #fff;
+    display: block;
+    overflow: hidden;
+    float: left;
+    margin-bottom: 6px;
+}
+.page-goods-list-big-image section details:last-child{
+    margin-bottom: 0;
+}
+.page-goods-list-big-image section details>image{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: block;
+    width: 100vw;
+    height: 100vw;
+}
+.page-goods-list-big-image section details .title-price{
+    background-color: #fff;
+    display: block;
+    overflow: hidden;
+    padding: 10px;
+}
+.page-goods-list-big-image section details .title-price text{
+    color: #333333;
+    height: 40px;
+    line-height: 20px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2;
+}
+.page-goods-list-big-image section details .title-price i{
+    line-height:14px;
+    height:14px;
+    color:#FF0000;
+    margin-bottom:5px;
+    font-size:14px;
+    display:inherit;
+    font-weight: bold;
+}
+/*列表*/
+.page-goods-list-rows{
+    overflow: hidden;
+    display: block;
+}
+.page-goods-list-rows section{
+    display:block;
+    box-sizing:boder-box;
+}
+.page-goods-list-rows section details{
+    background-color: #fff;
+    display: block;
+    overflow: hidden;
+    float: left;
+    padding: 15px;
+    position: relative;
+    height: 100px;
+}
+.page-goods-list-rows section details>image{
+    margin:0;
+    padding:0;
+    border:0;
+    display:inline-block;
+    width:100px;
+    height:100px;
+    float:left;
+    position:absolute;
+}
+.page-goods-list-rows section details .title-price{
+    background-color:#fff;
+    display:inline-block;
+    overflow:hidden;
+    float:left;
+    margin-left:120px;
+    position: relative;
+    height: 100%;
+    border-bottom: 1px solid #F8F8F8;
+}
+.page-goods-list-rows section details:last-child .title-price{
+    border-bottom: none;
+}
+.page-goods-list-rows section details .title-price text{
+    color: #333333;
+    height: 40px;
+    line-height: 20px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2;
+}
+.page-goods-list-rows section details .title-price i{
+    line-height:14px;
+    height:14px;
+    color:#FF0000;
+    margin-bottom:5px;
+    font-size:14px;
+    display:inherit;
+    font-weight: bold;
+}
