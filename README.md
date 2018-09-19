@@ -10,6 +10,8 @@
 
 开发问题欢迎一起交流 ： QQ交流群：632466687
 
+后台UI项目地址：[https://github.com/mojisrc/fashop-admin](https://github.com/mojisrc/fashop-admin)
+
 ## 扫码体验
 
 <p>
