@@ -37,6 +37,7 @@
 ## UI预览
 - 由于每天坚持迭代，测试项目存在大量测试数据不美观，下面附上一张UI的概况。
 <img src="https://ws2.sinaimg.cn/large/006tNbRwgy1fvex804vsnj31kw0yvwvb.jpg" width="100%">
+<img src="https://ws4.sinaimg.cn/large/006tNbRwgy1fveylm7d15g31kw1iohdx.gif" width="100%">
 
 ## 后台操作
 <p>
