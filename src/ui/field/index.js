@@ -103,7 +103,7 @@ Component({
                     success: function (res) {
                         // todo 优化先预览后返回覆盖
                         const tempFilePaths = res.tempFilePaths
-                        for(let i=0;i<=tempFilePaths.length;i++){
+                        for(let i=0;i<tempFilePaths.length;i++){
                             wx.uploadFile({
                                 url: that.data.uploaderUrl,
                                 filePath: tempFilePaths[i],
