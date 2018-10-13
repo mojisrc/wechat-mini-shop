@@ -10,7 +10,7 @@ Component({
         previewImage: function (e) {
             wx.previewImage({
                 current: e.currentTarget.dataset.url,
-                urls: this.data.info.images
+                urls: e.currentTarget.dataset.images
             })
         },
 
