@@ -61,6 +61,7 @@
     width: 79.2vw;
     display: flex;
     justify-content: center;
+
 }
 .goods-category-style-1 aside:nth-child(2)>scroll-view{
     width: 79.2vw;

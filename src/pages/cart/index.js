@@ -14,7 +14,7 @@ Page({
         onLoaded: false,
         goodsId: null,
         specClickGoodsId: null,
-        specClickGoodsSkuId:null,
+        specClickGoodsSkuId: null,
         inCartNumber: 0,
         goodsInfo: null,
         goodsSkuId: null,
@@ -25,7 +25,7 @@ Page({
         stepper: 1,
         cartList: [],
         total: 0,
-        totalNum:0,
+        totalNum: 0,
         checkedGoodsSkuInfoIds: [],
         checkedCartIds: [],
         allChecked: false,
@@ -61,7 +61,7 @@ Page({
     async onChecked(e) {
         await cartModel.check({
             goods_sku_ids: [e.currentTarget.dataset.goodsSkuId],
-            is_check: fa.inArray(this.data.cartList[e.currentTarget.dataset.index].goods_sku_id,this.data.checkedGoodsSkuInfoIds)  ? 0 : 1,
+            is_check: fa.inArray(this.data.cartList[e.currentTarget.dataset.index].goods_sku_id, this.data.checkedGoodsSkuInfoIds) ? 0 : 1,
         })
         this.initCartList()
     },
@@ -74,7 +74,7 @@ Page({
 
         await cartModel.check({
             goods_sku_ids: goodsSkuIds,
-            is_check: cartLength === checkedLength  ? 0 : 1,
+            is_check: cartLength === checkedLength ? 0 : 1,
         })
         this.initCartList()
     },
@@ -124,8 +124,8 @@ Page({
                 }
             }
         })
-        loginLogic.wechatLogin()
-        this.onShow()
+        await loginLogic.wechatLogin()
+        this.init()
     },
     async onPullDownRefresh() {
         await cartModel.list()
@@ -145,15 +145,18 @@ Page({
             })
         }
     },
-    onLoad(){
+    onLoad() {
         wx.showShareMenu({
             withShareTicket: true
         })
     },
     async onShow() {
+        await this.init()
+    },
+    async init(){
         const user_info = fa.cache.get('user_info')
         this.setData({
-            userInfo: user_info,
+            userInfo: user_info ? user_info : null,
             onLoaded: true
         })
         if (fa.cache.get('user_info')) {
@@ -256,7 +259,6 @@ Page({
     async changeSkuConfirm() {
         const stepper = this.data.stepper
         const goodsSkuInfo = this.data.goodsSkuInfo
-        console.log(goodsSkuInfo)
         const specClickGoodsSkuId = this.data.specClickGoodsSkuId
         if (!goodsSkuInfo) {
             return false

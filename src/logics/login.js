@@ -82,7 +82,7 @@ export default class Login {
     // 注意：微信这个异步还不知道怎么写才能行的通  await无效
     async wechatLogin(autoRegister = true) {
         const self = this
-        const result = await wx.login({
+        await wx.login({
             success: async function (res) {
                 const login = await self._wechatLogin({
                     login_type: 'wechat_mini',
