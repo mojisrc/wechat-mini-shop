@@ -4,7 +4,7 @@ import Model from '../utils/model'
 import { CartListInfoInterface, CartListInterface } from '../interface/cart'
 
 export default class Cart extends Model {
-    async list(params) {
+    async list(params = {}) {
         try {
             const { result } = await request(api.cart.list, { data: params })
             return new CartListInterface(result)
