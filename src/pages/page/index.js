@@ -1,14 +1,20 @@
 import regeneratorRuntime from '../../libs/regenerator-runtime/runtime-module'
 import PageModel from "../../models/page";
+import GoodsCategoryModel from "../../models/goodsCategory";
+const categoryModel = new GoodsCategoryModel()
 const pageModel = new PageModel()
 Page({
     data: {
+        id: null,
         pageData: null,
-        backgroundColor:'#f8f8f8'
+        backgroundColor: '#f8f8f8'
     },
-    onLoad() {
+    onLoad({ id }) {
         wx.showShareMenu({
             withShareTicket: true
+        })
+        this.setData({
+            id
         })
         this.initPage()
     },
@@ -49,16 +55,17 @@ Page({
         this.handelLink(info.link)
     },
     onSearchClick() {
-        console.log('onSearchClick')
         wx.navigateTo({
             url: `/pages/goods/search/index`
         })
     },
     async initPage() {
-        const page = await pageModel.portal()
+        const page = await pageModel.info({
+            id: this.data.id
+        })
         this.setData({
             pageData: page.body,
-            backgroundColor:page.background_color
+            backgroundColor: page.background_color
         })
         wx.setNavigationBarTitle({
             title: page.name
@@ -68,8 +75,7 @@ Page({
         this.initPage()
         wx.stopPullDownRefresh()
     },
-    handelLink(link) {
-        console.log(getCurrentPages())
+    async handelLink(link) {
         switch (link.action) {
             case 'portal':
                 wx.switchTab({
@@ -82,16 +88,24 @@ Page({
                 })
                 break
             case 'page':
-                if(getCurrentPages().length > 1){
+                if (getCurrentPages().length > 1) {
                     // 小程序对层级有限制
                     wx.redirectTo({
                         url: `/pages/page/index?id=${link.param.id}`
                     })
-                }else{
+                } else {
                     wx.navigateTo({
                         url: `/pages/page/index?id=${link.param.id}`
                     })
                 }
+                break
+            case 'goods_category':
+                const category = await categoryModel.info({
+                    id: link.param.id
+                })
+                wx.navigateTo({
+                    url: `/pages/goods/search/index?category_id=${link.param.id}&category_keywords=${category.name}`
+                })
                 break
         }
     },

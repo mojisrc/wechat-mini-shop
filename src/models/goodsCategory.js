@@ -13,4 +13,13 @@ export default class GoodsCategory extends Model {
             return false
         }
     }
+    async info(params) {
+        try {
+            const { result } = await request(api.goodsCategory.info, { data: params })
+            return result.info
+        } catch (e) {
+            this.setException(e)
+            return false
+        }
+    }
 }

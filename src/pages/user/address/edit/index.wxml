@@ -11,6 +11,7 @@
         <fa-field
                 title="联系方式："
                 inputType="number"
+                maxlength="11"
                 placeholder="请输入手机号"
                 value="{{ mobile_phone }}"
                 bind:change="onMobilePhoneChange"

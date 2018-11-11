@@ -120,6 +120,10 @@ const api = {
             url: `${host}server/goodscategory/list`,
             method: 'GET'
         },
+        info:{
+            url: `${host}server/goodscategory/info`,
+            method: 'GET'
+        }
     },
     goods: {
         list: {

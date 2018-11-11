@@ -1,8 +1,8 @@
 import regeneratorRuntime from '../../libs/regenerator-runtime/runtime-module'
 import PageModel from "../../models/page";
-
+import GoodsCategoryModel from "../../models/goodsCategory";
 const pageModel = new PageModel()
-
+const categoryModel = new GoodsCategoryModel()
 Page({
     data: {
         pageData: null,
@@ -70,7 +70,8 @@ Page({
         this.initPage()
         wx.stopPullDownRefresh()
     },
-    handelLink(link) {
+    async handelLink(link) {
+
         switch (link.action) {
             case 'portal':
                 wx.switchTab({
@@ -85,6 +86,14 @@ Page({
             case 'page':
                 wx.navigateTo({
                     url: `/pages/page/index?id=${link.param.id}`
+                })
+                break
+            case 'goods_category':
+                const category = await categoryModel.info({
+                    id:link.param.id
+                })
+                wx.navigateTo({
+                    url: `/pages/goods/search/index?category_id=${link.param.id}&category_keywords=${category.name}`
                 })
                 break
         }
