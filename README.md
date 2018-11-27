@@ -12,6 +12,7 @@
 
 后台UI项目地址：[https://github.com/mojisrc/fashop-admin](https://github.com/mojisrc/fashop-admin)
 
+App项目地址：[https://github.com/mojisrc/fashop-client-react-native](https://github.com/mojisrc/fashop-client-react-native)
 ## 扫码体验
 
 <p>
