@@ -55,7 +55,6 @@ Component({
             let computeTimeMs = this.endTimeMs - now;
             // countdown interval
             let timeout = computeTimeMs % 1000 || 0;
-
             this._timer = setTimeout(() => {
                 this.initCountdown();
             }, timeout)

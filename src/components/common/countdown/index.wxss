@@ -2,9 +2,17 @@
     display: flex;
     flex-flow: row nowrap;
 }
-
-.countdown .item {
+.countdown__item{
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
+}
+
+.countdown__item--num {
+    font-size: 14px;
+    color: #333333;
+}
+.countdown__item--symbol{
+    font-size: 14px;
+    color: #333333;
 }
