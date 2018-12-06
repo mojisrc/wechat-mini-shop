@@ -1,0 +1,84 @@
+<view style="background-color:#F8F8F8;display: block;overflow: hidden" wx:if="{{goodsInfo}}">
+    <fa-panel>
+        <view class="refund-goods-card">
+            <view class="body">
+                <view class="item">
+                    <view class="content">
+                        <view class="image">
+                            <image src="{{goodsInfo.goods_img}}" mode="aspectFill" />
+                        </view>
+                        <view class="body">
+                            <text>{{goodsInfo.goods_title}}</text>
+                            <view class="end">
+                                <text class="spec">{{goodsInfo.goods_spec_string}}</text>
+                                <label class="number">x {{goodsInfo.goods_num}}</label>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </fa-panel>
+    <fa-panel>
+        <fa-field
+                wx:if="{{refundType === 2}}"
+                type="picker"
+                title="货物状态"
+                placeholder="请选择"
+                range="{{receiveStateList}}"
+                value="{{userReceive}}"
+                bind:change="onReceiveStateChange"
+                right="true"
+        >
+        </fa-field>
+        <fa-field
+                type="picker"
+                title="退款原因"
+                placeholder="请选择"
+                value="{{reason}}"
+                range="{{reasonList}}"
+                bind:change="onResonChange"
+                right="true"
+        >
+        </fa-field>
+        <fa-field
+                type="input"
+                inputType="digit"
+                title="退款金额"
+                placeholder="¥{{noMoreThan}}"
+                value="{{refundAmount ? refundAmount : noMoreThan}}"
+                bind:blur="onRefundAmountChange"
+                desc="最多¥{{noMoreThan}}，含发货邮费¥{{goodsInfo.goods_freight_fee}}"
+                right="true"
+        >
+        </fa-field>
+        <fa-field
+                title="退款说明"
+                placeholder="必填"
+                value="{{userExplain}}"
+                bind:change="onUserExplainChange"
+                right="true"
+        >
+        </fa-field>
+        <fa-field
+                type="uploader"
+                title="图片上传"
+                uploaderButtonText="{{uploaderButtonText}}"
+                uploaderFormData="{{uploaderFormData}}"
+                uploaderUrl="{{uploaderUrl}}"
+                uploaderHeader="{{uploaderHeader}}"
+                uploaderFiles="{{uploaderFiles}}"
+                uploaderCount="6"
+                uploaderAllowDel="true"
+                bind:success="onUploadFileSuccess"
+                bind:change="handleFieldChange"
+                bind:delete="onUploadFileDelete"
+        >
+        </fa-field>
+    </fa-panel>
+    <fixed-bottom>
+        <view class="footer">
+            <fa-button type="danger" size="large" bind:btnclick="onSubmit">提交</fa-button>
+        </view>
+    </fixed-bottom>
+</view>

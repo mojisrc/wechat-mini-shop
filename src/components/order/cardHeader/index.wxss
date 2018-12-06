@@ -30,20 +30,20 @@
     margin-left: 10px;
 }
 .order-card-header .right .state-0{
-    color:red;
+    color:#FF635C;
 }
 .order-card-header .right .state-10{
-    color:red;
+    color:#FF635C;
 
 }
 .order-card-header .right .state-20{
-    color:red;
+    color:#FF635C;
 
 }
 .order-card-header .right .state-30{
-    color:red;
+    color:#FF635C;
 
 }
 .order-card-header .right .state-40{
-    color:red;
+    color:#FF635C;
 }

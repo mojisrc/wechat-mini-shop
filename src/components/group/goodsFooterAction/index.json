@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "login-view": "../../login/view/index",
+    "fa-button": "../../../ui/btn/index"
+  }
+}

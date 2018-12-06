@@ -127,7 +127,6 @@ Page({
         })
     },
     async onGoodsSkuMatchSuccess(e) {
-        console.log('onGoodsSkuMatchSuccess')
         this.setData({
             goodsSkuInfo: e.detail.goodsSkuInfo
         })
@@ -201,7 +200,6 @@ Page({
         const result = await goodsModel.info({
             id: this.data.id
         })
-        console.log(result)
         if (result) {
             let detail = result.info
             this.setData({

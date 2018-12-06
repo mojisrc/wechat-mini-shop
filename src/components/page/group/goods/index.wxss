@@ -1,0 +1,303 @@
+.page-goods-list-small-image{
+    overflow: hidden;
+    display: block;
+}
+.page-goods-list-small-image section{
+    display:block;
+    border-top:6px solid rgba(0, 0, 0, 0);
+    border-left:6px solid rgba(0, 0, 0, 0);
+    border-right:6px solid rgba(0, 0, 0, 0);
+    overflow:hidden;
+    box-sizing:border-box;
+}
+.page-goods-list-small-image section details{
+    background-color: #fff;
+    display: block;
+    overflow: hidden;
+    float: left;
+    margin-bottom: 6px;
+}
+.page-goods-list-small-image section details:nth-child(odd){
+    margin-right: 6px;
+}
+.page-goods-list-small-image section details>image{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: block;
+}
+.page-goods-list-small-image section details .title-price{
+    background-color: #fff;
+    display: block;
+    overflow: hidden;
+    padding: 10px 10px 5px 10px;
+}
+.page-goods-list-small-image section details .title-price text{
+    color: #333333;
+    height: 40px;
+    line-height: 20px;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2;
+}
+.page-goods-list-small-image section details .num-price{
+    background-color: #fff;
+    overflow: hidden;
+    padding: 0 10px 0 10px;
+    display: flex;
+    align-items: center;
+}
+.page-goods-list-small-image section details .num-price i{
+    font-size: 12px;
+    color: #FF635C;
+}
+.page-goods-list-small-image section details .num-price text{
+    font-size: 14px;
+    color: #FF635C;
+    margin-left: 15px;
+}
+.page-goods-list-small-image section details .group-num{
+    background-color: #fff;
+    overflow: hidden;
+    padding: 0 10px 10px 10px;
+    display: flex;
+    align-items: center;
+}
+.page-goods-list-small-image section details .group-num text{
+    font-size: 12px;
+    color: #999999;
+}
+/*大图*/
+.page-goods-list-big-image{
+    overflow: hidden;
+    display: block;
+}
+.page-goods-list-big-image section{
+    display:block;
+    box-sizing: border-box;
+}
+.page-goods-list-big-image section details{
+    background-color: #fff;
+    display: block;
+    overflow: hidden;
+    float: left;
+    margin-bottom: 6px;
+}
+.page-goods-list-big-image section details:last-child{
+    margin-bottom: 0;
+}
+.page-goods-list-big-image section details>image{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    display: block;
+    width: 100vw;
+    height: 100vw;
+}
+.page-goods-list-big-image section details .title-price{
+    background-color: #fff;
+    display: block;
+    overflow: hidden;
+    padding: 10px;
+}
+.page-goods-list-big-image section details .title-price text{
+    color: #333333;
+    line-height: 20px;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2;
+}
+.page-goods-list-big-image section details .footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+.page-goods-list-big-image section details .footer .price{
+    color: #FF635C;
+    display: flex;
+    justify-content: flex-start;
+}
+.page-goods-list-big-image section details .footer .price>text{
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 0;
+    margin-left: 8px;
+}
+.page-goods-list-big-image section details .footer .price>i{
+    font-size: 12px;
+    line-height: 0;
+}
+.page-goods-list-big-image section details .footer>text{
+    font-size: 12px;
+    color: #999999;
+}
+/*列表*/
+.page-goods-list-rows{
+    overflow: hidden;
+    display: block;
+}
+.page-goods-list-rows section{
+    display:block;
+    box-sizing:border-box;
+}
+.page-goods-list-rows section details{
+    background-color: #fff;
+    display: block;
+    overflow: hidden;
+    float: left;
+    padding: 15px 15px 0 15px;
+    position: relative;
+    height: 90px;
+    border-bottom: 1px solid #F8F8F8;
+}
+.page-goods-list-rows section details>image{
+    margin:0;
+    padding:0;
+    border:0;
+    display:inline-block;
+    width:75px;
+    height:75px;
+    float:left;
+    position:absolute;
+}
+.page-goods-list-rows section details .title-price{
+    background-color:#fff;
+    display:inline-block;
+    overflow:hidden;
+    float:left;
+    margin-left:90px;
+    position: relative;
+    height: 100%;
+}
+.page-goods-list-rows section details:last-child .title-price{
+    border-bottom: none;
+}
+.page-goods-list-rows section details .title-price .desc{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.page-goods-list-rows section details .title-price>text{
+    color: #333333;
+    height: 40px;
+    line-height: 20px;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2;
+}
+.page-goods-list-rows section details .num-price{
+    background-color: #fff;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.page-goods-list-rows section details .num-price text{
+    font-size: 14px;
+    color: #FF635C;
+    font-weight: bold;
+}
+.page-goods-list-rows section details .num-price i{
+    font-size: 12px;
+    color: #cacaca;
+    margin-left: 10px;
+    text-decoration:line-through
+}
+
+.page-goods-list-rows section details .group-num{
+    background-color: #fff;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    color: #999999;
+}
+.page-goods-list-rows section details .group-num text{
+    font-size: 12px;
+    margin-left: 5px;
+}
+.page-goods-list-rows section details .group-num i{
+    font-size: 12px;
+}
+
+/*轮播*/
+.page-goods-swiper{
+    overflow: hidden;
+    display: block;
+    padding: 15px;
+
+}
+.page-goods-swiper swiper{
+    height: 190px;
+}
+.page-goods-swiper section{
+    display: flex;
+    justify-content: space-between;
+}
+.page-goods-swiper section details{
+    width: 105px;
+    overflow: hidden;
+    text-align: center;
+}
+.page-goods-swiper section details .image{
+    width:105px;
+    height:105px;
+    position: relative;
+}
+.page-goods-swiper section details .image>image{
+    margin:0;
+    padding:0;
+    border:0;
+    display:inline-block;
+    width:105px;
+    height:105px;
+}
+.page-goods-swiper section details .image text{
+    position:absolute;
+    bottom:0;
+    background-color: rgba(0, 0, 0, 0.45);
+    text-align:center;
+    width:100%;
+    z-index:1;
+    left:0;
+    font-size:14px;
+    color:#fff;
+}
+.page-goods-swiper section details .title-price{
+    display: flex;
+    flex-direction: column;
+}
+
+.page-goods-swiper section details .title-price>text{
+    color: #333333;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:1;
+    text-align: center;
+}
+.page-goods-swiper section details .title-price>label{
+    font-size: 16px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:1;
+    text-align: center;
+    color: #FF635C;
+    font-weight: bold;
+    padding: 5px 0;
+}

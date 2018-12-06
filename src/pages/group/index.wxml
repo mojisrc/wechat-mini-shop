@@ -1,0 +1,133 @@
+<page-group-goods dataSource="{{dataSource1}}"></page-group-goods>
+
+<fa-cell-group>
+    <fa-cell>
+        <group-invite-goods-item
+                info="{{goodsInfo}}"
+        ></group-invite-goods-item>
+    </fa-cell>
+</fa-cell-group>
+<view class="invite">
+    <view class="info-countdown">
+        <view class="number">
+            <text>还差</text>
+            <label>17</label>
+            <text>人成团，</text>
+        </view>
+        <view class="countdown">
+            <text>剩余</text>
+            <countdown
+                    numStyle="font-size:14px;color:#fff;background-color:#000;border-radius:3px;padding:0 3px;margin:0 3px"
+                    symbolStyle="font-size:14px;color:#999;"
+                    format="dd天hh时mm分ss秒"
+                    countdown="20"
+            ></countdown>
+        </view>
+    </view>
+    <view class="avatars">
+        <avatars emptyNum="{{3}}"></avatars>
+    </view>
+    <view class="btn-area">
+        <fa-button type="danger">邀请好友</fa-button>
+    </view>
+</view>
+<fa-cell title="拼团玩法" value="开团、参团、邀请好友参团" is-link></fa-cell>
+
+
+<window title="全部拼团" show="{{false}}">
+    <scroll-view scroll-y style="max-height: 50vh;" slot="body">
+        <group-goods-all></group-goods-all>
+    </scroll-view>
+</window>
+<window title="参与拼团" show="{{false}}">
+    <group-goods-join slot="body"></group-goods-join>
+</window>
+<page-group-goods dataSource="{{dataSource2}}"></page-group-goods>
+<page-group-goods dataSource="{{dataSource3}}"></page-group-goods>
+
+
+<group-goods-price-state></group-goods-price-state>
+<group-goods-join-state></group-goods-join-state>
+
+<group-goods-footer-action>
+</group-goods-footer-action>
+
+
+邀请好友
+分开写 以免未来关联太大
+
+<view>
+    <view>
+        <text>团长</text>
+        <avatar url="xxxxx"></avatar>
+    </view>
+    <view>
+        <avatar url="xxxxx"></avatar>
+    </view>
+    <view>
+        <avatar url="加号" bind:clicl="onAddGroupUser"></avatar>
+    </view>
+</view>
+
+
+拼团失败
+
+
+首页
+
+
+<!--组件1-->
+<!--<swiper class="page-banner-swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000" style="height: {{height}}px">-->
+<!--<block wx:for="{{dataSource.data}}" wx:for-index="index" wx:key="item">-->
+<!--<swiper-item>-->
+<!--<view>-->
+<!--<image src="{{item.img.url}}" mode="scaleToFill" style="height: {{height}}px" data-index="{{index}}" bindtap="onClick"/>-->
+<!--<text>已拼888888件</text>-->
+<!--</view>-->
+<!--<view>-->
+<!--<text>2人团</text>-->
+<!--<label>¥56.00</label>-->
+<!--</view>-->
+<!--<text>这是商品标题学习下信息，一行</text>-->
+<!--</swiper-item>-->
+<!--</block>-->
+<!--</swiper>-->
+<!--列表1-->
+<!--<view>-->
+<!--<view class="page-goods-list-rows" wx:elif="{{dataSource.options.layout_style === 3}}">-->
+<!--<section>-->
+<!--<block wx:for="{{dataSource.data}}" wx:key="key" wx:for-index="index" wx:for-item="item">-->
+<!--<details data-index="{{index}}" bindtap="onClick">-->
+<!--<image src="{{item.img}}"/>-->
+<!--<view class="info">-->
+<!--<text>这里是商品标题这里是商品标题这里是商品标题这里是商品标题这里是商品标题这里是商品标题这里是商品标题这里是商品标题这里是商品标题</text>-->
+<!--<view class="footer">-->
+<!--<view class="column-1">-->
+<!--<text>2人团</text><text>已拼8888件</text>-->
+<!--<label>¥56.00</label><i>¥88.00</i>-->
+<!--</view>-->
+<!--<view class="column-2">-->
+<!--<fa-button>去开团</fa-button>-->
+<!--</view>-->
+<!--</view>-->
+<!--</view>-->
+<!--</details>-->
+<!--</block>-->
+<!--</section>-->
+<!--</view>-->
+<!--</view>-->
+<!--列表2-->
+<!--<view class="page-goods-list-small-image" wx:if="{{dataSource.options.layout_style === 1}}">-->
+<!--<section>-->
+<!--<block wx:for="{{dataSource.data}}" wx:key="key" wx:for-index="index" wx:for-item="item">-->
+<!--<details style="width:{{smallImageWidth}}px" data-index="{{index}}" bindtap="onClick">-->
+<!--<image src="{{item.img}}"  style="width:{{smallImageWidth}}px;height: {{smallImageWidth}}px"/>-->
+<!--<view class="title-price">-->
+<!--<text>{{item.title}}</text>-->
+<!--<text class="group-num">2人团</text><text class="price">¥56.00</text>-->
+<!--<i>已拼8888件</i>-->
+<!--</view>-->
+<!--</details>-->
+<!--</block>-->
+<!--</section>-->
+<!--</view>-->

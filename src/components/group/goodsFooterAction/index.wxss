@@ -1,0 +1,102 @@
+.goods-footer {
+    display: flex;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #fff;
+    box-sizing: border-box;
+    border-top: 1px solid #F8F8F8;
+    z-index: 1;
+}
+
+.goods-footer .item {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+.goods-footer .item:last-child{
+    flex:1
+}
+
+.goods-footer .sub {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    width: 50px;
+}
+
+.goods-footer .sub .icon {
+    width: 22px;
+    height: 22px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.goods-footer .sub .icon image {
+    width: 22px;
+    height: 22px;
+    display: block;
+    overflow: hidden;
+}
+
+.goods-footer .sub text {
+    font-size: 10px;
+    line-height: 10px;
+    color: #999;
+    display: block;
+}
+.goods-footer .item fa-button{
+    flex:1
+}
+.goods-footer .item fa-button view{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.goods-footer .item fa-button view text{
+    display: block;
+    font-size: 16px;
+    line-height: 16px;
+    height: 16px;
+    margin-bottom: 3px;
+}
+.goods-footer .item fa-button view label{
+    display: block;
+    font-size: 12px;
+    line-height: 12px;
+    height: 16px;
+}
+.kf-button{
+    position:relative;
+    margin-left:initial;
+    margin-right:initial;
+    padding-left:initial;
+    padding-right:initial;
+    box-sizing:initial;
+    font-size:initial;
+    text-align:initial;
+    text-decoration:initial;
+    line-height:initial;
+    -webkit-tap-highlight-color:initial;
+    overflow:initial;
+    color:initial;
+    background-color:initial;
+    border-radius: 0;
+    border:none;
+}
+.kf-button:after{ border:none;}
+.kf-button.prev{
+    background-color: initial;
+    color: initial;
+}

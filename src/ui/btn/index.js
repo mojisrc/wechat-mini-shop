@@ -31,6 +31,10 @@ Component({
             type: Boolean,
             value: false,
         },
+        round: {
+            type: Boolean,
+            value: false,
+        },
         disabled: {
             type: Boolean,
             value: false,

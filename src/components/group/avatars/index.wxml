@@ -1,0 +1,20 @@
+<view class="full-users">
+    <view class="full-item" wx:for="{{avatars}}" wx:key="key" wx:for-index="index" wx:for-item="item">
+        <view class="group-leader" wx:if="{{index===0}}">
+            <text>团长</text>
+        </view>
+        <avatar
+                src="{{item.avatar}}"
+                size="36"
+                img-class="{{index ===0 ? 'avatar-img' : ''}}"
+        ></avatar>
+    </view>
+
+    <view class="full-item" wx:for="{{emptyNum}}" wx:key="key" wx:for-index="index" wx:for-item="item">
+        <avatar
+                src="https://ws4.sinaimg.cn/large/006tNbRwly1fxw88512k6j303403ajr9.jpg"
+                size="36"
+                img-class="dotted-avatar"
+        ></avatar>
+    </view>
+</view>

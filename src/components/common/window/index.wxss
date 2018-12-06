@@ -1,0 +1,27 @@
+.window{
+    background-color: #ffffff;
+    width: 80vw;
+    border-radius: 6px;
+    position: relative;
+}
+.window .close{
+    position: absolute;
+    right: -16px;
+    top: -16px;
+}
+.window .close>image{
+    width: 32px;
+    height: 32px;
+    border-radius: 100em;
+}
+.title-outer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #EAEAEA;
+    padding: 15px 0;
+}
+.title-outer .title{
+    font-size: 14px;font-weight: 800;
+    text-align: center;
+}

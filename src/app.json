@@ -1,6 +1,14 @@
 {
   "pages": [
+    "pages/group/index",
+    "pages/group/goods/detail/index",
     "pages/index/index",
+    "pages/group/rule/index",
+    "pages/group/order/detail/index",
+    "pages/group/refund/detail/index",
+    "pages/group/refund/list/index",
+    "pages/group/refund/serviceApply/index",
+    "pages/group/refund/serviceType/index",
     "pages/category/index",
     "pages/cart/index",
     "pages/goods/detail/index",

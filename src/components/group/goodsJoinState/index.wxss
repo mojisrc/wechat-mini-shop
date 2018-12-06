@@ -1,0 +1,56 @@
+.group-join-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color:#333333;
+}
+.user-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.user-info avatar{margin-right: 10px}
+.user-info text{font-size: 14px;font-weight: 800}
+.countdown{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.join-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.info-countdown{
+
+}
+.info-countdown .number{
+    font-size: 12px;
+    text-align: right;
+}
+.info-countdown .number label{
+    margin: 0 5px;
+    color: #FF635C;
+}
+.info-countdown .countdown{
+    font-size: 12px;
+    color: #999999;
+}
+.info-countdown .countdown text{
+    margin-right: 5px;
+}
+.join-btn{
+    margin-left: 15px;
+}
+.full{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.full>text{
+    font-weight: bold;
+    font-size: 14px;
+    color: #333333;
+    margin-bottom: 20px;
+}

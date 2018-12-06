@@ -1,0 +1,6 @@
+<image
+        src="{{src?src:'/themes/default/user/default-avatar.png'}}" mode="aspectFill"
+        style="border-radius: 100em;width: {{size>0?size:30}}px;height: {{size>0?size:30}}px;"
+        bindtap="onClick"
+        class="img-class"
+/>

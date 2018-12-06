@@ -71,7 +71,7 @@
     margin-bottom: 10px;
 }
 .goods-evaluate-item .reply-content {
-    color: red;
+    color: #FF635C;
 }
 .goods-evaluate-item .reply-content time-format{
     margin-left: 5px;

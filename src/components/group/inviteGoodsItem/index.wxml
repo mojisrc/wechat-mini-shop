@@ -1,0 +1,22 @@
+<view class="page-goods-list-rows" wx:if="{{info}}">
+    <section>
+            <details data-id="{{info.id}}" bindtap="onClick">
+                <image src="{{info.img}}" />
+                <view class="title-price">
+                    <text>{{info.title}}</text>
+                    <view class="desc">
+                        <view class="info">
+                            <view class="group-num">
+                                <i>2人团</i>
+                                <text>已拼8888件</text>
+                            </view>
+                            <view class="num-price">
+                                <text>¥ {{info.price}}</text>
+                                <i>¥3000</i>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </details>
+    </section>
+</view>

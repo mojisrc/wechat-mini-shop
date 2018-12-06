@@ -1,5 +1,5 @@
-<button 
-  class="custom-class fa-btn {{ inGroup ? 'fa-btn--group' : '' }} {{ isLast ? 'fa-btn--last' : '' }} {{size ? 'fa-btn--'+size : ''}} {{size === 'mini' ? 'fa-btn--plain' : ''}} {{plain ? 'fa-btn--plain' : ''}} {{type ? 'fa-btn--'+type : ''}} {{loading ? 'fa-btn--loading' : ''}} {{disabled ? 'fa-btn--disabled' : ''}}"
+<button
+  class="custom-class fa-btn {{ inGroup ? 'fa-btn--group' : '' }} {{ isLast ? 'fa-btn--last' : '' }} {{size ? 'fa-btn--'+size : ''}} {{size === 'mini' ? 'fa-btn--plain' : ''}} {{plain ? 'fa-btn--plain' : ''}} {{round ? 'fa-btn--round' : ''}} {{type ? 'fa-btn--'+type : ''}} {{loading ? 'fa-btn--loading' : ''}} {{disabled ? 'fa-btn--disabled' : ''}}"
   open-type="{{ openType }}"
   app-parameter="{{ appParameter }}"
   hover-stop-propagation="{{ hoverStopPropagation }}"

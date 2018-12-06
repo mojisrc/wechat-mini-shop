@@ -1,0 +1,52 @@
+.goods-all{
+    background-color: #ffffff;
+    width: 80vw;
+    border-radius: 6px;
+    position: relative;
+}
+.goods-all .close{
+    position: absolute;
+    right: -16px;
+    top: -16px;
+}
+.goods-all .close>image{
+    width: 32px;
+    height: 32px;
+    border-radius: 100em;
+}
+.group-join-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color:#333333;
+}
+.user-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.user-info avatar{margin-right: 10px}
+.info>text{font-size: 14px;font-weight: 800}
+.info{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.join-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info-countdown .number{
+    font-size: 12px;
+    display: flex;
+    justify-content: flex-start;
+    color: #999999;
+}
+.info-countdown .number label{
+    color: #FF635C;
+}
+.join-btn{
+    margin-left: 15px;
+}

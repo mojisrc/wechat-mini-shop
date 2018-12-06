@@ -1,0 +1,12 @@
+{
+  "component": true,
+  "usingComponents": {
+    "login-view": "../../login/view/index",
+    "avatar": "../../user/avatar/index",
+    "avatars": "../avatars/index",
+    "countdown": "../../common/countdown/index",
+    "fa-button": "../../../ui/btn/index",
+    "fa-cell-group": "../../../ui/cell-group/index",
+    "fa-cell": "../../../ui/cell/index"
+  }
+}

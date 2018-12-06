@@ -1,0 +1,2 @@
+fa-panel{margin-bottom: 10px;display: block}
+fa-panel:last-child{margin-bottom: 160px}

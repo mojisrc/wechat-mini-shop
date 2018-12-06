@@ -6,7 +6,7 @@
 }
 .page-goods-list-rows section{
     display:block;
-    box-sizing:boder-box;
+    box-sizing:border-box;
 }
 .page-goods-list-rows section details{
     background-color: #fff;

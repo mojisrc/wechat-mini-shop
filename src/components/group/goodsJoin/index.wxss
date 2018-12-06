@@ -1,0 +1,21 @@
+.group-join{
+    color: #333333;
+}
+.group-join button{margin-top: 15px}
+.group-join .body{
+    padding: 15px;
+    font-size: 14px;
+}
+.group-join .body .desc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.group-join .body .desc label{
+    margin: 0 5px;
+    color: #FF635C;
+}
+.group-join .body .desc  countdown{
+    padding: 0 5px;
+}

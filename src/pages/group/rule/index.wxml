@@ -1,0 +1,16 @@
+<image src="/themes/default/group/rule/1.png" mode="aspectFit"></image>
+<image src="/themes/default/group/rule/2.png" mode="aspectFit"></image>
+<image src="/themes/default/group/rule/3.png" mode="aspectFit"></image>
+<image src="/themes/default/group/rule/4.png" mode="aspectFit"></image>
+<image src="/themes/default/group/rule/5.png" mode="aspectFit"></image>
+<image src="/themes/default/group/rule/6.png" mode="aspectFit"></image>
+<view class="info">
+    <text>
+        - 点击拼团活动，开团成为团长，并邀请好友参团，在
+        团有效时间内凑齐成团人数，即可拼团成功，商家将
+        会发货；
+        - 在团有效时间内未凑齐成团人数，即拼团失败，系统
+        自动取消订单并全额退款，支付金额将会原路退回付
+        款账户；
+    </text>
+</view>

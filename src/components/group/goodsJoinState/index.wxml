@@ -1,0 +1,87 @@
+<fa-panel>
+    <fa-cell-group>
+        <fa-cell is-link="true" value="查看全部">
+            <text style="color:red">32</text>
+            人正在拼团
+        </fa-cell>
+        <fa-cell>
+            <view class="group-join-row">
+                <view class="user-info">
+                    <avatar
+                            src="https://tvax4.sinaimg.cn/crop.0.0.1242.1242.180/648679cbly8fw970qnrc4j20yi0yidjk.jpg"
+                            size="36"
+                    ></avatar>
+                    <text>小小滴小哥</text>
+                </view>
+                <view class="join-info">
+                    <view class="info-countdown">
+                        <view class="number">
+                            <text>还差</text>
+                            <label>1</label>
+                            <text>人成团</text>
+                        </view>
+                        <view class="countdown">
+                            <text>剩余</text>
+                            <countdown
+                                    numStyle="font-size:12px;color:#999"
+                                    symbolStyle="font-size:12px;color:#999"
+                                    format="dd:hh:mm:ss"
+                                    countdown="20"
+                            ></countdown>
+                        </view>
+                    </view>
+                    <view class="join-btn">
+                        <fa-button round type="danger" size="small">参团</fa-button>
+                    </view>
+                </view>
+            </view>
+        </fa-cell>
+        <fa-cell>
+            <view class="group-join-row">
+                <view class="user-info">
+                    <avatar
+                            src="https://tvax4.sinaimg.cn/crop.0.0.1242.1242.180/648679cbly8fw970qnrc4j20yi0yidjk.jpg"
+                            size="36"
+                    ></avatar>
+                    <text>小小滴小哥</text>
+                </view>
+                <view class="join-info">
+                    <view class="info-countdown">
+                        <view class="number">
+                            <text>还差</text>
+                            <label>1</label>
+                            <text>人成团</text>
+                        </view>
+                        <view class="countdown">
+                            <text>剩余</text>
+                            <countdown
+                                    numStyle="font-size:12px;color:#999"
+                                    symbolStyle="font-size:12px;color:#999"
+                                    format="dd:hh:mm:ss"
+                                    countdown="20"
+                            ></countdown>
+                        </view>
+                    </view>
+                    <view class="join-btn">
+                        <fa-button round type="danger" size="small">参团</fa-button>
+                    </view>
+                </view>
+            </view>
+        </fa-cell>
+        <fa-cell>
+            <view class="full">
+                <text>来晚了，本团名额已满</text>
+                <avatars></avatars>
+            </view>
+            <!--发起的拼团-->
+            <view class="full">
+                <text>欢迎参加 小小滴小哥 发起的拼团</text>
+                <avatars emptyNum="{{3}}"></avatars>
+            </view>
+        </fa-cell>
+        <fa-cell title="拼团玩法" value="开团、参团、邀请好友参团" is-link></fa-cell>
+
+    </fa-cell-group>
+</fa-panel>
+
+

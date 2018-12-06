@@ -65,7 +65,7 @@
     margin-bottom: 10px;
 }
 .goods-evaluate-item .reply-content {
-    color: red;
+    color: #FF635C;
 }
 
 .goods-evaluate-item .conte.goods-evaluate-item .header {

@@ -1,11 +1,14 @@
 .countdown {
     display: flex;
     flex-flow: row nowrap;
+    text-align: center;
+    justify-content: center;
 }
 .countdown__item{
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
+    justify-content: center;
 }
 
 .countdown__item--num {

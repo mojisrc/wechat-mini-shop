@@ -1,0 +1,40 @@
+.full-users{
+    font-size: 15px;
+    display:flex;
+    flex-wrap:wrap;
+    text-align:center;
+    justify-content:center;
+}
+.full-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 7.5px;
+    text-align: center;
+    position: relative;
+
+}
+.full-item text{
+    border-radius: 100px;
+    background-color: #FF635C;
+    color: #ffffff;
+    font-size: .6em;
+    padding: 2px 8px;
+    text-align: center;
+}
+.group-leader{
+    position: absolute;
+    top: -35%;
+    left: 0;
+    text-align: center;
+    width: 100%;
+}
+.group-leader>text {
+
+}
+.avatar-img{
+    border: 1px solid #FF635C;
+}
+.dotted-avatar{
+    border: 1px dashed #ccc;
+}

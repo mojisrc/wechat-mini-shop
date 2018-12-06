@@ -1,0 +1,60 @@
+<view style="background-color:#F8F8F8;display: block;overflow: hidden">
+    <fa-panel>
+        <refund-goods-card
+                goodsTitle="{{goodsInfo.goods_title}}"
+                goodsImg="{{goodsInfo.goods_img}}"
+                goodsSpec="{{goodsInfo.goods_spec_string}}"
+                goodsNum="{{goodsInfo.goods_num}}"
+        ></refund-goods-card>
+    </fa-panel>
+    <fa-panel>
+        <fa-field
+                title="物流公司"
+                placeholder="请填写物流公司，必填"
+                value="{{tracking_company }}"
+                bind:change="onTrackingCompanyChange"
+        >
+        </fa-field>
+        <fa-field
+                title="物流单号"
+                placeholder="请输入物流单号，必填"
+                value="{{tracking_no}}"
+                bind:change="onTrackingNoChange"
+        >
+        </fa-field>
+        <fa-field
+                title="联系电话"
+                placeholder="请填写手机号码，必填"
+                value="{{tracking_phone}}"
+                bind:change="onTackingPhoneChange"
+        >
+        </fa-field>
+        <fa-field
+                title="退款说明"
+                placeholder="退款说明，必填"
+                value="{{tracking_explain}}"
+                bind:change="onTrackingExplainChange"
+        >
+        </fa-field>
+        <fa-field
+                type="uploader"
+                title="图片上传"
+                uploaderButtonText="{{uploaderButtonText}}"
+                uploaderFormData="{{uploaderFormData}}"
+                uploaderUrl="{{uploaderUrl}}"
+                uploaderHeader="{{uploaderHeader}}"
+                uploaderFiles="{{uploaderFiles}}"
+                uploaderCount="6"
+                uploaderAllowDel="true"
+                bind:success="onUploadFileSuccess"
+                bind:change="handleFieldChange"
+                bind:delete="onUploadFileDelete"
+        >
+        </fa-field>
+    </fa-panel>
+</view>
+<fixed-bottom>
+    <view class="footer">
+        <fa-button type="danger" size="large" bind:btnclick="onSubmit">提交</fa-button>
+    </view>
+</fixed-bottom>

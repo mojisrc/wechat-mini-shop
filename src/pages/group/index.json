@@ -1,0 +1,23 @@
+{
+  "navigationBarTitleText": "拼团",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "page-group-goods": "../../components/page/group/goods/index",
+    "fa-popup": "../../../ui/popup/index",
+    "countdown": "../../components/common/countdown/index",
+    "group-goods-footer-action":"../../components/group/goodsFooterAction/index",
+    "group-goods-join-state":"../../components/group/goodsJoinState/index",
+    "group-goods-price-state":"../../components/group/goodsPriceState/index",
+    "group-goods-join":"../../components/group/goodsJoin/index",
+    "group-goods-all":"../../components/group/goodsAll/index",
+    "group-invite-goods-item":"../../components/group/inviteGoodsItem/index",
+    "avatar": "../../components/user/avatar/index",
+    "avatars": "../../components/group/avatars/index",
+    "fa-panel": "../../../ui/panel/index",
+    "fa-button": "../../../ui/btn/index",
+    "fa-tab": "../../../ui/tab/index",
+    "fa-cell-group": "../../../ui/cell-group/index",
+    "fa-cell": "../../../ui/cell/index",
+    "window": "../../components/common/window/index"
+  }
+}

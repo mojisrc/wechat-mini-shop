@@ -207,7 +207,7 @@
     border-top:6px solid rgba(0, 0, 0, 0);
     border-left:6px solid rgba(0, 0, 0, 0);
     border-right:6px solid rgba(0, 0, 0, 0);
-    box-sizing:boder-box;
+    box-sizing:border-box;
     overflow:hidden;
 }
 .goods-category-style-3 section details{

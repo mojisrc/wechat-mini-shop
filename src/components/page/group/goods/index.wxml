@@ -1,0 +1,90 @@
+<view class="page-goods-list-small-image" wx:if="{{dataSource.options.layout_style === 1}}">
+    <section>
+        <block wx:for="{{dataSource.data}}" wx:key="key" wx:for-index="index" wx:for-item="item">
+            <details style="width:{{smallImageWidth}}px" data-index="{{index}}" bindtap="onClick">
+                <image src="{{item.img}}" style="width:{{smallImageWidth}}px;height: {{smallImageWidth}}px" />
+                <view class="title-price">
+                    <text>{{item.title}}</text>
+                </view>
+                <view class="num-price">
+                    <i>2人团</i>
+                    <text>¥ {{item.price}}</text>
+                </view>
+                <view class="group-num">
+                    <text>已拼8888件</text>
+                </view>
+            </details>
+        </block>
+    </section>
+</view>
+<view class="page-goods-list-big-image" wx:elif="{{dataSource.options.layout_style === 2}}">
+    <section>
+        <block wx:for="{{dataSource.data}}" wx:key="key" wx:for-index="index" wx:for-item="item">
+            <details data-index="{{index}}" bindtap="onClick">
+                <image src="{{item.img}}" mode="aspectFit" />
+                <view class="title-price">
+                    <text>{{item.title}}</text>
+                </view>
+                <view class="footer">
+                    <view class="price">
+                        <i>2人团</i>
+                        <text>¥ {{item.price}}</text>
+                    </view>
+                    <text>已拼8888件</text>
+                </view>
+            </details>
+        </block>
+    </section>
+</view>
+
+<view class="page-goods-list-rows" wx:elif="{{dataSource.options.layout_style === 3}}">
+    <section>
+        <block wx:for="{{dataSource.data}}" wx:key="key" wx:for-index="index" wx:for-item="item">
+            <details data-index="{{index}}" bindtap="onClick">
+                <image src="{{item.img}}" />
+                <view class="title-price">
+                    <text>{{item.title}}</text>
+                    <view class="desc">
+                        <view class="info">
+                            <view class="group-num">
+                                <i>2人团</i>
+                                <text>已拼8888件</text>
+                            </view>
+                            <view class="num-price">
+                                <text>¥ {{item.price}}</text>
+                                <i>¥3000</i>
+                            </view>
+                        </view>
+                        <fa-button type="danger" size="small" round>去拼团</fa-button>
+                    </view>
+                </view>
+
+            </details>
+        </block>
+    </section>
+</view>
+
+<view class="page-goods-swiper" wx:elif="{{dataSource.options.layout_style === 4}}">
+    <wxs src="../../../../utils/tools.wxs" module="tools" />
+    <swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="{{5000}}" duration="{{500}}" indicator-active-color="#FF635C" indicator-color="#ccc">
+        <block wx:for="{{tools.swiperSplit(dataSource.data,3)}}" wx:key="k" wx:for-index="i" wx:for-item="split" >
+            <swiper-item>
+                <section>
+                    <block wx:for="{{split}}" wx:key="key" wx:for-index="index" wx:for-item="item">
+                        <details data-index="{{index}}" bindtap="onClick">
+                            <view class="image">
+                                <image src="{{item.img}}" />
+                                <text>2人团</text>
+                            </view>
+                            <view class="title-price">
+                                <label>¥ {{item.price}}</label>
+                                <text>{{item.title}}</text>
+                            </view>
+
+                        </details>
+                    </block>
+                </section>
+            </swiper-item>
+        </block>
+    </swiper>
+</view>

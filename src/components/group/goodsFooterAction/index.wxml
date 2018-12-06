@@ -1,0 +1,45 @@
+<footer class="goods-footer">
+    <view class="item">
+        <button class="sub kf-button" open-type="contact" session-from="weapp">
+            <view class="icon">
+                <image src="/themes/default/goods/contact.png"
+                       mode="aspectFill" />
+            </view>
+            <text>客服</text>
+        </button>
+        <login-view class="sub" bind:success="onLoginSuccess">
+            <view class="icon" bindtap="onCollect">
+                <image src="/themes/default/goods/collect.png"
+                       mode="aspectFill" />
+            </view>
+            <text bindtap="onCollect">收藏</text>
+        </login-view>
+        <login-view class="sub" bind:success="onLoginSuccess" bindtap="goCart" wx:if="{{cartTotalNumber>0}}">
+            <view class="icon">
+                <fa-badge wx:if="{{cartTotalNumber>0}}"
+                          color="#fff"
+                          background-color="red"
+                          font-size="12"
+                >{{cartTotalNumber > 99 ? '99+' : cartTotalNumber}}
+                </fa-badge>
+                <image src="/themes/default/goods/cart.png"
+                       mode="aspectFill" />
+            </view>
+            <text>购物车</text>
+        </login-view>
+    </view>
+    <view class="item">
+        <fa-button type="warn" size="large" bind:btnclick="onBuyNow">
+            <view>
+                <text>¥50.00</text>
+                <label>单独购买</label>
+            </view>
+        </fa-button>
+        <fa-button type="danger" size="large" bind:btnclick="onBuyGroup">
+            <view>
+                <text>¥50.00</text>
+                <label>一键开团</label>
+            </view>
+        </fa-button>
+    </view>
+</footer>

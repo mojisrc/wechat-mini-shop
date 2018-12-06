@@ -1,0 +1,14 @@
+<view class="group-join">
+    <view class="body">
+        <view class="desc">
+            <text>仅剩</text>
+            <label>1</label>个名额
+            <countdown
+                    countdown="20"
+            ></countdown>
+            后结束
+        </view>
+        <avatars emptyNum="{{1}}"></avatars>
+        <fa-button type="danger">一键参团</fa-button>
+    </view>
+</view>

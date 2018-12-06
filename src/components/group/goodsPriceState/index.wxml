@@ -1,0 +1,17 @@
+<view class="price-time">
+    <view class="price">
+        <i>¥</i>
+        <text>25.00</text>
+        <label>3人团</label>
+    </view>
+    <view class="time">
+        <view style="background-color:#FCAAA6;text-align: center;padding: 40px">
+            <text style="font-size:12px;color:#fff;padding-bottom: 3px;display: block;">距结束还剩</text>
+            <countdown
+                    countdown="20"
+                    numStyle="background-color:#fff;padding:0 2px;color:#333;border-radius:3px;font-size:12px"
+                    symbolStyle="padding:0 2px;color:#fff;font-size:12px"
+            ></countdown>
+        </view>
+    </view>
+</view>

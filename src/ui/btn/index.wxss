@@ -116,6 +116,22 @@
 .fa-btn--plain.fa-btn--danger {
     color: #FF635C
 }
+.fa-btn--round::after{     border-radius: 10em;}
+.fa-btn--round.fa-btn {
+    border-radius: 10em;
+}
+
+.fa-btn--round.fa-btn--primary {
+    border-radius: 10em;
+}
+
+.fa-btn--round.fa-btn--warn {
+    border-radius: 10em;
+}
+
+.fa-btn--round.fa-btn--danger {
+    border-radius: 10em;
+}
 
 .button-hover {
     opacity: .9

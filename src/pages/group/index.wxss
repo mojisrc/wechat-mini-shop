@@ -1,0 +1,31 @@
+.invite{
+    color: #333;
+    font-size: 14px;
+    padding: 15px;
+}
+.invite .info-countdown{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 15px;
+}
+.invite .info-countdown .number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.invite .info-countdown .number label{
+    color: #FF635C;
+    margin: 0 3px;
+}
+.invite  .countdown{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.invite .avatars{
+    padding: 15px;
+}
+.invite .btn-area{
+    padding: 0 15px 15px 15px;
+}

@@ -1,0 +1,11 @@
+<fa-popup show="{{show}}" bind:close="onClose">
+    <view class="window">
+        <view class="close">
+            <image src="https://ws4.sinaimg.cn/large/006tNbRwly1fxw88512k6j303403ajr9.jpg" mode="aspectFill" />
+        </view>
+        <view class="title-outer" wx:if="{{title}}">
+            <text class="title">{{title}}</text>
+        </view>
+        <slot name="body"></slot>
+    </view>
+</fa-popup>
