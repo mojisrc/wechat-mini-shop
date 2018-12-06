@@ -14,3 +14,4 @@ lerna-debug.log
 /yarn.lock
 dist/
 project.config.json
+.idea/workspace.xml
