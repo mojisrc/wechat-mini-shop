@@ -150,5 +150,22 @@ Page({
             const prevPage = pages[pages.length - 2];
             prevPage.updateListRow(id);
         }
+    },
+    async onLogistics(e) {
+        const result = await orderModel.logistics({
+            id: e.detail.orderId
+        })
+        if (result) {
+            // 跳转
+            // const url = encodeURIComponent("https://m.kuaidi100.com/index_all.html?type=emsguoji&postid=BE960265852US");
+            const url = encodeURIComponent(result.url)
+            wx.navigateTo({
+                url: `/pages/webView/index?url=${url}`
+            })
+        } else {
+            fa.toast.show({
+                title: fa.code.parse(orderModel.getException().getCode())
+            })
+        }
     }
 })

@@ -49,6 +49,9 @@ Component({
         },
         onEvaluate(){
             this.triggerEvent('evaluate', { orderInfo: this.data.orderInfo });
+        },
+        onLogistics() {
+            this.triggerEvent('logistics', { orderId: this.data.orderId });
         }
     }
 });

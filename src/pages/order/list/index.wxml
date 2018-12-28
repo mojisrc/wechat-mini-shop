@@ -22,11 +22,12 @@
                             showEvaluateBtn="{{item.if_evaluate}}"
                             showPayBtn="{{item.if_pay}}"
                             showReceiveBtn="{{item.if_receive}}"
-                            showLogisticsBtn="{{item.showLogisticsBtn}}"
+                            showLogisticsBtn="{{item.state===30||item.state===40}}"
                             bind:pay="onPay"
                             bind:receive="onReceive"
                             bind:cancel="onCancel"
                             bind:evaluate="onEvaluate"
+                            bind:logistics="onLogistics"
                     ></order-card-footer>
                 </order-card>
             </fa-panel>

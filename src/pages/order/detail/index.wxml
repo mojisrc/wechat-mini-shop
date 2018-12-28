@@ -22,12 +22,13 @@
                 showDelBtn="false"
                 showEvaluateBtn="{{orderInfo.if_evaluate}}"
                 showPayBtn="{{orderInfo.if_pay}}"
-                showLogisticsBtn="{{orderInfo.showLogisticsBtn}}"
+                showLogisticsBtn="{{orderInfo.state===30||orderInfo.state===40}}"
                 showReceiveBtn="{{orderInfo.if_receive}}"
                 bind:pay="onPay"
                 bind:receive="onReceive"
                 bind:cancel="onCancel"
                 bind:evaluate="onEvaluate"
+                bind:logistics="onLogistics"
         ></order-footer-action>
     </fa-panel>
 </view>

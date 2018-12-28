@@ -248,6 +248,10 @@ const api = {
             url: `${host}server/order/deliverInfo`,
             method: 'GET'
         },
+        logistics: {
+            url: `${host}server/order/logistics`,
+            method: 'GET'
+        },
         goodsList: {
             url: `${host}server/order/goodsList`,
             method: 'GET'

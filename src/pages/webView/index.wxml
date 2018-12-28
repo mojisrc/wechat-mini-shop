@@ -1,0 +1,3 @@
+<!--pages/pointsrule/index.wxml-->
+<web-view src="{{url}}"></web-view>
+

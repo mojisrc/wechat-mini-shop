@@ -64,6 +64,16 @@ export default class Order extends Model {
         }
     }
 
+    async logistics(params) {
+        try {
+            const { result } = await request(api.order.logistics, { data: params })
+            return result
+        } catch (e) {
+            this.setException(e)
+            return false
+        }
+    }
+
     async goodsList(params) {
         try {
             const { result } = await request(api.order.goodsList, { data: params })

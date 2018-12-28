@@ -18,9 +18,9 @@
             <block wx:if="{{showEvaluateBtn === true}}">
                 <order-button text="评价" bind:click="onEvaluate"></order-button>
             </block>
-            <!--<block wx:if="{{showLogisticsBtn === true}}">-->
-                <!--<order-button text="查看物流">查看物流</order-button>-->
-            <!--</block>-->
+            <block wx:if="{{showLogisticsBtn === true}}">
+                <order-button text="查看物流" bind:click="onLogistics">查看物流</order-button>
+            </block>
         </view>
     </view>
 </view>

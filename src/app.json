@@ -42,7 +42,8 @@
     "pages/user/editPassword/password/index",
     "pages/user/findPassword/password/index",
     "pages/user/findPassword/index",
-    "pages/user/findPassword/smscode/index"
+    "pages/user/findPassword/smscode/index",
+    "pages/webView/index"
   ],
   "window": {
     "navigationBarTitleText": "FaShop",
