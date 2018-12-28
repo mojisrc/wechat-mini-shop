@@ -199,7 +199,7 @@ Page({
         if (result) {
             // 跳转
             // const url = encodeURIComponent("https://m.kuaidi100.com/index_all.html?type=emsguoji&postid=BE960265852US");
-            const url = encodeURIComponent(result.url)
+            const url = encodeURIComponent(result.info.url)
             wx.navigateTo({
                 url: `/pages/webView/index?url=${url}`
             })
