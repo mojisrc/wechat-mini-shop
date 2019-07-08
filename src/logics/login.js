@@ -1,6 +1,6 @@
-import UserModel from '../models/user'
+import UserModel from '@/models/user'
 import fa from '../utils/fa'
-import regeneratorRuntime from '../libs/regenerator-runtime/runtime-module'
+import "regenerator-runtime/runtime"
 // 如果用户授权了 是不需要调用 getUserInfo 的，但是为了降低bug出现 统一先获得
 export default class Login {
     userModel = new UserModel()

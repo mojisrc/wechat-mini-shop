@@ -1,8 +1,8 @@
-import fa from '../../../utils/fa'
-import RefundModel from '../../../models/refund'
-import regeneratorRuntime from '../../../libs/regenerator-runtime/runtime-module'
+import fa from '@/utils/fa'
+import RefundModel from '@/models/refund'
+import "regenerator-runtime/runtime"
 
-const Dialog = require('../../../ui/dialog/dialog');
+const Dialog = require('@/ui/dialog/dialog');
 
 const refundModel = new RefundModel()
 

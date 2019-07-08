@@ -1,9 +1,9 @@
-import CartModel from '../../models/cart'
-import fa from '../../utils/fa'
-import regeneratorRuntime from '../../libs/regenerator-runtime/runtime-module'
-import CartLogic from "../../logics/cart";
-import LoginLogic from "../../logics/login";
-import GoodsModel from "../../models/goods";
+import CartModel from '@/models/cart'
+import fa from '@/utils/fa'
+import "regenerator-runtime/runtime"
+import CartLogic from "@/logics/cart";
+import LoginLogic from "@/logics/login";
+import GoodsModel from "@/models/goods";
 
 const cartModel = new CartModel()
 const goodsModel = new GoodsModel()

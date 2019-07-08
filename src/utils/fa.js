@@ -1,4 +1,4 @@
-import regeneratorRuntime from '../libs/regenerator-runtime/runtime-module'
+import "regenerator-runtime/runtime"
 import Validate from './validate'
 import Code from './code'
 import Cache from './cache'

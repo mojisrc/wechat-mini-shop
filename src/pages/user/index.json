@@ -1,11 +1,11 @@
 {
   "navigationBarTitleText": "FaShop商城系统",
   "usingComponents": {
-    "unlogin-ucenter": "../../components/login/ucenter/index",
-    "login-view": "../../components/login/view/index",
-    "fa-cell-group": "../../ui/cell-group/index",
-    "fa-cell": "../../ui/cell/index",
-    "fa-panel": "../../ui/panel/index",
-    "fa-badge": "../../ui/badge/index"
+    "unlogin-ucenter": "@/components/login/ucenter/index",
+    "login-view": "@/components/login/view/index",
+    "fa-cell-group": "@/ui/cell-group/index",
+    "fa-cell": "@/ui/cell/index",
+    "fa-panel": "@/ui/panel/index",
+    "fa-badge": "@/ui/badge/index"
   }
 }

@@ -1,10 +1,10 @@
 {
   "navigationBarTitleText": "收货地址",
   "usingComponents": {
-    "fa-panel": "../../../../ui/panel/index",
-    "fa-button": "../../../../ui/btn/index",
-    "fa-dialog": "../../../../ui/dialog/index",
-    "address-card": "../../../../components/address/card/index",
-    "fixed-bottom": "../../../../components/common/fixedBottom/index"
+    "fa-panel": "@/ui/panel/index",
+    "fa-button": "@/ui/btn/index",
+    "fa-dialog": "@/ui/dialog/index",
+    "address-card": "@/components/address/card/index",
+    "fixed-bottom": "@/components/common/fixedBottom/index"
   }
 }

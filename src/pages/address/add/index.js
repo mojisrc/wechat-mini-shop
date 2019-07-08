@@ -1,7 +1,7 @@
-import fa from '../../../utils/fa'
-import AddressModel from '../../../models/address'
-import AreaModel from '../../../models/area'
-import regeneratorRuntime from '../../../libs/regenerator-runtime/runtime-module'
+import fa from '@/utils/fa'
+import AddressModel from '@/models/address'
+import AreaModel from '@/models/area'
+import "regenerator-runtime/runtime"
 
 const addressModel = new AddressModel()
 const areaModel = new AreaModel()

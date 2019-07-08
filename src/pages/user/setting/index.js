@@ -1,4 +1,4 @@
-import fa from '../../../utils/fa'
+import fa from '@/utils/fa'
 Page({
     data: {
         address:{

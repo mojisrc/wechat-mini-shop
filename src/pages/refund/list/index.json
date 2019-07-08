@@ -1,8 +1,8 @@
 {
   "navigationBarTitleText": "退款/售后",
   "usingComponents": {
-    "fa-panel": "../../../ui/panel/index",
-    "common-countdown": "../../../components/common/countdown/index",
-    "refund-card": "../../../components/refund/card/index"
+    "fa-panel": "@/ui/panel/index",
+    "common-countdown": "@/components/common/countdown/index",
+    "refund-card": "@/components/refund/card/index"
   }
 }

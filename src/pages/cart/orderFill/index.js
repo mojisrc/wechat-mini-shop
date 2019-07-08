@@ -1,8 +1,8 @@
-import fa from "../../../utils/fa";
-import regeneratorRuntime from '../../../libs/regenerator-runtime/runtime-module'
-import CartModel from "../../../models/cart";
-import BuyModel from "../../../models/buy";
-import AddressModel from "../../../models/address";
+import fa from "@/utils/fa";
+import "regenerator-runtime/runtime"
+import CartModel from "@/models/cart";
+import BuyModel from "@/models/buy";
+import AddressModel from "@/models/address";
 
 const cartModel = new CartModel()
 const buyModel = new BuyModel()

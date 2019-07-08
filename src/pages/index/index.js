@@ -1,6 +1,6 @@
-import regeneratorRuntime from '../../libs/regenerator-runtime/runtime-module'
-import PageModel from "../../models/page";
-import GoodsCategoryModel from "../../models/goodsCategory";
+import "regenerator-runtime/runtime"
+import PageModel from "@/models/page";
+import GoodsCategoryModel from "@/models/goodsCategory";
 const pageModel = new PageModel()
 const categoryModel = new GoodsCategoryModel()
 Page({

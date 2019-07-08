@@ -1,5 +1,5 @@
-import regeneratorRuntime from '../../../libs/regenerator-runtime/runtime-module'
-import RefundModel from '../../../models/refund'
+import "regenerator-runtime/runtime"
+import RefundModel from '@/models/refund'
 
 const refundModel = new RefundModel()
 Page({

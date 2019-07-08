@@ -1,10 +1,10 @@
 {
   "navigationBarTitleText": "选择服务类型",
   "usingComponents": {
-    "refund-goods-card":"../../../components/refund/goodsCard/index",
-    "fa-panel": "../../../ui/panel/index",
-    "fa-tab": "../../../ui/tab/index",
-    "fa-cell-group": "../../../ui/cell-group/index",
-    "fa-cell": "../../../ui/cell/index"
+    "refund-goods-card":"@/components/refund/goodsCard/index",
+    "fa-panel": "@/ui/panel/index",
+    "fa-tab": "@/ui/tab/index",
+    "fa-cell-group": "@/ui/cell-group/index",
+    "fa-cell": "@/ui/cell/index"
   }
 }

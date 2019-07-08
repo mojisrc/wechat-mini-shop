@@ -1,10 +1,10 @@
-import GoodsModel from '../../../models/goods'
-import CartModel from '../../../models/cart'
-import GoodsEvaluateModel from '../../../models/goodsEvaluate'
-import GoodsCollectModel from '../../../models/goodsCollect'
-import fa from '../../../utils/fa'
-import CartLogic from '../../../logics/cart'
-import regeneratorRuntime from '../../../libs/regenerator-runtime/runtime-module'
+import GoodsModel from '@/models/goods'
+import CartModel from '@/models/cart'
+import GoodsEvaluateModel from '@/models/goodsEvaluate'
+import GoodsCollectModel from '@/models/goodsCollect'
+import fa from '@/utils/fa'
+import CartLogic from '@/logics/cart'
+import "regenerator-runtime/runtime"
 
 const goodsModel = new GoodsModel()
 const cartModel = new CartModel()

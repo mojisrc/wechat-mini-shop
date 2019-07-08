@@ -1,15 +1,15 @@
 {
   "navigationBarTitleText": "商品详情",
   "usingComponents": {
-    "goods-body": "../../../components/goods/body/index",
-    "fa-stepper": "../../../ui/stepper/index",
-    "fa-cell-group": "../../../ui/cell-group/index",
-    "fa-cell": "../../../ui/cell/index",
-    "fa-badge": "../../../ui/badge/index",
-    "fa-panel": "../../../ui/panel/index",
-    "fa-button": "../../../ui/btn/index",
-    "login-view": "../../../components/login/view/index",
-    "goods-sku-popup": "../../../components/goods/popupSku/index",
-    "goods-evaluate-card": "../../../components/goods/evaluate/card/index"
+    "goods-body": "@/components/goods/body/index",
+    "fa-stepper": "@/ui/stepper/index",
+    "fa-cell-group": "@/ui/cell-group/index",
+    "fa-cell": "@/ui/cell/index",
+    "fa-badge": "@/ui/badge/index",
+    "fa-panel": "@/ui/panel/index",
+    "fa-button": "@/ui/btn/index",
+    "login-view": "@/components/login/view/index",
+    "goods-sku-popup": "@/components/goods/popupSku/index",
+    "goods-evaluate-card": "@/components/goods/evaluate/card/index"
   }
 }

@@ -1,6 +1,6 @@
 {
   "component": true,
   "usingComponents": {
-    "fa-stepper": "../../../ui/stepper/index"
+    "fa-stepper": "@/ui/stepper/index"
   }
 }

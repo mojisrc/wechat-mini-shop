@@ -1,9 +1,9 @@
 {
   "component": true,
   "usingComponents": {
-    "fa-cell-group": "../../../ui/cell-group/index",
-    "fa-cell": "../../../ui/cell/index",
-    "fa-panel": "../../../ui/panel/index",
+    "fa-cell-group": "@/ui/cell-group/index",
+    "fa-cell": "@/ui/cell/index",
+    "fa-panel": "@/ui/panel/index",
     "login-view": "../view/index"
   }
 }

@@ -1,4 +1,4 @@
-import regeneratorRuntime from '../libs/regenerator-runtime/runtime-module'
+import "regenerator-runtime/runtime"
 import { api, request } from '../api';
 import Model from '../utils/model'
 import { ShopInfoInterface } from '../interface/shop'

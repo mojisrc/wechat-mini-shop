@@ -1,6 +1,6 @@
-import CartModel from '../models/cart'
+import CartModel from '@/models/cart'
 import fa from '../utils/fa'
-import regeneratorRuntime from '../libs/regenerator-runtime/runtime-module'
+import "regenerator-runtime/runtime"
 
 export default class Cart {
     cartModel = new CartModel()

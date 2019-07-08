@@ -1,12 +1,12 @@
 {
   "navigationBarTitleText": "退款详情",
   "usingComponents": {
-    "fa-panel": "../../../ui/panel/index",
-    "fa-dialog": "../../../ui/dialog/index",
-    "refund-base-info": "../../../components/refund/baseInfo/index",
-    "order-contact": "../../../components/order/contact/index",
-    "refund-goods-info": "../../../components/refund/goodsInfo/index",
-    "refund-state-card": "../../../components/refund/stateCard/index",
-    "refund-state-reason": "../../../components/refund/stateReason/index"
+    "fa-panel": "@/ui/panel/index",
+    "fa-dialog": "@/ui/dialog/index",
+    "refund-base-info": "@/components/refund/baseInfo/index",
+    "order-contact": "@/components/order/contact/index",
+    "refund-goods-info": "@/components/refund/goodsInfo/index",
+    "refund-state-card": "@/components/refund/stateCard/index",
+    "refund-state-reason": "@/components/refund/stateReason/index"
   }
 }

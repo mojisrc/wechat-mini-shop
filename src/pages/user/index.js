@@ -1,6 +1,6 @@
-import fa from '../../utils/fa'
-import OrderModel from '../../models/order'
-import regeneratorRuntime from '../../libs/regenerator-runtime/runtime-module'
+import fa from '@/utils/fa'
+import OrderModel from '@/models/order'
+import "regenerator-runtime/runtime"
 
 const orderModel = new OrderModel()
 Page({

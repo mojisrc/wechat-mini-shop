@@ -1,11 +1,11 @@
 {
   "navigationBarTitleText": "提交订单",
   "usingComponents": {
-    "fixed-bottom": "../../../components/common/fixedBottom/index",
-    "fa-button": "../../../ui/btn/index",
-    "fa-panel": "../../../ui/panel/index",
-    "fa-cell": "../../../ui/cell/index",
-    "cart-order-fill-card": "../../../components/cart/orderFillCard/index",
-    "fa-cell-group": "../../../ui/cell-group/index"
+    "fixed-bottom": "@/components/common/fixedBottom/index",
+    "fa-button": "@/ui/btn/index",
+    "fa-panel": "@/ui/panel/index",
+    "fa-cell": "@/ui/cell/index",
+    "cart-order-fill-card": "@/components/cart/orderFillCard/index",
+    "fa-cell-group": "@/ui/cell-group/index"
   }
 }

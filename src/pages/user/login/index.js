@@ -1,6 +1,6 @@
-import UserModel from '../../../models/user'
-import regeneratorRuntime from '../../../libs/regenerator-runtime/runtime-module'
-import fa from '../../../utils/fa'
+import UserModel from '@/models/user'
+import "regenerator-runtime/runtime"
+import fa from '@/utils/fa'
 import validator from "../../../libs/validator/validator"
 
 Page({

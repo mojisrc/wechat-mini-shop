@@ -1,8 +1,8 @@
-import regeneratorRuntime from 'libs/regenerator-runtime/runtime-module';
-import ShopModel from './models/shop'
-import AreaModel from './models/area'
-import fa from 'utils/fa'
-import LoginLogic from './logics/login'
+import "regenerator-runtime/runtime"
+import ShopModel from '@/models/shop'
+import AreaModel from '@/models/area'
+import fa from "@/utils/fa"
+import LoginLogic from '@/logics/login'
 
 const shopModel = new ShopModel()
 const areaModel = new AreaModel()

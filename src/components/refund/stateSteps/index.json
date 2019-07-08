@@ -1,6 +1,6 @@
 {
   "component": true,
   "usingComponents": {
-    "fa-steps": "../../../ui/steps/index"
+    "fa-steps": "@/ui/steps/index"
   }
 }

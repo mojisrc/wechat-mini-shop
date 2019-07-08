@@ -1,6 +1,6 @@
-import fa from "../../../utils/fa";
-import LoginLogic from "../../../logics/login";
-import regeneratorRuntime from '../../../libs/regenerator-runtime/runtime-module'
+import fa from "@/utils/fa";
+import LoginLogic from "@/logics/login";
+import "regenerator-runtime/runtime"
 
 Component({
     externalClasses: ['mask-class', 'container-class'],

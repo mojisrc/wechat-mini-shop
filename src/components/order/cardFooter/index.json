@@ -1,6 +1,6 @@
 {
   "component": true,
   "usingComponents": {
-    "fa-dialog": "/ui/dialog/index"
+    "fa-dialog": "@/ui/dialog/index"
   }
 }

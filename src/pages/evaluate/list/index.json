@@ -1,9 +1,9 @@
 {
   "navigationBarTitleText": "评价中心",
   "usingComponents": {
-    "fa-panel": "../../../ui/panel/index",
-    "fa-tab": "../../../ui/tab/index",
-    "evaluate-card": "../../../components/evaluate/card/index",
-    "order-card-button": "../../../components/order/cardButton/index"
+    "fa-panel": "@/ui/panel/index",
+    "fa-tab": "@/ui/tab/index",
+    "evaluate-card": "@/components/evaluate/card/index",
+    "order-card-button": "@/components/order/cardButton/index"
   }
 }

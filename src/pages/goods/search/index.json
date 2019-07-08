@@ -3,6 +3,6 @@
   "navigationBarTextStyle": "black",
   "backgroundTextStyle": "dark",
   "usingComponents": {
-    "common-search": "../../../../components/common/search/index"
+    "common-search": "@/components/common/search/index"
   }
 }

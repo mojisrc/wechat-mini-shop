@@ -2,12 +2,12 @@
   "navigationBarTitleText": "购物车",
   "enablePullDownRefresh": true,
   "usingComponents": {
-    "cart-card": "../../components/cart/card/index",
-    "cart-card-edit": "../../components/cart/editCard/index",
-    "fa-stepper": "../../ui/stepper/index",
-    "fa-panel": "../../ui/panel/index",
-    "fa-cell": "../../ui/cell/index",
-    "fa-button": "../../ui/btn/index",
-    "goods-sku-popup": "../../components/goods/popupSku/index"
+    "cart-card": "@/components/cart/card/index",
+    "cart-card-edit": "@/components/cart/editCard/index",
+    "fa-stepper": "@/ui/stepper/index",
+    "fa-panel": "@/ui/panel/index",
+    "fa-cell": "@/ui/cell/index",
+    "fa-button": "@/ui/btn/index",
+    "goods-sku-popup": "@/components/goods/popupSku/index"
   }
 }

@@ -1,5 +1,5 @@
-@import "ui/index.wxss";
-@import "themes/default/weui.wxss";
+@import "@/ui/index.wxss";
+@import "@/themes/default/weui.wxss";
 page{
     background-color: #F8F8F8;
 }

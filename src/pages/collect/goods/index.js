@@ -1,5 +1,5 @@
-import GoodsCollectModel from '../../../models/goodsCollect'
-import regeneratorRuntime from '../../../libs/regenerator-runtime/runtime-module'
+import GoodsCollectModel from '@/models/goodsCollect'
+import "regenerator-runtime/runtime"
 
 const goodsCollectModel = new GoodsCollectModel()
 

@@ -1,7 +1,7 @@
 {
   "navigationBarTitleText": "评价详情",
   "usingComponents": {
-    "common-rater": "../../../components/common/rater/index",
-    "time-format":"../../../components/common/timeFormat/index"
+    "common-rater": "@/components/common/rater/index",
+    "time-format":"@/components/common/timeFormat/index"
   }
 }

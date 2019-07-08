@@ -1,11 +1,11 @@
-import fa from '../../../utils/fa'
-import OrderModel from '../../../models/order'
-import regeneratorRuntime from '../../../libs/regenerator-runtime/runtime-module'
-import BuyModel from "../../../models/buy";
+import fa from '@/utils/fa'
+import OrderModel from '@/models/order'
+import "regenerator-runtime/runtime"
+import BuyModel from "@/models/buy";
 
 const orderModel = new OrderModel()
 const buyModel = new BuyModel()
-const Dialog = require('../../../ui/dialog/dialog');
+const Dialog = require('@/ui/dialog/dialog');
 Page({
     data: {
         id: null,

@@ -1,20 +1,20 @@
 {
   "navigationBarTitleText": "我的订单",
   "usingComponents": {
-    "fa-panel": "../../../ui/panel/index",
-    "fa-tab": "../../../ui/tab/index",
-    "fa-dialog": "../../../ui/dialog/index",
-    "order-address": "../../../components/order/address/index",
-    "order-base-info": "../../../components/order/baseInfo/index",
-    "order-card": "../../../components/order/card/index",
-    "order-card-button": "../../../components/order/cardButton/index",
-    "order-card-footer": "../../../components/order/cardFooter/index",
-    "order-card-goods": "../../../components/order/cardGoods/index",
-    "order-card-header": "../../../components/order/cardHeader/index",
-    "order-card-contact": "../../../components/order/contact/index",
-    "order-cost-list": "../../../components/order/costList/index",
-    "order-footer-action": "../../../components/order/footerAction/index",
-    "order-logistics": "../../../components/order/logistics/index",
-    "order-state-card": "../../../components/order/stateCard/index"
+    "fa-panel": "@/ui/panel/index",
+    "fa-tab": "@/ui/tab/index",
+    "fa-dialog": "@/ui/dialog/index",
+    "order-address": "@/components/order/address/index",
+    "order-base-info": "@/components/order/baseInfo/index",
+    "order-card": "@/components/order/card/index",
+    "order-card-button": "@/components/order/cardButton/index",
+    "order-card-footer": "@/components/order/cardFooter/index",
+    "order-card-goods": "@/components/order/cardGoods/index",
+    "order-card-header": "@/components/order/cardHeader/index",
+    "order-card-contact": "@/components/order/contact/index",
+    "order-cost-list": "@/components/order/costList/index",
+    "order-footer-action": "@/components/order/footerAction/index",
+    "order-logistics": "@/components/order/logistics/index",
+    "order-state-card": "@/components/order/stateCard/index"
   }
 }

@@ -1,6 +1,6 @@
-import fa from '../../../utils/fa'
-import GoodsEvaluate from '../../../models/goodsEvaluate'
-import regeneratorRuntime from '../../../libs/regenerator-runtime/runtime-module'
+import fa from '@/utils/fa'
+import GoodsEvaluate from '@/models/goodsEvaluate'
+import "regenerator-runtime/runtime"
 
 const goodsEvaluateModel = new GoodsEvaluate()
 Page({

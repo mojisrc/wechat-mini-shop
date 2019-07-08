@@ -1,9 +1,9 @@
-import fa from '../../../utils/fa'
-import RefundModel from '../../../models/refund'
-import OrderModel from '../../../models/order'
-import regeneratorRuntime from '../../../libs/regenerator-runtime/runtime-module'
-import { UploadImageInterface } from '../../../interface/uploadImage'
-import { api } from '../../../api'
+import fa from '@/utils/fa'
+import RefundModel from '@/models/refund'
+import OrderModel from '@/models/order'
+import "regenerator-runtime/runtime"
+import { UploadImageInterface } from '@/interface/uploadImage'
+import { api } from '@/api'
 
 const refundModel = new RefundModel()
 const orderModel = new OrderModel()

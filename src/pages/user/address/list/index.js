@@ -1,9 +1,9 @@
-import fa from '../../../../utils/fa'
-import AddressModel from '../../../../models/address'
-import regeneratorRuntime from '../../../../libs/regenerator-runtime/runtime-module'
+import fa from '@/utils/fa'
+import AddressModel from '@/models/address'
+import "regenerator-runtime/runtime"
 
 const addressModel = new AddressModel()
-const Dialog = require('../../../../ui/dialog/dialog');
+const Dialog = require('@/ui/dialog/dialog');
 
 Page({
     data: {

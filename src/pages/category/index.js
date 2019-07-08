@@ -1,8 +1,8 @@
-import GoodsCategoryModel from "../../models/goodsCategory";
-import regeneratorRuntime from '../../libs/regenerator-runtime/runtime-module'
-import fa from "../../utils/fa";
-import ShopModel from '../../models/shop'
-import GoodsModel from "../../models/goods";
+import GoodsCategoryModel from "@/models/goodsCategory";
+import "regenerator-runtime/runtime"
+import fa from "@/utils/fa";
+import ShopModel from '@/models/shop'
+import GoodsModel from "@/models/goods";
 
 const shopModel = new ShopModel()
 const goodsCategoryModel = new GoodsCategoryModel()
