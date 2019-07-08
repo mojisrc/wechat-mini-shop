@@ -1,25 +1,26 @@
 {
   "presets": [
     [
-      "env",
+      "@babel/preset-env",
       {
         "modules": false,
         "loose": true,
-        "exclude": [
-          "transform-es2015-typeof-symbol"
-        ],
-        "useBuiltIns": true
-      }
-    ],
-    "stage-0"
-  ],
-  "plugins": [
-    "@babel/plugin-proposal-class-properties",
-    [
-      "transform-runtime",
-      {
-        "polyfill": false
+        "targets": {
+          "browsers": ["Chrome >= 53", "safari >= 8"]
+        }
       }
     ]
+  ],
+  "plugins": [
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "corejs": false,
+        "helpers": false,
+        "useESModules": false
+      }
+    ],
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-proposal-json-strings"
   ]
 }

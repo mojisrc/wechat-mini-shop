@@ -2,13 +2,10 @@
   "name": "fashop",
   "version": "1.0.0",
   "scripts": {
-    "dev": "npm run dev:mini & npm run dev:plugin",
-    "build": "npm run build:mini && npm run build:plugin",
-    "ctrl + c": "退出后还会监听，需要手动 kill 进程",
+    "dev": "npm run dev:mini",
+    "build": "npm run build:mini",
     "dev:mini": "webpack --mode development --watch --config ./build/webpack.config.mini.js",
-    "dev:plugin": "webpack --mode development --watch --config ./build/webpack.config.plugin.js",
-    "build:mini": "webpack --mode production --config ./build/webpack.config.mini.js",
-    "build:plugin": "webpack --mode production --config ./build/webpack.config.plugin.js"
+    "build:mini": "webpack --mode production --config ./build/webpack.config.mini.js"
   },
   "description": "mini loader 打包小程序插件示例",
   "main": "index.js",
@@ -18,9 +15,10 @@
   "devDependencies": {
     "@babel/core": "^7.5.0",
     "@babel/plugin-proposal-class-properties": "^7.5.0",
+    "@babel/plugin-transform-runtime": "^7.5.0",
     "@babel/preset-env": "^7.5.0",
+    "@babel/runtime": "^7.5.1",
     "autoprefixer": "^8.5.0",
-    "babel-core": "^7.0.0-0",
     "babel-eslint": "^8.2.3",
     "babel-loader": "^8.0.6",
     "babel-plugin-transform-es2015-spread": "^6.22.0",

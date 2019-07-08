@@ -12,7 +12,6 @@ const fileLoader = name => ({
 module.exports = [
   {
     test: /\.js$/,
-    include: path.resolve(__dirname, '../plugin'),
     exclude: path.resolve(__dirname, '../node_modules'),
     use: [
       'cache-loader',
