@@ -1,0 +1,3 @@
+<view class="fixedBottom" style="background-color: {{backgroundColor}}">
+    <slot></slot>
+</view>

@@ -1,0 +1,16 @@
+<view class="page-pic-window">
+    <block wx:if="{{payload.options.layout_style === 1}}">
+        <view class="page-pic-window-mix">
+            <block wx:for="{{payload.data}}" wx:key="key" wx:for-index="index" wx:for-item="item">
+                <image
+                        class="image"
+                        src="{{item.img.url}}"
+                        mode="widthFix"
+                        data-index="{{index}}"
+                        bind:tap="onPress"
+                        style="width:50px"
+                />
+            </block>
+        </view>
+    </block>
+</view>

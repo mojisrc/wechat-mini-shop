@@ -1,0 +1,91 @@
+{
+  "pages": [
+    "pages/user/index",
+    "pages/index/index",
+    "pages/user/setting/bind/phone/index",
+    "pages/user/setting/bind/index",
+    "pages/user/login/index",
+    "pages/evaluate/list/index",
+    "pages/order/list/index",
+    "pages/cart/orderFill/index",
+    "pages/goods/detail/index",
+    "pages/cart/index",
+    "pages/address/list/index",
+    "pages/address/add/index",
+    "pages/address/edit/index",
+    "pages/refund/serviceApply/index",
+    "pages/refund/serviceType/index",
+    "pages/refund/list/index",
+    "pages/refund/detail/index",
+    "pages/order/detail/index",
+    "pages/collect/index/index",
+    "pages/user/setting/index",
+    "pages/page/detail/index",
+    "pages/search/result/index",
+    "pages/webView/index",
+    "pages/user/footprint/index",
+    "pages/categoryPage/detail/index",
+    "pages/categoryPage/portal/index",
+    "pages/brand/detail/index",
+    "pages/user/editPassword/index",
+    "pages/user/address/add/index",
+    "pages/user/address/list/index",
+    "pages/user/address/edit/index",
+    "pages/evaluate/additional/index",
+    "pages/evaluate/add/index",
+    "pages/evaluate/detail/index",
+    "pages/refund/logisticsFill/index",
+    "pages/goods/evaluateList/index",
+    "pages/goods/list/index",
+    "pages/pay/result/index",
+    "pages/user/setting/userinfo/index",
+    "pages/user/register/index",
+    "pages/user/findPassword/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "FaShop",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTextStyle": "black",
+    "backgroundTextStyle": "dark",
+    "backgroundColor": "#FFFFFF",
+    "backgroundColorBottom": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#DBAF6A",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "assets/tabbar/home.png",
+        "selectedIconPath": "assets/tabbar/home-a.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/categoryPage/portal/index",
+        "iconPath": "assets/tabbar/category.png",
+        "selectedIconPath": "assets/tabbar/category-a.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/cart/index",
+        "iconPath": "assets/tabbar/cart.png",
+        "selectedIconPath": "assets/tabbar/cart-a.png",
+        "text": "购物车"
+      },
+      {
+        "pagePath": "pages/user/index",
+        "iconPath": "assets/tabbar/user.png",
+        "selectedIconPath": "assets/tabbar/user-a.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 60000,
+    "downloadFile": 10000
+  },
+  "debug": true,
+  "sitemapLocation": "sitemap.json"
+}

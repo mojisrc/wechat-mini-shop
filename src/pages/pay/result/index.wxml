@@ -1,0 +1,12 @@
+<view class="pay-result">
+    <view class="result">
+        <image class="icon" src="/assets/pay/pay-success.png"></image>
+        <text class="desc">支付成功</text>
+        <text class="price">¥{{payAmount}}</text>
+        <label class="way">微信支付</label>
+    </view>
+    <view class="button-area">
+        <van-button class="portal" type="danger" bind:click="goPortal">返回首页</van-button>
+        <van-button class="order-detail" plain="true" type="danger" bind:click="onDetail">查看订单</van-button>
+    </view>
+</view>

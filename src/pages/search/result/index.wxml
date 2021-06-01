@@ -1,0 +1,40 @@
+<view class="page-container">
+<common-search
+        keywords="{{keywords}}"
+        showSearchBar="true"
+        categoryId="{{categoryId}}"
+        categoryKeywords="{{categoryInfo?categoryInfo.name:null}}" bind:search-confirm="onSearchConfirm"
+></common-search>
+    <filterbar
+        items="{{filterbarItems}}"
+        bind:onChange="onFilterbarChange"
+    />
+    <block wx:if="{{list.length > 0}}">
+        <view class="goods-list">
+            <div class="section">
+                <block wx:for="{{list}}" wx:key="key" wx:for-index="page-data" wx:for-item="item">
+                    <div class="details" style="width:{{imageWidth}}px" bindtap="onGoodsDetail" data-id="{{item.id}}">
+                        <image src="{{item.img}}"  style="width:{{imageWidth}}px;height: {{imageWidth}}px" mode="aspectFill" />
+                        <view class="title-price">
+                            <view class="title"><goods-tags goodsInfo="{{item}}"/>{{item.title}}</view>
+                            <text class="i">¥ {{item.price}}</text>
+                            <view style="margin-top:5px;height: 16px;overflow: hidden">
+                                <goods-diy-tags
+                                        tags="{{item.tags}}"
+                                        style="height: 16px;display:flex;flex-wrap:wrap;"
+                                />
+                            </view>
+                        </view>
+                    </div>
+                </block>
+            </div>
+            <view class="line"></view>
+        </view>
+    </block>
+    <block wx:if="{{list.length===0}}">
+        <view class="list-empty">
+            <image src="/assets/order/list-empty.png" mode="aspectFill"></image>
+            <text>暂无相关数据</text>
+        </view>
+    </block>
+</view>

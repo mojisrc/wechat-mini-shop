@@ -1,0 +1,12 @@
+<view class="cart-card">
+    <image src="{{image}}" mode="aspectFill" bindtap="onClick" />
+    <view class="title-price">
+        <text class="title" bindtap="onClick">{{title}}</text>
+            <view class="spec" bindtap="onClick">
+                <text>{{spec}}</text>
+            </view>
+        <view class="footer">
+            <i class="price" bindtap="onClick">¥ {{price}}</i>
+        </view>
+    </view>
+</view>

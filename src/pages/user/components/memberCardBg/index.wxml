@@ -1,0 +1,12 @@
+<image src="./vipbg.png" mode="widthFix" class="main">
+    <view class="content">
+        <view class="join">
+            <view class="left">
+                <image src="./vip.png" mode="widthFix" class="icon" />
+                <text class="title">{{isVip?card.title:'会员'}}</text>
+                <text wx:if="{{!isVip}}" class="desc">下单有礼，可赢免单</text>
+            </view>
+            <view class="btn" bind:tap="onBtnPress">{{isVip?'查看特权':'立即加入'}}</view>
+        </view>
+    </view>
+</image>

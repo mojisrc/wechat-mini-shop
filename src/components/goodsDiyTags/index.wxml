@@ -1,0 +1,6 @@
+<block wx:for="{{tags}}" wx:key="key" wx:for-index="index" wx:for-item="tag">
+    <text
+            class="text"
+            style="margin-right:{{index === tags.length - 1 ? 0 : 3}}px; background-color: {{tag.background_color}}; color:{{ tag.font_color}}; border-color: {{tag.border_color}};"
+    >{{tag.title}}</text>
+</block>

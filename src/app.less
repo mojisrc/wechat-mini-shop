@@ -1,0 +1,71 @@
+
+page{
+    background-color: #F8F8F8;
+}
+.page-container {
+    background: #F8F8F8;
+    overflow: hidden;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.page-title {
+    position: relative;
+    padding: 15px 0;
+    margin: 10px 15px;
+    line-height: 25px;
+    font-size: 25px;
+    color: #666;
+    border-bottom: 1rpx solid #e5e5e5;
+}
+
+.page-content {
+    padding: 15px;
+    overflow: hidden;
+    color: #666;
+}
+
+.page-content--without-pd {
+    padding: 15px 0;
+}
+
+.container {
+    background: #F9F9F9;
+    overflow: hidden;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 15px 0;
+}
+.container::before {
+    position: fixed;
+    top: 0;
+    left: 0;
+    content: ' ';
+    width: 100%;
+    height: 1rpx;
+    background-color: #e2e2e2;
+    z-index: 5;
+}
+.doc-title {
+    position: relative;
+    padding: 15px 0;
+    margin: 10px 15px;
+    line-height: 25px;
+    font-size: 25px;
+    color: #666;
+}
+.doc-description {
+    margin: 14px 0;
+    padding: 0 15px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #666;
+}
+
+.space10{
+    height: 10px;
+}
+.safeBottom{
+    padding-bottom: constant(safe-area-inset-bottom);
+    padding-bottom: env(safe-area-inset-bottom);
+}

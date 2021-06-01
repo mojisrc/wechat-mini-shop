@@ -1,0 +1,18 @@
+<view class="address-card">
+    <view class="info">
+        <view class="checked" wx:if="{{checked===true}}" data-id="{{addressId}}" bindtap="onChecked">
+            <icon class="weui-icon-radio" type="success" size="16" color="red"></icon>
+        </view>
+        <view class="user" data-id="{{addressId}}" bindtap="onChecked">
+            <view class="name-phone">
+                <text class="name">{{name}}</text>
+                <text class="phone">{{phone}}</text>
+            </view>
+            <view class="address">{{address}}</view>
+        </view>
+    </view>
+    <view class="action">
+        <!--<image src="https://ws3.sinaimg.cn/large/006tNc79ly1frlfuicj18j303c03cq2v.jpg" mode="scaleToFill" />-->
+        <text class="edit" data-id="{{id}}" bindtap="onEdit">编辑</text>
+    </view>
+</view>

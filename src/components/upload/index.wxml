@@ -1,0 +1,3 @@
+<view bind:tap="onUpload" class="main">
+    <slot></slot>
+</view>

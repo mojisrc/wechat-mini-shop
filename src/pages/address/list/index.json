@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "收货地址",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "van-panel": "@vant/weapp/panel/index",
+    "van-button": "@vant/weapp/button/index",
+    "address-card": "@/pages/address/components/card/index",
+    "fixed-bottom": "@/components/common/fixedBottom/index",
+    "list": "@/components/list/index"
+  }
+}

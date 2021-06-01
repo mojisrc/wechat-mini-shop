@@ -1,0 +1,3 @@
+<button class="button custom-class" open-type="{{openType}}" session-from="weapp">
+    <slot></slot>
+</button>

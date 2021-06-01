@@ -1,0 +1,35 @@
+<block wx:if="{{payload.options.layout_style === 1}}">
+    <swiper class="page-banner-swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000"
+            style="height: {{height}}px">
+        <block wx:for="{{list}}" wx:for-index="index" wx:key="item">
+            <swiper-item>
+                <transparent-button openType="{{item.openType}}" bindtap="onClick" data-index="{{index}}">
+                    <image class="image" src="{{item.img.url}}" mode="scaleToFill" style="height: {{height}}px"
+                           data-index="{{index}}" bindtap="onClick" bindload="imageLoad"/>
+                </transparent-button>
+            </swiper-item>
+        </block>
+    </swiper>
+</block>
+<block wx:elif="{{payload.options.layout_style === 2}}">
+    <view class="page-banner-list">
+        <block wx:for="{{list}}" wx:key="item">
+            <transparent-button openType="{{item.openType}}" bindtap="onClick" data-index="{{index}}">
+                <image class="image" src="{{item.img.url}}" mode="widthFix" data-index="{{index}}" bindtap="onClick"/>
+            </transparent-button>
+        </block>
+    </view>
+</block>
+<block wx:else>
+    <swiper class="page-banner-swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000"
+            style="height: {{height}}px">
+        <block wx:for="{{list}}" wx:for-index="index" wx:key="item">
+            <swiper-item>
+                <transparent-button openType="{{item.openType}}" bindtap="onClick" data-index="{{index}}">
+                    <image class="image" src="{{item.img.url}}" mode="scaleToFill" style="height: {{height}}px"
+                           data-index="{{index}}" bindtap="onClick" bindload="imageLoad"/>
+                </transparent-button>
+            </swiper-item>
+        </block>
+    </swiper>
+</block>

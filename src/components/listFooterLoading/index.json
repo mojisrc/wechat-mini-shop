@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "empty": "@/components/empty/index",
+    "van-loading": "@vant/weapp/loading/index"
+  }
+}

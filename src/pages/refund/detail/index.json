@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "退款详情",
+  "usingComponents": {
+    "van-panel": "@vant/weapp/panel/index",
+    "van-dialog": "@vant/weapp/dialog/index",
+    "refund-base-info": "@/pages/refund/components/baseInfo/index",
+    "order-contact": "@/pages/order/components/contact/index",
+    "refund-goods-info": "@/pages/refund/components/goodsInfo/index",
+    "refund-state-card": "@/pages/refund/components/stateCard/index",
+    "refund-state-reason": "@/pages/refund/components/stateReason/index",
+    "van-button": "@vant/weapp/button/index"
+  }
+}

@@ -1,0 +1,3 @@
+<block wx:for="{{payload.data}}" wx:key="item">
+    <image class="goods-body-image" src="{{item.img.url}}" mode="widthFix" data-index="{{index}}" bindtap="onClick"/>
+</block>

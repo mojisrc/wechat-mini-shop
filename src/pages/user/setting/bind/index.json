@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "账号绑定",
+  "usingComponents": {
+    "van-icon": "@vant/weapp/icon/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-dialog": "@vant/weapp/dialog/index"
+  }
+}

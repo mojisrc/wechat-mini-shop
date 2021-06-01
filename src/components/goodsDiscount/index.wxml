@@ -1,0 +1,9 @@
+<view style=" display:flex;flex-direction: row; align-items: flex-end; justify-content: flex-start;height: {{fontSize}}px; {{style}}">
+    <text style=" color: {{fontColor}};font-size: {{fontSize}}px;font-weight: 500;">{{_price[0]}}
+    </text>
+    <text style="color: {{fontColor}}; font-size: {{fontSize - 4}}px;font-weight: 500;" wx:if="{{price[1]>0}}">
+        .{{_price[1]}}
+    </text>
+    <text style="color: {{fontColor}};font-size: {{fontSize - 6}}px;margin-right: 2px;  font-weight: 500;padding-bottom: 1px">折
+    </text>
+</view>

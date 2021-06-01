@@ -1,0 +1,12 @@
+{
+  "component": true,
+  "usingComponents": {
+    "fa-area": "@/ui/area/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-uploader": "@vant/weapp/uploader/index",
+    "van-switch": "@vant/weapp/switch/index"
+  }
+
+}

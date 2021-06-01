@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "order-button": "@/pages/order/components/button/index"
+  }
+}

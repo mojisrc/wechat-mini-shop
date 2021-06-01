@@ -1,0 +1,19 @@
+<view class="refund-goods-info">
+    <view class="header">退款信息</view>
+    <view class="body">
+        <view class="item" bindtap="onGoods">
+            <view class="content">
+                <view class="image">
+                    <image class="img" src="{{refundInfo.goods_img}}" mode="aspectFill" />
+                </view>
+                <view class="body">
+                    <text class="title">{{refundInfo.goods_title}}</text>
+                    <view class="end">
+                        <text class="spec">{{refundInfo.goods_spec_string}}</text>
+                        <label class="number">x {{refundInfo.goods_num}}</label>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

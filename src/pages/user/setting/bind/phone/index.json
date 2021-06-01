@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "",
+  "usingComponents": {
+    "van-panel": "@vant/weapp/panel/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "fixed-bottom": "@/components/common/fixedBottom/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "smsCode": "@/components/common/smsCode/index",
+    "van-button": "@vant/weapp/button/index"
+  }
+}

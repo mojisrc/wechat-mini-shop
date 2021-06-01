@@ -1,0 +1,7 @@
+<view class="page-container">
+    <view class="goods-evaluate-list">
+        <block wx:for="{{list}}" wx:key="key" wx:for-index="index" wx:for-item="item">
+            <goods-evaluate-card info="{{item}}"></goods-evaluate-card>
+        </block>
+    </view>
+</view>

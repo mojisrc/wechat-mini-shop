@@ -1,0 +1,22 @@
+<view wx:if="{{firstLoad}}" class="skeleton">
+    <view class="space10"/>
+    <van-skeleton title row="3"/>
+    <view class="space10"/>
+    <van-skeleton title row="3"/>
+    <view class="space10"/>
+    <van-skeleton title row="3"/>
+    <view class="space10"/>
+    <van-skeleton title row="3"/>
+    <view class="space10"/>
+    <van-skeleton title row="3"/>
+    <view class="space10"/>
+    <van-skeleton title row="3"/>
+</view>
+<slot></slot>
+<view class="noMore" wx:if="{{showNoMore && noMore && list.length>0}}">
+    <text>{{noMoreDesc}}</text>
+</view>
+<view class="loadMore">
+    <van-loading wx:if="{{loadMore}}"/>
+</view>
+<van-empty description="暂无相关数据" wx:if="{{ !firstLoad && showEmpty && list.length===0}}"/>

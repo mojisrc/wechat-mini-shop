@@ -1,0 +1,22 @@
+<view class="page-icon-nav-bar">
+
+    <view class="page-icon-nav-bar-text menu-space-{{payload.options.menu_space}}"
+          wx:if="{{payload.options.menu_format === 1}}">
+        <block wx:for="{{list}}" wx:key="key" wx:for-index="index" wx:for-item="item">
+            <transparent-button class="details" openType="{{item.openType}}" style="background-color: {{item.background_color}}" data-index="{{index}}" bindtap="onClick">
+                <text class="text" style="color:{{item.font_color}};">{{item.title}}</text>
+            </transparent-button>
+        </block>
+    </view>
+
+    <view class="page-icon-nav-bar-icon menu-space-{{payload.options.menu_space}}"
+          wx:if="{{payload.options.menu_format === 2}}">
+        <block wx:for="{{list}}" wx:key="key" wx:for-index="index" wx:for-item="item">
+            <transparent-button class="details" openType="{{item.openType}}" style="background-color: {{item.background_color}}" data-index="{{index}}" bindtap="onClick">
+                <image class="image" src="{{item.img.url}}" mode="aspectFit" />
+                <text class="text" style="color:{{item.font_color}};">{{item.title}}</text>
+            </transparent-button>
+        </block>
+    </view>
+
+</view>

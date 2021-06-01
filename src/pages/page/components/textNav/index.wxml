@@ -1,0 +1,10 @@
+<view class="page-text-nav">
+    <block wx:for="{{list}}" wx:key="key" wx:for-index="index" wx:for-item="item">
+        <transparent-button openType="{{item.openType}}" bindtap="onClick" data-index="{{index}}">
+        <view class="item">
+            <text>{{item.title}}</text>
+            <image src="right.png" mode="aspectFit"/>
+        </view>
+        </transparent-button>
+    </block>
+</view>

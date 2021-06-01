@@ -1,0 +1,164 @@
+<view class="basePage" style="background-color:{{backgroundColor}};">
+    <block wx:for="{{pageBody}}" wx:key="key" wx:for-index="index" wx:for-item="item">
+        <block wx:if="{{item.type === 'image_ads'}}">
+            <page-banner
+                    payload="{{item}}"
+                    bind:click="onBannerClick"
+                    id="pageItem{{index}}"
+                    data-index="{{index}}"
+                    login="{{login}}"
+                    userInfo="{{userInfo}}"
+            />
+        </block>
+        <block wx:if="{{item.type === 'image_gallery'}}">
+            <page-image-gallery
+                    payload="{{item}}"
+                    bind:click="onBannerClick"
+                    id="pageItem{{index}}"
+                    data-index="{{index}}"
+                    login="{{login}}"
+                    userInfo="{{userInfo}}"
+            />
+        </block>
+        <block wx:elif="{{item.type === 'image_nav'}}">
+            <page-grid-nav-bar
+                    payload="{{item}}"
+                    bind:click="onGridNavBarClick"
+                    id="pageItem{{index}}"
+                    data-index="{{index}}"
+                    login="{{login}}"
+                    userInfo="{{userInfo}}"
+            />
+        </block>
+        <block wx:elif="{{item.type === 'goods'}}">
+            <page-goods-list
+                    payload="{{item}}"
+                    bind:click="onGoodsClick"
+                    id="pageItem{{index}}"
+                    data-index="{{index}}"
+                    login="{{login}}"
+                    userInfo="{{userInfo}}"
+            />
+        </block>
+        <block wx:elif="{{item.type === 'goods_list'}}">
+            <page-goods-list
+                    payload="{{item}}"
+                    bind:click="onGoodsClick"
+                    id="pageItem{{index}}"
+                    data-index="{{index}}"
+                    login="{{login}}"
+                    userInfo="{{userInfo}}"
+            />
+        </block>
+        <block wx:elif="{{item.type === 'separator'}}">
+            <page-divider
+                    payload="{{item}}"
+                    id="pageItem{{index}}"
+                    data-index="{{index}}"
+                    login="{{login}}"
+                    userInfo="{{userInfo}}"
+            />
+        </block>
+        <block wx:elif="{{item.type === 'goods_search'}}">
+            <page-goods-search
+                    payload="{{item}}"
+                    bind:click="onSearchClick"
+                    id="pageItem{{index}}"
+                    data-index="{{index}}"
+                    login="{{login}}"
+                    userInfo="{{userInfo}}"
+            />
+        </block>
+        <block wx:elif="{{item.type === 'shop_window'}}">
+            <page-pic-window
+                    payload="{{item}}"
+                    bind:click="onShopWindowClick"
+                    id="pageItem{{index}}"
+                    data-index="{{index}}"
+                    userInfo="{{userInfo}}"
+            />
+        </block>
+        <block wx:elif="{{item.type === 'top_menu'}}">
+            <page-icon-nav-bar
+                    payload="{{item}}"
+                    bind:click="onIconNavClick"
+                    id="pageItem{{index}}"
+                    data-index="{{index}}"
+                    login="{{login}}"
+                    userInfo="{{userInfo}}"
+            />
+        </block>
+        <block wx:elif="{{item.type === 'auxiliary_blank'}}">
+            <page-placeholder-line
+                    payload="{{item}}"
+                    id="pageItem{{index}}"
+                    data-index="{{index}}"
+                    login="{{login}}"
+                    userInfo="{{userInfo}}"
+            />
+        </block>
+        <block wx:elif="{{item.type === 'title'}}">
+            <page-column-title
+                    payload="{{item}}"
+                    id="pageItem{{index}}"
+                    data-index="{{index}}"
+                    login="{{login}}"
+                    userInfo="{{userInfo}}"
+            />
+        </block>
+        <block wx:elif="{{item.type === 'text_nav'}}">
+            <page-text-nav
+                    payload="{{item}}"
+                    bind:click="onTextNavClick"
+                    id="pageItem{{index}}"
+                    data-index="{{index}}"
+                    login="{{login}}"
+                    userInfo="{{userInfo}}"
+            />
+        </block>
+        <block wx:elif="{{item.type === 'video'}}">
+            <page-video
+                    payload="{{item}}"
+                    id="pageItem{{index}}"
+                    data-index="{{index}}"
+                    login="{{login}}"
+                    userInfo="{{userInfo}}"
+            />
+        </block>
+        <block wx:elif="{{item.type === 'goods_guess_like'}}">
+            <page-goods-guess-like
+                    payload="{{item}}"
+                    id="pageItem{{index}}"
+                    data-index="{{index}}"
+                    bind:onChange="onItemDataChange"
+                    login="{{login}}"
+                    userInfo="{{userInfo}}"
+            />
+        </block>
+        <block wx:elif="{{item.type === 'app_float'}}">
+            <page-app-float
+                    payload="{{item}}"
+                    bind:click="onAppFloatClick"
+                    id="pageItem{{index}}"
+                    data-index="{{index}}"
+                    userInfo="{{userInfo}}"
+            />
+        </block>
+        <block wx:elif="{{subPage===false && item.type === 'tab_page'}}">
+            <page-tab-page
+                    subPage="{{true}}"
+                    payload="{{item}}"
+                    id="pageItem{{index}}"
+                    data-index="{{index}}"
+                    login="{{login}}"
+                    userInfo="{{userInfo}}"
+                    navHeight="{{navHeight}}"
+                    class="basePage"
+            />
+        </block>
+        <view wx:else
+              id="pageItem{{index}}"
+              data-index="{{index}}"
+        />
+    </block>
+</view>

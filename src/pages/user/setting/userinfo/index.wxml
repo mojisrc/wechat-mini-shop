@@ -1,0 +1,26 @@
+<view class="page">
+    <form bindsubmit="onSubmit">
+        <view class="userinfo">
+            <upload class="upload" bind:onUploadSuccess="onUploadSuccess">
+                <view class="avatar">
+                    <image class="img"
+                           src="{{avatar?avatar:userInfo.profile.avatar?userInfo.profile.avatar:'/assets/user/default-avatar.png'}}"
+                           mode="aspectFill"></image>
+                    <text class="text">修改头像</text>
+                </view>
+            </upload>
+            <van-cell-group>
+                <van-field
+                        value="{{userInfo.profile.nickname}}"
+                        name="nickname"
+                        label="昵称"
+                        placeholder="请输入"
+                        input-align="right"
+                />
+            </van-cell-group>
+        </view>
+        <fixed-bottom>
+            <van-button type="info" form-type="submit" block>保存</van-button>
+        </fixed-bottom>
+    </form>
+</view>

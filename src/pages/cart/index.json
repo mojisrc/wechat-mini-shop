@@ -1,0 +1,14 @@
+{
+  "navigationBarTitleText": "购物车",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "cart-card": "./components/card/index",
+    "cart-card-edit": "./components/editCard/index",
+    "van-stepper": "@vant/weapp/stepper/index",
+    "van-panel": "@vant/weapp/panel/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-button": "@vant/weapp/button/index",
+    "goods-sku-popup": "@/pages/goods/components/popupSku/index",
+    "page-base": "@/pages/page/components/index"
+  }
+}

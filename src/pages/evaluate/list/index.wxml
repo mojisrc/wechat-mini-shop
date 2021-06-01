@@ -1,0 +1,25 @@
+<view class="page">
+    <van-tabs
+            active="{{state}}"
+            bind:change="onTabChange"
+            line-width="20px"
+    >
+        <van-tab title="{{item.title}}" wx:for="{{tabs}}" wx:key="tab" name="{{item.id}}"/>
+    </van-tabs>
+    <list
+            id="list"
+            service="{{service}}"
+            bind:load="onListLoad"
+    >
+        <block wx:if="{{list.length > 0}}"  wx:for="{{list}}" wx:key="key" wx:for-index="index" wx:for-item="item">
+            <evaluate-card
+                    goodsInfo="{{item}}"
+                    bind:goods="onGoods"
+                    bind:add="onAdd"
+                    bind:detail="onDetail"
+                    bind:additional="onAdditional"
+            ></evaluate-card>
+        </block>
+    </list>
+</view>
+<view class="safeBottom"/>

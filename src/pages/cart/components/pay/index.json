@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-popup": "@vant/weapp/popup/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-switch": "@vant/weapp/switch/index"
+  }
+}

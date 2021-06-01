@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-stepper": "@vant/weapp/stepper/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "login-view": "@/components/login/view/index",
+    "van-button": "@vant/weapp/button/index"
+  }
+}

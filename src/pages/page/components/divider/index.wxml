@@ -1,0 +1,4 @@
+<view
+        class="page-divier"
+      style="border-bottom:1px {{payload.options.style}} {{payload.options.color}}">
+</view>

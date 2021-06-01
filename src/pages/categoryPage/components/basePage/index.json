@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "page-banner": "../banner/index",
+    "page-icon": "../icon/index"
+  }
+}

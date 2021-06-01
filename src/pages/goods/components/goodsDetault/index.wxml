@@ -1,0 +1,84 @@
+<van-panel class="spacing goods-detail">
+    <swiper class="goods-image-swiper" indicator-dots="true" interval="5000" duration="500">
+        <block wx:for="{{goodsInfo.images}}" wx:key="item">
+            <swiper-item>
+                <view class="video" wx:if="{{index === 0 && goodsInfo.media_id > 0}}">
+                    <view class="videoCon">
+                        <view class="play" style="{{videoPlay ? 'display:none':''}}">
+                            <image src="./play.png" mode="aspectFill" bindtap="onVideoToggle"/>
+                        </view>
+                        <view class="close" style="{{!videoPlay ? 'display:none' : ''}}">
+                            <video id="myVideo" src="{{goodsInfo.media.url}}" style="width:100vw;height:300px"/>
+                            <view class="closeBtn">
+                                <text bindtap="onVideoToggle">退出播放1</text>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <image src="{{item}}" data-url="{{item}}" mode="aspectFill" bindtap="onBannerPreview"/>
+            </swiper-item>
+        </block>
+    </swiper>
+    <view class="goods-title">
+        <view class="title">
+            <goods-tags goodsInfo="{{goodsInfo}}"/>
+            {{goodsInfo.title}}
+        </view>
+        <view wx:if="{{goodsInfo.tags.length>0}}" style="margin-top:5px;height: 16px;overflow: hidden">
+            <goods-diy-tags
+                    tags="{{goodsInfo.tags}}"
+                    style="height: 16px;display:flex;flex-wrap:wrap;"
+            />
+        </view>
+        <view class="body">
+            <text class="price">¥ {{goodsInfo.price}}</text>
+            <!--open-type="share"-->
+            <button class="share-button" bind:tap="onPopupOpen">
+                <image class="share" src="/assets/goods/share.png" mode="scaleToFill"/>
+            </button>
+        </view>
+        <!--海报和微信分享组合-->
+        <van-popup show="{{show}}" position="bottom" bind:close="onPopupClose">
+            <view class="poster-pop">
+                <view class="poster-title">
+                    分享到
+                </view>
+                <view class="poster-item">
+                    <view class="poster-left">
+                        <button open-type="share" class="share-button share-friends">
+                            <view>
+                                <image class="poster-img"
+                                       src="/assets/goods/poster/wechat.png"
+                                       mode="scaleToFill"/>
+                            </view>
+                            <p class="poster-title-tip">微信好友</p>
+                        </button>
+                    </view>
+                    <view class="poster-right">
+                        <goods-create-poster id="poster"
+                                             hide-loading="{{true}}"
+                                             preload="{{false}}"
+                                             config="{{posterConfig}}"
+                                             bind:success="onPosterSuccess"
+                                             bind:fail="onPosterFail">
+                            <view>
+                                <image class="poster-img"
+                                       src="/assets/goods/poster/pic.png"
+                                       mode="scaleToFill"/>
+                            </view>
+                            <p class="poster-title-tip">生成海报</p>
+                        </goods-create-poster>
+                    </view>
+                </view>
+                <view class="poster-cancel"></view>
+                <view class="poster-close">
+                    <p bind:tap="onPopupClose">取消</p>
+                </view>
+            </view>
+        </van-popup>
+        <view class="goods-spec-etc">
+            <text>库存 {{goodsInfo.stock}}</text>
+            <text>销量 {{goodsInfo.sale_num}}</text>
+        </view>
+    </view>
+</van-panel>

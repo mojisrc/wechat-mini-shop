@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "商品搜索",
+  "navigationBarTextStyle": "black",
+  "backgroundTextStyle": "dark",
+  "usingComponents": {
+    "common-search": "@/components/common/search/index",
+    "filterbar": "@/components/filterbar/index",
+    "goods-diy-tags": "@/components/goodsDiyTags/index"
+  }
+}

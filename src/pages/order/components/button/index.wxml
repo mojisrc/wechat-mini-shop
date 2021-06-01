@@ -1,0 +1,1 @@
+<view class="order-button {{size}} order-button-type-{{type}} {{active === true?'active':''}}" bindtap="onClick">{{text}}</view>

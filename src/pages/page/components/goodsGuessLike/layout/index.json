@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "usingComponents": {
+    "goods-price": "@/components/goodsPrice/index",
+    "line-price": "@/components/linePrice/index",
+    "tag": "@/components/tag/index",
+    "goods-tags": "@/components/goodsTags/index",
+    "goods-diy-tags": "@/components/goodsDiyTags/index",
+    "list-footer-loading": "@/components/listFooterLoading/index"
+  }
+}

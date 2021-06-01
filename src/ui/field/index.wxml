@@ -1,0 +1,418 @@
+<van-field
+        wx:if="{{ type === 'textarea' }}"
+        type="textarea"
+        name="{{name}}"
+        size="{{size}}"
+        value="{{ value }}"
+        fixed="{{fixed}}"
+        focus="{{focus}}"
+        border="{{ border }}"
+        disabled="{{disabled}}"
+        readonly="{{readonly}}"
+        clearable="{{clearable}}"
+        clickable="{{clickable}}"
+        required="{{required}}"
+        center="{{center}}"
+        password="{{password}}"
+        title-width="{{titleWidth}}"
+        maxlength="{{maxlength}}"
+        placeholder="{{placeholder}}"
+        placeholder-style="{{placeholderStyle}}"
+        custom-style="{{customStyle}}"
+        is-link="{{isLink}}"
+        arrow-direction="{{arrowDirection}}"
+        show-word-limit="{{showWordLimit}}"
+        error="{{error}}"
+        error-message="{{errorMessage}}"
+        error-message-align="{{errorMessageAlign}}"
+        input-align="{{inputAlign}}"
+        autosize="{{autosize}}"
+        left-icon="{{leftIcon}}"
+        right-icon="{{rightIcon}}"
+        confirm-type="{{confirmType}}"
+        confirm-hold="{{confirmHold}}"
+        hold-keyboard="{{holdKeyboard}}"
+        cursor-spacing="{{cursorSpacing}}"
+        adjust-position="{{adjustPosition}}"
+        show-confirm-bar="{{showConfirmBar}}"
+        selection-start="{{selectionStart}}"
+        selection-end="{{selectionEnd}}"
+        auto-focus="{{autoFocus}}"
+        disable-default-padding="{{disableDefaultPadding}}"
+        cursor="{{cursor}}"
+        bind:input="input"
+        bind:change="change"
+        bind:confirm="confirm"
+        bind:click-icon="clickIcon"
+        bind:focus="focus"
+        bind:blur="blur"
+        bind:clear="clear"
+        bind:click-input="clickInput"
+        bind:linechange="linechange"
+        bind:keyboardheightchange="keyboardheightchange"
+>
+    <view slot="label" class="label">
+        <text class="title">{{title}}</text>
+        <text class="label">{{label}}</text>
+    </view>
+</van-field>
+
+<van-field
+        wx:if="{{ type === 'number' || type ==='idcard' || type ==='digit' }}"
+        type="{{type}}"
+        name="{{name}}"
+        size="{{size}}"
+        value="{{ value }}"
+        fixed="{{fixed}}"
+        focus="{{focus}}"
+        border="{{ border }}"
+        disabled="{{disabled}}"
+        readonly="{{readonly}}"
+        clearable="{{clearable}}"
+        clickable="{{clickable}}"
+        required="{{required}}"
+        center="{{center}}"
+        password="{{password}}"
+        title-width="{{titleWidth}}"
+        maxlength="{{maxlength}}"
+        placeholder="{{placeholder}}"
+        placeholder-style="{{placeholderStyle}}"
+        custom-style="{{customStyle}}"
+        is-link="{{isLink}}"
+        arrow-direction="{{arrowDirection}}"
+        show-word-limit="{{showWordLimit}}"
+        error="{{error}}"
+        error-message="{{errorMessage}}"
+        error-message-align="{{errorMessageAlign}}"
+        input-align="{{inputAlign}}"
+        autosize="{{autosize}}"
+        left-icon="{{leftIcon}}"
+        right-icon="{{rightIcon}}"
+        confirm-type="{{confirmType	}}"
+        confirm-hold="{{confirmHold	}}"
+        hold-keyboard="{{holdKeyboard}}"
+        cursor-spacing="{{cursorSpacing}}"
+        adjust-position="{{adjustPosition}}"
+        show-confirm-bar="{{showConfirmBar}}"
+        selection-start="{{selectionStart}}"
+        selection-end="{{selectionEnd}}"
+        auto-focus="{{autoFocus}}"
+        disable-default-padding="{{disableDefaultPadding}}"
+        cursor="{{cursor}}"
+        bind:input="input"
+        bind:change="change"
+        bind:confirm="confirm"
+        bind:click-icon="clickIcon"
+        bind:focus="focus"
+        bind:blur="blur"
+        bind:clear="clear"
+        bind:click-input="clickInput"
+        bind:linechange="linechange"
+        bind:keyboardheightchange="keyboardheightchange"
+>
+    <view slot="label" class="label">
+        <text class="title">{{title}}</text>
+        <text class="label">{{label}}</text>
+    </view>
+</van-field>
+
+
+<van-field
+        wx:if="{{ type === 'picker' }}"
+        name="{{name}}"
+        label="{{label}}"
+        size="{{size}}"
+        value="{{ value }}"
+        fixed="{{fixed}}"
+        focus="{{focus}}"
+        border="{{ border }}"
+        disabled="{{disabled}}"
+        readonly="{{readonly}}"
+        clearable="{{clearable}}"
+        clickable="{{clickable}}"
+        required="{{required}}"
+        center="{{center}}"
+        title-width="{{titleWidth}}"
+        maxlength="{{maxlength}}"
+        placeholder="{{placeholder}}"
+        placeholder-style="{{placeholderStyle}}"
+        custom-style="{{customStyle}}"
+        is-link="{{isLink}}"
+        arrow-direction="{{arrowDirection}}"
+        show-word-limit="{{showWordLimit}}"
+        error="{{error}}"
+        error-message="{{errorMessage}}"
+        error-message-align="{{errorMessageAlign}}"
+        input-align="{{inputAlign}}"
+        autosize="{{autosize}}"
+        left-icon="{{leftIcon}}"
+        right-icon="{{rightIcon}}"
+        confirm-type="{{confirmType	}}"
+        confirm-hold="{{confirmHold	}}"
+        hold-keyboard="{{holdKeyboard}}"
+        cursor-spacing="{{cursorSpacing}}"
+        adjust-position="{{adjustPosition}}"
+        show-confirm-bar="{{showConfirmBar}}"
+        selection-start="{{selectionStart}}"
+        selection-end="{{selectionEnd}}"
+        disable-default-padding="{{disableDefaultPadding}}"
+        cursor="{{cursor}}"
+        bind:click-icon="clickIcon"
+>
+    <view slot="label" class="label">
+        <text class="title">{{title}}</text>
+        <text class="label">{{label}}</text>
+    </view>
+    <picker
+            class="inputAlign_{{inputAlign}}"
+            slot="input"
+            mode="selector"
+            bindchange="change"
+            range="{{range}}">
+        <view class="picker">
+            {{value || value === 0 ? range[value] : placeholder}}
+        </view>
+    </picker>
+</van-field>
+
+<van-field
+        wx:if="{{ type === 'area' }}"
+        name="{{name}}"
+        label="{{label}}"
+        size="{{size}}"
+        value="{{ value }}"
+        fixed="{{fixed}}"
+        focus="{{focus}}"
+        border="{{ border }}"
+        disabled="{{disabled}}"
+        readonly="{{readonly}}"
+        clearable="{{clearable}}"
+        clickable="{{clickable}}"
+        required="{{required}}"
+        center="{{center}}"
+        title-width="{{titleWidth}}"
+        maxlength="{{maxlength}}"
+        placeholder="{{placeholder}}"
+        placeholder-style="{{placeholderStyle}}"
+        custom-style="{{customStyle}}"
+        is-link="{{isLink}}"
+        arrow-direction="{{arrowDirection}}"
+        show-word-limit="{{showWordLimit}}"
+        error="{{error}}"
+        error-message="{{errorMessage}}"
+        error-message-align="{{errorMessageAlign}}"
+        input-align="{{inputAlign}}"
+        autosize="{{autosize}}"
+        left-icon="{{leftIcon}}"
+        right-icon="{{rightIcon}}"
+        confirm-type="{{confirmType	}}"
+        confirm-hold="{{confirmHold	}}"
+        hold-keyboard="{{holdKeyboard}}"
+        cursor-spacing="{{cursorSpacing}}"
+        adjust-position="{{adjustPosition}}"
+        show-confirm-bar="{{showConfirmBar}}"
+        selection-start="{{selectionStart}}"
+        selection-end="{{selectionEnd}}"
+        auto-focus="{{autoFocus}}"
+        disable-default-padding="{{disableDefaultPadding}}"
+        cursor="{{cursor}}"
+        bind:change="change"
+        bind:confirm="confirm"
+        bind:click-icon="clickIcon"
+>
+    <view slot="label" class="label">
+        <text class="title">{{title}}</text>
+        <text class="label">{{label}}</text>
+    </view>
+    <view
+            class="inputAlign_{{inputAlign}}"
+            slot="input"
+    >
+        <fa-area
+                areaNames="{{ areaNames }}"
+                placeholder="{{ placeholder }}"
+                areaList="{{areaList}}"
+                value="{{value}}"
+                bind:change="change"
+        />
+    </view>
+</van-field>
+
+
+<van-field
+        wx:if="{{ type === 'switch' }}"
+        name="{{name}}"
+        size="{{size}}"
+        value="{{ value }}"
+        fixed="{{fixed}}"
+        focus="{{focus}}"
+        border="{{ border }}"
+        disabled="{{disabled}}"
+        readonly="{{readonly}}"
+        clearable="{{clearable}}"
+        clickable="{{clickable}}"
+        required="{{required}}"
+        center="{{center}}"
+        title-width="{{titleWidth}}"
+        maxlength="{{maxlength}}"
+        placeholder="{{placeholder}}"
+        placeholder-style="{{placeholderStyle}}"
+        custom-style="{{customStyle}}"
+        is-link="{{isLink}}"
+        arrow-direction="{{arrowDirection}}"
+        show-word-limit="{{showWordLimit}}"
+        error="{{error}}"
+        error-message="{{errorMessage}}"
+        error-message-align="{{errorMessageAlign}}"
+        input-align="{{inputAlign}}"
+        autosize="{{autosize}}"
+        left-icon="{{leftIcon}}"
+        right-icon="{{rightIcon}}"
+        confirm-type="{{confirmType	}}"
+        confirm-hold="{{confirmHold	}}"
+        hold-keyboard="{{holdKeyboard}}"
+        cursor-spacing="{{cursorSpacing}}"
+        adjust-position="{{adjustPosition}}"
+        show-confirm-bar="{{showConfirmBar}}"
+        selection-start="{{selectionStart}}"
+        selection-end="{{selectionEnd}}"
+        auto-focus="{{autoFocus}}"
+        disable-default-padding="{{disableDefaultPadding}}"
+        cursor="{{cursor}}"
+        bind:click-icon="clickIcon"
+>
+    <view slot="label" class="label">
+        <text class="title">{{title}}</text>
+        <text class="label">{{label}}</text>
+    </view>
+    <view
+            class="inputAlign_{{inputAlign}}"
+            slot="input"
+    >
+        <van-switch checked="{{ !!value }}" size="16px" bind:change="change"/>
+    </view>
+</van-field>
+
+
+<van-field
+        wx:if="{{ type === 'uploader' }}"
+        name="{{name}}"
+        size="{{size}}"
+        value="{{ value }}"
+        fixed="{{fixed}}"
+        focus="{{focus}}"
+        border="{{ border }}"
+        disabled="{{disabled}}"
+        readonly="{{readonly}}"
+        clearable="{{clearable}}"
+        clickable="{{clickable}}"
+        required="{{required}}"
+        center="{{center}}"
+        title-width="{{titleWidth}}"
+        maxlength="{{maxlength}}"
+        placeholder="{{placeholder}}"
+        placeholder-style="{{placeholderStyle}}"
+        custom-style="{{customStyle}}"
+        is-link="{{isLink}}"
+        arrow-direction="{{arrowDirection}}"
+        show-word-limit="{{showWordLimit}}"
+        error="{{error}}"
+        error-message="{{errorMessage}}"
+        error-message-align="{{errorMessageAlign}}"
+        input-align="{{inputAlign}}"
+        autosize="{{autosize}}"
+        left-icon="{{leftIcon}}"
+        right-icon="{{rightIcon}}"
+        confirm-type="{{confirmType	}}"
+        confirm-hold="{{confirmHold	}}"
+        hold-keyboard="{{holdKeyboard}}"
+        cursor-spacing="{{cursorSpacing}}"
+        adjust-position="{{adjustPosition}}"
+        show-confirm-bar="{{showConfirmBar}}"
+        selection-start="{{selectionStart}}"
+        selection-end="{{selectionEnd}}"
+        auto-focus="{{autoFocus}}"
+        disable-default-padding="{{disableDefaultPadding}}"
+        cursor="{{cursor}}"
+        bind:change="change"
+        bind:confirm="confirm"
+        bind:click-icon="clickIcon"
+>
+    <view slot="label" class="label">
+        <text class="title">{{title}}</text>
+        <text class="label">{{label}}</text>
+        <view class="uploader">
+            <van-uploader
+                    accept="image"
+                    file-list="{{ fileList }}"
+                    max-count="{{maxCount}}"
+                    multiple="{{multiple}}"
+                    bind:after-read="uploaderChooseImage"
+                    bind:delete="uploaderDel"
+            />
+
+        </view>
+    </view>
+
+</van-field>
+
+
+<van-field
+        wx:if="{{ type === 'checkbox' }}"
+        name="{{name}}"
+        size="{{size}}"
+        value="{{ value }}"
+        fixed="{{fixed}}"
+        focus="{{focus}}"
+        border="{{ border }}"
+        disabled="{{disabled}}"
+        readonly="{{readonly}}"
+        clearable="{{clearable}}"
+        clickable="{{clickable}}"
+        required="{{required}}"
+        center="{{center}}"
+        title-width="{{titleWidth}}"
+        maxlength="{{maxlength}}"
+        placeholder="{{placeholder}}"
+        placeholder-style="{{placeholderStyle}}"
+        custom-style="{{customStyle}}"
+        is-link="{{isLink}}"
+        arrow-direction="{{arrowDirection}}"
+        show-word-limit="{{showWordLimit}}"
+        error="{{error}}"
+        error-message="{{errorMessage}}"
+        error-message-align="{{errorMessageAlign}}"
+        input-align="{{inputAlign}}"
+        autosize="{{autosize}}"
+        left-icon="{{leftIcon}}"
+        right-icon="{{rightIcon}}"
+        confirm-type="{{confirmType	}}"
+        confirm-hold="{{confirmHold	}}"
+        hold-keyboard="{{holdKeyboard}}"
+        cursor-spacing="{{cursorSpacing}}"
+        adjust-position="{{adjustPosition}}"
+        show-confirm-bar="{{showConfirmBar}}"
+        selection-start="{{selectionStart}}"
+        selection-end="{{selectionEnd}}"
+        auto-focus="{{autoFocus}}"
+        disable-default-padding="{{disableDefaultPadding}}"
+        cursor="{{cursor}}"
+        bind:change="change"
+        bind:confirm="confirm"
+        bind:click-icon="clickIcon"
+>
+    <view slot="label" class="label">
+        <text class="title">{{title}}</text>
+        <text class="label">{{label}}</text>
+        <view class="uploader">
+            <checkbox-group name="{{name}}" bindchange="change" class="checkboxGroup">
+                <label class="checkbox" wx:for="{{range}}" wx:key="r">
+                    <checkbox value="1"/>{{item}}
+                </label>
+            </checkbox-group>
+
+        </view>
+    </view>
+
+</van-field>
+

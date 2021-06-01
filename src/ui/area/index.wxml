@@ -1,0 +1,15 @@
+<view class="section">
+    <picker
+            mode="multiSelector"
+            value="{{selected}}"
+            range="{{range}}"
+            bindcolumnchange="onColumnChange"
+            bindchange="onChange"
+            range-key="name"
+    >
+        <view class="picker">
+            <block wx:if="{{text}}"><text class="text">{{text}}</text></block>
+            <block wx:else="{{placeholder}}"><text class="placeholder">{{placeholder}}</text></block>
+        </view>
+    </picker>
+</view>

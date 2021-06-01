@@ -1,0 +1,3 @@
+<view class="page">
+    <van-steps direction="horizontal" steps="{{steps}}" active="{{ active }}"></van-steps>
+</view>

@@ -1,0 +1,37 @@
+<view class="page">
+    <form bindsubmit="onSubmit">
+        <view class="userinfo">
+            <upload class="upload" bind:onUploadSuccess="onUploadSuccess">
+                <view class="avatar">
+                    <image class="img"
+                           src="{{avatar?avatar:userInfo.profile.avatar?userInfo.profile.avatar:'/assets/user/default-avatar.png'}}"
+                           mode="aspectFill"></image>
+                    <text class="text">修改头像</text>
+                </view>
+            </upload>
+            <view class="space10"/>
+            <van-cell-group>
+                <van-field
+                        value="{{userInfo.profile.nickname}}"
+                        name="nickname"
+                        label="昵称"
+                        placeholder="请输入"
+                        input-align="right"
+                        bind:change="onNicknameChange"
+                />
+            </van-cell-group>
+            <view class="space10"/>
+            <van-cell-group>
+                <van-cell
+                        is-link title="手机绑定" url="/pages/user/setting/bind/index"
+                />
+                <van-cell
+                        is-link title="修改密码" url="/pages/user/editPassword/index"
+                />
+            </van-cell-group>
+        </view>
+    </form>
+    <fixed-bottom>
+        <van-button size="large" bind:click="logout">退出</van-button>
+    </fixed-bottom>
+</view>

@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-panel": "@vant/weapp/panel/index",
+    "login-view": "../view/index"
+  }
+}

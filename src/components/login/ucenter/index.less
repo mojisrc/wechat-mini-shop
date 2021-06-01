@@ -1,0 +1,162 @@
+
+.order-action-area {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.order-action-area .header {
+    padding: 12px 15px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.order-action-area .header .left {
+    display: flex;
+}
+
+.order-action-area .header .left text {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 14px;
+}
+
+.order-action-area .header .right {
+    display: flex;
+}
+
+.order-action-area .header .right text {
+    font-size: 12px;
+    color: #666666;
+}
+
+.van-cell__bd {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.van-cell__text {
+    line-height: 14px;
+    font-size: 14px
+}
+
+.van-cell {
+    position: relative;
+    padding: 12px 15px;
+    display: flex;
+    align-items: center;
+    line-height: 1.4;
+    font-size: 14px;
+    justify-content: space-around;
+}
+
+.van-cell::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    -webkit-transform: scale(.5);
+    transform: scale(.5);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    pointer-events: none;
+    box-sizing: border-box;
+    border: 0 solid #e5e5e5;
+    border-bottom-width: 1px;
+    left: 15px;
+    right: 0
+}
+
+.van-cell--access .van-cell__ft {
+    padding-right: 13px;
+    position: relative;
+}
+
+.van-cell--access .van-cell__ft::after {
+    position: absolute;
+    top: 50%;
+    right: 2px;
+    content: " ";
+    display: inline-block;
+    height: 6px;
+    width: 6px;
+    border-width: 2px 2px 0 0;
+    border-color: #c8c8c8;
+    border-style: solid;
+    -webkit-transform: translateY(-50%) matrix(.71, .71, -.71, .71, 0, 0);
+    transform: translateY(-50%) matrix(.71, .71, -.71, .71, 0, 0)
+}
+
+.van-cell--switch {
+    padding-top: 6px;
+    padding-bottom: 6px
+}
+
+.order-action-area .list {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.order-action-area .list .item {
+    text-align: center;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.order-action-area .list .item .icon {
+    width: 22px;
+    height: 22px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.order-action-area .list .item .icon image {
+    width: 22px;
+    height: 22px;
+    display: block;
+    overflow: hidden;
+}
+
+.order-action-area .list .item text {
+    font-size: 12px;
+    line-height: 12px;
+    color: #666666;
+    display: block;
+}
+
+.user-header {
+}
+
+.user-header .avatar {
+    display: flex;
+    align-items: center;
+}
+
+.user-header .avatar image {
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+    border-radius: 30px;
+}
+.user-header .avatar .nickname{
+    font-weight: bold;
+    font-size: 16px;
+}
+.setting-action {
+    font-size: 12px;
+    color: #666666;
+}
+.cell-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

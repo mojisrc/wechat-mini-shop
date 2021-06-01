@@ -1,0 +1,66 @@
+<view class="page">
+    <view class="main">
+        <view class="header">
+            <text class="title">绑定手机号</text>
+            <text class="desc">请您进行手机号认证，为了登录后更方便使用</text>
+        </view>
+        <van-panel>
+            <van-cell-group>
+                <van-cell title="手机号">
+                    <input
+                            maxlength="11"
+                            placeholder="请输入"
+                            type="number"
+                            bindinput="onPhoneChange"
+                            value="{{phone}}"
+                    />
+                </van-cell>
+                <van-cell title="验证码">
+                    <view class="smscode">
+                        <input
+                                maxlength="11"
+                                placeholder="请输入"
+                                type="number"
+                                bindinput="onVerifyCodeChange"
+                                value="{{verify_code}}"
+                        />
+                        <smsCode
+                                disabled="{{sendSuccess=== false || !phone || phone.length !== 11 }}"
+                                seconds="59"
+                                bind:onPress="onPress"
+                                bind:onStart="onStart"
+                                bind:onEnd="onEnd"
+                                custom-class="smscodeBtn"
+                        />
+                    </view>
+                </van-cell>
+                <van-cell title="密码">
+                    <input
+                            style="width:200px"
+                            placeholder="不小于6位、需包含数字和字母"
+                            bindinput="onPasswordChange"
+                            value="{{password}}"
+                    />
+                </van-cell>
+            </van-cell-group>
+        </van-panel>
+        <!--        disabled="{{!phone || phone.length !== 11 || !verify_code || !password || password.length < 6}}"-->
+
+        <view class="footer">
+            <van-button
+                    type="danger"
+                    block
+                    bind:click="onSubmit"
+            >完成
+            </van-button>
+            <view class="space"/>
+            <van-button
+                    type="info"
+                    block
+                    open-type="getPhoneNumber"
+                    bind:getphonenumber="onBindWechatPhone"
+            >一键绑定手机
+            </van-button>
+        </view>
+    </view>
+</view>

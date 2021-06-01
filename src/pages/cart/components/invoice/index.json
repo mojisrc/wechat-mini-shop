@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-popup": "@vant/weapp/popup/index",
+    "van-button": "@vant/weapp/button/index",
+    "fa-field": "@/ui/field/index"
+  }
+}

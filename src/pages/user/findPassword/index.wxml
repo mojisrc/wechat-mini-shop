@@ -1,0 +1,52 @@
+<view class="page">
+    <view class="user-setting-bind-phone">
+        <van-panel>
+            <van-cell-group>
+                <van-cell title="手机号">
+                    <input
+                            maxlength="11"
+                            placeholder="请输入手机号"
+                            type="number"
+                            bindinput="onPhoneChange"
+                            value="{{phone}}"
+                    />
+                </van-cell>
+                <van-cell title="验证码">
+                    <view class="smscode">
+                        <input
+                                maxlength="11"
+                                placeholder="请输入"
+                                type="number"
+                                bindinput="onVerifyCodeChange"
+                                value="{{verify_code}}"
+                        />
+                        <smsCode
+                                disabled="{{sendSuccess=== false || !phone || phone.length !== 11 }}"
+                                seconds="59"
+                                bind:onPress="onPress"
+                                bind:onStart="onStart"
+                                bind:onEnd="onEnd"
+                                custom-class="smscodeBtn"
+                        />
+                    </view>
+                </van-cell>
+                <van-cell title="密码">
+                    <input
+                            placeholder="设置密码(必须包含数字和字母)"
+                            bindinput="onPasswordChange"
+                            value="{{password}}"
+                            type="password"
+                    />
+                </van-cell>
+            </van-cell-group>
+        </van-panel>
+    </view>
+    <fixed-bottom>
+        <van-button
+                type="danger"
+                bind:click="onSubmit"
+                disabled="{{submitLoading=== true || !phone || phone.length !== 11 || !verify_code || !password || password.length < 6}}">
+            找回密码
+        </van-button>
+    </fixed-bottom>
+</view>

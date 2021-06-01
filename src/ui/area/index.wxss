@@ -1,0 +1,10 @@
+.placeholder{
+    font-size: 14px;
+    line-height: 14px;
+    color:#c9c9c9;
+}
+.text{
+    font-size: 14px;
+    line-height: 14px;
+    color:#333
+}

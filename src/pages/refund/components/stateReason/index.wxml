@@ -1,0 +1,55 @@
+<view class="order-state-reason">
+    <block wx:if="{{refundInfo.is_close===0 && refundInfo.handle_state === 0 }}">
+        <view class="header">
+            <text class="state">您已经成功发起退款申请，请耐心等待商家处理。</text>
+        </view>
+        <view class="body">
+            <span>- 商家同意后，请按照给出的退货地址退货，并请记录退货运单号。</span>
+            <span>- 如商家拒绝，您可以修改申请后再次发起，商家会重新处理。</span>
+            <span>- 如商家超时未处理，退货申请将达成，请按系统给出的退货地址退货</span>
+        </view>
+        <view class="footer">
+            <van-button bind:click="onUndo">撤销申请</van-button>
+            <!--<van-button text="修改申请"></van-button>-->
+        </view>
+    </block>
+    <block wx:if="{{refundInfo.refund_type === 2 && refundInfo.handle_state === 20 && refundInfo.is_close === 0 && refundInfo.send_expiry_time > 0 }}">
+        <view class="body" wx:if="{{refundInfo.tracking_time > 0}}">
+            <view class="order-address">
+                <view class="info">
+                    <view class="user">
+                        <text class="name">物流公司：{{refundInfo.tracking_company}}</text>
+                    </view>
+                    <view class="address">
+                        <text class="phone">联系电话：{{refundInfo.tracking_phone}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="footer" wx:if="{{!refundInfo.tracking_time}}">
+            <van-button bind:click="onTrack">我已寄出，点击填写物流单号</van-button>
+        </view>
+    </block>
+    <block wx:if="{{refundInfo.handle_state === 30}}">
+        <view class="refund-success">
+            <view class="refund-info">
+                <view class="item">
+                    <label>退款总金额</label>
+                    <text>¥{{refundInfo.refund_amount}}</text>
+                </view>
+                <view class="item">
+                    <label>返回支付方</label>
+                    <text>¥{{refundInfo.refund_amount}}</text>
+                </view>
+            </view>
+            <view class="state-steps">
+                <refund-steps refundInfo="{{refundInfo}}" steps="{{steps}}"></refund-steps>
+            </view>
+        </view>
+    </block>
+    <block wx:if="{{refundInfo.handle_state === 51 }}">
+        <view class="header">
+            <text class="state">确认收货，自动关闭退款申请</text>
+        </view>
+    </block>
+</view>

@@ -1,0 +1,89 @@
+<van-panel class="order-action-area">
+    <view class="user-header">
+        <login-view login="{{login}}" bind:success="onSuccess" bind:fail="onFail">
+            <view class="van-cell van-cell--access">
+                <view class="van-cell__bd">
+                    <view class="avatar">
+                        <image src="/assets/user/default-avatar.png"
+                               mode="aspectFit" />
+                        <view class="nickname">
+                            <text>点击登录</text>
+                        </view>
+                    </view>
+                </view>
+                <view class="van-cell__ft"></view>
+            </view>
+        </login-view>
+    </view>
+</van-panel>
+<van-panel class="order-action-area">
+    <view class="header van-cell van-cell--access">
+        <view class="van-cell__bd">
+            <view class="left">
+                <text>我的订单</text>
+            </view>
+            <login-view login="{{login}}" class="right" data-state="0" bind:success="onSuccess" bind:fail="onFail">
+                <text>全部订单</text>
+            </login-view>
+        </view>
+        <view class="van-cell__ft"></view>
+    </view>
+    <login-view login="{{login}}" bind:success="onSuccess" bind:fail="onFail">
+        <view class="list">
+            <view class="item" data-state="1">
+                <view class="icon">
+                    <image src="/assets/user/order/state_new.png"
+                           mode="aspectFit" />
+                </view>
+                <text>待付款</text>
+            </view>
+            <view class="item" data-state="1">
+                <view class="icon">
+                    <image src="/assets/user/order/state_pay.png"
+                           mode="aspectFit" />
+                </view>
+                <text>待收货</text>
+            </view>
+            <iew class="item" data-state="1">
+                <view class="icon">
+                    <image src="/assets/user/order/state_send.png"
+                           mode="aspectFit" />
+                </view>
+                <text>已完成</text>
+            </iew>
+            <view class="item" data-state="1">
+                <view class="icon">
+                    <image src="/assets/user/order/state_unevaluate.png"
+                           mode="aspectFit" />
+                </view>
+                <text>待评价</text>
+            </view>
+            <view class="item" data-state="1">
+                <view class="icon">
+                    <image src="/assets/user/order/state_refund.png"
+                           mode="aspectFit" />
+                </view>
+                <text>退款售后</text>
+            </view>
+        </view>
+    </login-view>
+</van-panel>
+
+<van-panel>
+    <login-view login="{{login}}" bind:success="onSuccess" bind:fail="onFail">
+        <van-cell-group>
+            <van-cell title="地址管理" is-link="{{true}}">
+                <view slot="icon" class="cell-icon">
+                    <image src="/assets/user/address.png"
+                           mode="aspectFit" style="width:22px;height: 22px" />
+                </view>
+            </van-cell>
+            <van-cell title="商品关注" bind:success="onSuccess" bind:fail="onFail" is-link="{{true}}">
+                <view slot="icon" class="cell-icon">
+                    <image src="/assets/user/collect.png"
+                           mode="aspectFit" style="width:22px;height: 22px" />
+                </view>
+            </van-cell>
+        </van-cell-group>
+    </login-view>
+</van-panel>

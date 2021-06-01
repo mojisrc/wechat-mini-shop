@@ -1,0 +1,6 @@
+<view class="page-column-title">
+    <view class="details" style="justify-content:{{justifyContent[payload.options.align]}};background-color: {{payload.options.background_color}}">
+        <image class="image" src="{{payload.options.leading_image.url}}" mode="aspectFit" />
+        <text class="text" style="color:{{payload.options.font_color}}">{{payload.options.title}}</text>
+    </view>
+</view>

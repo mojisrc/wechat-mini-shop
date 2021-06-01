@@ -1,0 +1,92 @@
+<view class="main">
+    <invoice-modal
+            id="invoice-modal"
+            bind:onConfirm="onInvoiceChange"
+    />
+    <van-panel>
+        <block wx:if="{{addressId > 0}}">
+            <view class="address">
+                <view class="selected">
+                    <van-cell is-link bind:tap="onAddressList">
+                        <view class="user">
+                            <view class="name-phone">
+                                <text class="name">{{address.truename}}</text>
+                                <text class="phone">{{address.phone}}</text>
+                            </view>
+                            <view class="address">{{address.combine_detail}} {{address.address}}</view>
+                        </view>
+                    </van-cell>
+                </view>
+                <image src="/assets/cart/address-footer-line.png"
+                       class="address-footer-line"></image>
+            </view>
+
+        </block>
+        <block wx:else>
+            <view class="address" bindtap="onAddressAdd">
+                <view class="un-select">
+                    <image src="/assets/cart/address.png"></image>
+                    <text>添加地址</text>
+                </view>
+                <image class="address-footer-line" src="/assets/cart/address-footer-line.png"></image>
+            </view>
+        </block>
+    </van-panel>
+
+    <van-panel>
+        <van-cell-group>
+            <block wx:for="{{cartList}}" wx:key="key" wx:for-index="page-data" wx:for-item="item">
+                <van-cell>
+                    <goods-item item="{{item}}"/>
+                </van-cell>
+            </block>
+            <van-cell title="发票" wx:if="{{calculate}}" bindtap="onInvoicePress">
+                <view class="coupon">
+                    <text>{{invoiceText}}</text>
+                    <image src="/assets/cart/order-fill-more.png" mode="aspectFill"></image>
+                </view>
+            </van-cell>
+            <van-cell>
+                <view class="message">
+                    <input placeholder="选填 有什么想对商家说的（45字以内）" placeholder-class="placeholder-class"
+                           value="{{message}}" bindinput="onMessageChange"/>
+                </view>
+            </van-cell>
+        </van-cell-group>
+
+    </van-panel>
+    <van-panel>
+        <van-cell-group>
+            <van-cell title="商品总额" wx:if="{{calculate}}">
+                <view>
+                    <text class="freight-price">+ ¥{{calculate.goods_amount}}</text>
+                </view>
+            </van-cell>
+            <van-cell title="运费" wx:if="{{calculate}}">
+                <view>
+                    <text class="freight-price">+ ¥{{calculate.pay_freight_fee}}</text>
+                </view>
+            </van-cell>
+        </van-cell-group>
+    </van-panel>
+    <fixed-bottom>
+        <view class="footer">
+            <view class="left">
+                <label>实付：</label>
+                <text>¥{{calculate ? calculate.pay_amount : total}}</text>
+            </view>
+            <view class="right">
+                <van-button
+                        square
+                        custom-class="btn"
+                        size="large"
+                        type="danger"
+                        bind:click="onCreateOrder"
+                        disabled="{{!calculate}}">
+                    提交订单
+                </van-button>
+            </view>
+        </view>
+    </fixed-bottom>
+</view>
+<pay id="pay"/>

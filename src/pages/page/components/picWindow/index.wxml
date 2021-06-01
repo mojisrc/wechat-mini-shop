@@ -1,0 +1,62 @@
+<view class="page-pic-window">
+    <block wx:if="{{payload.options.layout_style === 1}}">
+        <view class="page-pic-window-mix">
+            <block wx:for="{{list}}" wx:key="key" wx:for-index="index" wx:for-item="item">
+                <transparent-button class="transparent-button" openType="{{item.openType}}" data-index="{{index}}" bind:tap="onPress">
+                    <image src="{{item.img.url}}" mode="widthFix" class="image"/>
+                </transparent-button>
+            </block>
+        </view>
+    </block>
+
+    <block wx:if="{{payload.options.layout_style === 2}}">
+        <view class="page-pic-window-rows">
+            <block wx:for="{{list}}" wx:key="key" wx:for-index="index" wx:for-item="item">
+                <transparent-button class="transparent-button" openType="{{item.openType}}" data-index="{{index}}" bind:tap="onPress">
+                    <image src="{{item.img.url}}" mode="widthFix" class="image"/>
+                </transparent-button>
+            </block>
+        </view>
+    </block>
+
+    <block wx:if="{{payload.options.layout_style === 112}}">
+        <view class="flexWrap">
+            <block wx:for="{{list}}" wx:key="key" wx:for-index="index" wx:for-item="item" style="width:50vw">
+                <transparent-button class="transparent-button" openType="{{item.openType}}" data-index="{{index}}" bind:tap="onPress">
+                    <image
+                            src="{{item.img.url}}"
+                            mode="widthFix"
+                            style="width:50vw"
+                            class="image"
+                    />
+                </transparent-button>
+            </block>
+        </view>
+    </block>
+
+    <block wx:if="{{payload.options.layout_style === 113}}">
+        <view class="flexWrap">
+            <block wx:for="{{list}}" wx:key="key" wx:for-index="index" wx:for-item="item">
+                <transparent-button class="transparent-button" openType="{{item.openType}}" style="width:33.3333333vw" data-index="{{index}}"
+                                    bind:tap="onPress">
+                    <image src="{{item.img.url}}" mode="widthFix" style="width:33.3333333vw" class="image"/>
+                </transparent-button>
+            </block>
+        </view>
+    </block>
+
+    <block wx:if="{{payload.options.layout_style === 114}}">
+        <view class="flexWrap">
+            <block wx:for="{{list}}" wx:key="key" wx:for-index="index" wx:for-item="item">
+                <transparent-button class="transparent-button" openType="{{item.openType}}" style="width:25vw" data-index="{{index}}"
+                                    bind:tap="onPress">
+                    <image src="{{item.img.url}}"
+                           mode="widthFix"
+                           style="width:25vw"
+                           class="image"
+                    />
+                </transparent-button>
+            </block>
+        </view>
+    </block>
+</view>

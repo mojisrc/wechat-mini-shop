@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-steps": "@vant/weapp/steps/index"
+  }
+}

@@ -1,0 +1,71 @@
+<view class="page" >
+    <form bindsubmit="onSubmit">
+    <van-panel>
+        <view class="refund-goods-card">
+            <view class="body">
+                <view class="item">
+                    <view class="content">
+                        <view class="image">
+                            <image src="{{goodsInfo.goods_img}}" mode="aspectFill" />
+                        </view>
+                        <view class="body">
+                            <text>{{goodsInfo.goods_title}}</text>
+                            <view class="end">
+                                <text class="spec">{{goodsInfo.goods_spec_string}}</text>
+                                <title class="number">x {{goodsInfo.goods_num}}</title>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </van-panel>
+    <van-panel>
+        <fa-field
+                wx:if="{{refundType === 2}}"
+                name="user_receive"
+                type="picker"
+                title="货物状态"
+                placeholder="请选择"
+                range="{{receiveStateList}}"
+        />
+        <fa-field
+                name="reason"
+                type="picker"
+                title="退款原因"
+                placeholder="请选择"
+                range="{{reasonList}}"
+        />
+        <fa-field
+                name="refund_amount"
+                type="digit"
+                title-width="10em"
+                center="{{true}}"
+                title="退款金额"
+                placeholder="¥{{noMoreThan}}"
+                label="最多¥{{noMoreThan}}，含发货邮费¥{{goodsInfo.goods_freight_fee}}"
+                value="{{refundAmount}}"
+        />
+        <fa-field
+                name="user_explain"
+                type="textarea"
+                title="退款说明"
+                placeholder="必填"
+        />
+        <fa-field
+                name="images"
+                value="{{[]}}"
+                type="uploader"
+                title="图片上传"
+                label="上传凭证(最多6张)"
+                title-width="100%"
+                uploader="{{uploader}}"
+        />
+    </van-panel>
+    <fixed-bottom>
+        <view class="footer">
+            <van-button type="danger" size="large" form-type="submit">提交</van-button>
+        </view>
+    </fixed-bottom>
+    </form>
+</view>

@@ -1,0 +1,16 @@
+{
+  "navigationBarTitleText": "提交订单",
+  "usingComponents": {
+    "fixed-bottom": "@/components/common/fixedBottom/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-panel": "@vant/weapp/panel/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "cart-order-fill-card": "../components/orderFillCard/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "invoice-modal": "../components/invoice/index",
+    "goods-tags": "@/components/goodsTags/index",
+    "goods-item": "./components/goodsItem/index",
+    "fa-field": "@/ui/field/index",
+    "pay": "../components/pay/index"
+  }
+}

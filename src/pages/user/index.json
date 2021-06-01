@@ -1,0 +1,14 @@
+{
+  "navigationBarTitleText": "我的",
+  "usingComponents": {
+    "unlogin-ucenter": "@/components/login/ucenter/index",
+    "login-view": "@/components/login/view/index",
+    "transparent-button": "@/components/transparentButton/index",
+    "page-base": "@/pages/page/components/index",
+    "van-grid": "@vant/weapp/grid/index",
+    "van-grid-item": "@vant/weapp/grid-item/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index"
+  }
+}
