@@ -1,4 +1,4 @@
-<view class="basePage" style="background-color:{{backgroundColor}};">
+<view class="basePage" style="background-color:{{backgroundColor}};min-height:{{subPage?'100vh':'auto'}}">
     <block wx:for="{{pageBody}}" wx:key="key" wx:for-index="index" wx:for-item="item">
         <block wx:if="{{item.type === 'image_ads'}}">
             <page-banner
