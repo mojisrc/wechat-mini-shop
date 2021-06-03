@@ -56,7 +56,7 @@ Component({
             }
         },
         async onReachBottom() {
-            if (this.properties.noMore === false) {
+            if (this.properties.noMore === false && this.data.payload.isRequest) {
                 this.setData({
                     page: this.properties.page + 1
                 }, async () => {
