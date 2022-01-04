@@ -1,6 +1,0 @@
-<view class="page-goods-search" style="background-color: {{payload.options.background_color}}">
-    <view class="section" bindtap="onClick">
-        <image class="image" src="goods-search-icon.png" mode="aspectFit"/>
-        <text class="text">搜索商品</text>
-    </view>
-</view>

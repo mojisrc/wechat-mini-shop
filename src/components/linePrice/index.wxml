@@ -1,5 +1,0 @@
-<view style="overflow: hidden;display:flex;flex-wrap:wrap;">
-    <view style=" display:flex;flex-direction: row; align-items: baseline; justify-content: flex-start;overflow: hidden; ">
-        <text style="color:{{fontColor}}; font-size: {{fontSize}}px; text-decoration:line-through">¥{{_price[0]}}.{{_price[1]}}</text>
-    </view>
-</view>

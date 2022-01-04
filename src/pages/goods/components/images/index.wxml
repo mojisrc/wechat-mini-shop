@@ -1,7 +1,0 @@
-<swiper class="goods-image-swiper" indicator-dots="true" autoplay="true" interval="5000" duration="500">
-    <block wx:for="{{images}}" wx:key="item">
-        <swiper-item>
-            <image src="{{item}}" data-url="{{item}}" mode="aspectFill" bindtap="bannerPreview"/>
-        </swiper-item>
-    </block>
-</swiper>

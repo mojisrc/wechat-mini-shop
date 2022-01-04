@@ -1,8 +1,0 @@
-<page-base
-        wx:if="{{body.length>0}}"
-        id="page"
-        body="{{body}}"
-        backgroundColor="{{backgroundColor}}"
-        login="{{login}}"
-        userInfo="{{userInfo}}"
-/>

@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "商品评价",
-  "usingComponents": {
-    "goods-evaluate-card": "@/pages/goods/components/evaluate/card/index"
-  }
-}

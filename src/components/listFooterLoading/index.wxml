@@ -1,5 +1,0 @@
-<view class="requestLoading">
-    <van-loading wx:if="{{loading}}"/>
-    <text wx:if="{{loading}}">加载中</text>
-    <view wx:if="{{noMore}}" class="noMore">没有更多了~</view>
-</view>

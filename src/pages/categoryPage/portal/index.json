@@ -1,6 +1,0 @@
-{
-  "navigationBarTitleText": "",
-  "usingComponents": {
-    "page-body": "../components/basePage/index"
-  }
-}

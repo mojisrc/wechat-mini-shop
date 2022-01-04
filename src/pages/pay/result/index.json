@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "支付成功",
-  "usingComponents": {
-    "van-panel": "@vant/weapp/panel/index",
-    "van-button": "@vant/weapp/button/index"
-  }
-}

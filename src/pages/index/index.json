@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "FaShop",
-  "enablePullDownRefresh": true,
-  "usingComponents": {
-    "page-base": "@/pages/page/components/index",
-    "page-goods-search": "@/pages/page/components/goodsSearch/index"
-  }
-}

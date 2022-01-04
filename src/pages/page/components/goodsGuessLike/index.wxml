@@ -1,8 +1,0 @@
-<goods-layout
-        wx:if="{{payload.isRequest}}"
-        loading="{{loading}}"
-        noMore="{{noMore}}"
-        payload="{{payload}}"
-        payload="{{payload}}"
-/>
-<van-loading wx:if="{{!payload.isRequest}}" />

@@ -1,7 +1,0 @@
-{
-  "component": true,
-  "usingComponents": {
-    "goods-layout": "./layout/index",
-    "van-loading": "@vant/weapp/loading/index"
-  }
-}

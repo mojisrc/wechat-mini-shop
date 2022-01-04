@@ -1,1 +1,0 @@
-<text class="text" bind:tap="onPress">{{text}}</text>

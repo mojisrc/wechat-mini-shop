@@ -1,6 +1,0 @@
-{
-  "component": true,
-  "usingComponents": {
-    "time-format": "@/components/common/timeFormat/index"
-  }
-}

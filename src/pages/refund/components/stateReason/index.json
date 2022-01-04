@@ -1,7 +1,0 @@
-{
-  "component": true,
-  "usingComponents": {
-    "van-button": "@vant/weapp/button/index",
-    "refund-steps": "../stateSteps/index"
-  }
-}

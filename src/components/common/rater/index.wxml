@@ -1,6 +1,0 @@
-<view class="rater-list">
-    <block wx:for="{{list}}" wx:key="key" wx:for-index="index" wx:for-item="item">
-        <image src="active.png"  style="width:{{size}}px;height: {{size}}px" mode="aspectFill" wx:if="{{index < value}}" data-value="{{index+1}}" bindtap="onChange"/>
-        <image src="default.png"  style="width:{{size}}px;height: {{size}}px" mode="aspectFill" wx:if="{{index >= value}}" data-value="{{index+1}}" bindtap="onChange"/>
-    </block>
-</view>

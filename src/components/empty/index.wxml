@@ -1,4 +1,0 @@
-<view class="list-empty custom-class">
-    <image class="image" src="{{icon}}" mode="aspectFill" style="width:{{size}}px;height:{{size}}px"></image>
-    <text class="text">{{desc}}</text>
-</view>

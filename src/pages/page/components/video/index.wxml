@@ -1,3 +1,0 @@
-<view class="page-video">
-    <video class="video" src="{{payload.data.url}}" controls="controls" />
-</view>

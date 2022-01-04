@@ -1,7 +1,0 @@
-{
-  "component": true,
-  "usingComponents": {
-    "order-button": "../button/index",
-    "time-format": "@/components/common/timeFormat/index"
-  }
-}

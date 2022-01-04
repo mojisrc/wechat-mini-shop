@@ -1,9 +1,0 @@
-{
-  "navigationBarTitleText": "退款/售后",
-  "enablePullDownRefresh": true,
-  "usingComponents": {
-    "van-panel": "@vant/weapp/panel/index",
-    "refund-card": "@/pages/refund/components/card/index",
-    "list": "@/components/list/index"
-  }
-}

@@ -1,7 +1,0 @@
-{
-  "component": true,
-  "usingComponents": {
-    "goods-tags": "@/components/goodsTags/index",
-    "goods-diy-tags": "@/components/goodsDiyTags/index"
-  }
-}

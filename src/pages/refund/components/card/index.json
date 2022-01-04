@@ -1,8 +1,0 @@
-{
-  "component": true,
-  "usingComponents": {
-    "refund-goods-card": "../goodsCard/index",
-    "common-static-countdown": "@/components/common/staticCountdown/index",
-    "van-button": "@vant/weapp/button/index"
-  }
-}

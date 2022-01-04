@@ -1,5 +1,0 @@
-<view
-        class="page-placeholder-line"
-      style="height: {{payload.options.height}}px"
->
-</view>

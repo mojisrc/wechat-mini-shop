@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "品牌详情",
-  "navigationBarTextStyle": "black",
-  "backgroundTextStyle": "dark",
-  "usingComponents": {
-    "common-search": "@/components/common/search/index"
-  }
-}

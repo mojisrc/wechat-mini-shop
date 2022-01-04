@@ -1,6 +1,0 @@
-{
-  "component": true,
-  "usingComponents": {
-    "transparent-button": "@/components/transparentButton/index"
-  }
-}

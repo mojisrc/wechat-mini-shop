@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "",
-  "usingComponents": {
-    "van-button": "@vant/weapp/button/index",
-    "smsCode": "@/components/common/smsCode/index"
-  }
-}

@@ -1,6 +1,0 @@
-<view class="page-column-title">
-    <view class="details" style="justify-content:{{justifyContent[dataSource.options.align]}};background-color: {{dataSource.options.background_color}}">
-        <image src="{{dataSource.options.leading_image.url}}" mode="aspectFit" />
-        <text style="color:{{dataSource.options.font_color}}">{{dataSource.options.title}}</text>
-    </view>
-</view>

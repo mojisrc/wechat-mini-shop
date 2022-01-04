@@ -1,3 +1,0 @@
-<block wx:for="{{tags}}" wx:key="key" wx:for-index="index" wx:for-item="item">
-    <text class="text {{item.class}}">{{item.text}}</text>
-</block>
